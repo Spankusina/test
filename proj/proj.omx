@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="41" xmlns:dp="automation.deployment" xmlns:eth="automation.ethernet">
+  <link-unit name="System" uuid="8e959f48-7540-4f5c-b94b-52ee116a14b8" target="Om.System" />
+  <link-unit name="Server" uuid="6460d855-40d2-4b28-a70c-9a6b46490166" target="Om.Server" />
+  <dp:domain name="Domain" uuid="2598dc6b-f150-4ae2-a095-964e8e739e28" address="local">
+    <dp:domain-node name="host" uuid="8cfdcbf1-1965-49ab-946f-d34473c6e4cb">
+      <eth:ethernet-adapter name="EthernetAdapter" uuid="a9bde55a-4ffa-4e02-9a2f-21ab8c782da9" network="Ethernet" use-dhcp="true" />
+    </dp:domain-node>
+    <eth:ethernet-net name="Ethernet" uuid="1e97de1c-23b6-4552-affd-b94f516c9a71" />
+    <dp:workstation name="Workstation" uuid="21adb4c2-e207-4110-818a-64d58ef3b0b8">
+      <eth:abstract-ethernet-adapter name="EthernetAdapter" uuid="8fe1f2a3-fd2f-47bc-8f5f-c7d0714e8573" />
+    </dp:workstation>
+  </dp:domain>
+  <namespace name="Namespace" uuid="b0ad5e0f-42f2-4365-b294-04160fe94d12" />
+  <json name="JSON" uuid="9d5956aa-818d-4139-b22e-3117264aba36" />
+</omx>
