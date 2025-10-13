@@ -1,16 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<omx xmlns="system" migration="41" xmlns:dp="automation.deployment" xmlns:eth="automation.ethernet">
+<omx xmlns="system" migration="41" xmlns:dp="automation.deployment" xmlns:eth="automation.ethernet" xmlns:iectm="automation.iectm" xmlns:ct="automation.control" xmlns:srv="server" xmlns:r="automation.reference">
   <link-unit name="System" uuid="8e959f48-7540-4f5c-b94b-52ee116a14b8" target="Om.System" />
   <link-unit name="Server" uuid="6460d855-40d2-4b28-a70c-9a6b46490166" target="Om.Server" />
   <dp:domain name="Domain" uuid="2598dc6b-f150-4ae2-a095-964e8e739e28" address="local">
     <dp:domain-node name="host" uuid="8cfdcbf1-1965-49ab-946f-d34473c6e4cb">
-      <eth:ethernet-adapter name="EthernetAdapter" uuid="a9bde55a-4ffa-4e02-9a2f-21ab8c782da9" network="Ethernet" use-dhcp="true" />
+      <eth:ethernet-adapter name="EthernetAdapter" uuid="a9bde55a-4ffa-4e02-9a2f-21ab8c782da9" network="Ethernet" use-dhcp="false" address="10.0.0.1" />
+      <srv:io-server name="Server" uuid="622dadd5-1849-4d89-a5d1-f80f9f89cd48">
+        <srv:iec-104-master-module name="Iec104Master" uuid="b508c97f-6aad-45bd-9a84-9241ba66db13" />
+        <dp:application-object name="Application" uuid="cc0d9d77-cd03-428a-a96e-41031f65b2d6">
+          <ct:object name="Object" uuid="9a4bd102-ae7b-46ba-97cf-b2e0521431e3">
+            <r:subject-ref name="SubjectReference" uuid="1188dcc6-83a4-440f-848c-26544bd7e2c7" object="Computer.Runtime.Application.Object" />
+            <ct:parameter name="Parameter" uuid="a44007ed-0a7e-4ba5-a5f5-534422d0cfd0" direction="in" type="bool" />
+            <ct:bind source="Parameter" target="SubjectReference.Parameter" />
+          </ct:object>
+        </dp:application-object>
+      </srv:io-server>
     </dp:domain-node>
     <eth:ethernet-net name="Ethernet" uuid="1e97de1c-23b6-4552-affd-b94f516c9a71" />
-    <dp:workstation name="Workstation" uuid="21adb4c2-e207-4110-818a-64d58ef3b0b8">
-      <eth:abstract-ethernet-adapter name="EthernetAdapter" uuid="8fe1f2a3-fd2f-47bc-8f5f-c7d0714e8573" />
-    </dp:workstation>
+    <dp:computer name="Computer" uuid="c0a47968-451b-4b5e-a384-fa764ce2135e">
+      <eth:ethernet-adapter name="EthernetAdapter" uuid="10567c50-3670-480f-80ea-9158d1c3de69" network="Ethernet" address="10.0.0.2" />
+      <dp:external-runtime name="Runtime" uuid="6f9fa37f-7db7-4c5d-aaad-707ee9fb7736">
+        <iectm:iec-104-slave name="IecTm104Slave" uuid="12ba77ce-316d-491b-8fe2-fdad70e8981f" number="2" address-map="Application.IecTmAddressMap" />
+        <dp:application-object name="Application" uuid="80cabccc-8756-488c-b0bd-7a36d0f5ddce">
+          <ct:object name="Object" uuid="c4c8a158-049a-4aee-a49f-f61d40092064">
+            <ct:parameter name="Parameter" uuid="14b2d38e-d1d8-47c5-ae8c-d58b4287c233" type="bool" direction="in" />
+          </ct:object>
+          <iectm:iectm-link-map name="IecTmAddressMap" uuid="d1c72abe-549e-4122-afea-7ed7c7ceaf11" file="Папка\map.xml" />
+        </dp:application-object>
+      </dp:external-runtime>
+    </dp:computer>
   </dp:domain>
   <namespace name="Namespace" uuid="b0ad5e0f-42f2-4365-b294-04160fe94d12" />
-  <json name="JSON" uuid="9d5956aa-818d-4139-b22e-3117264aba36" />
 </omx>
