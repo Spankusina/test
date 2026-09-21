@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <ct:object name="Domain.CPC_tree.CPC.P0023.JC" uuid="635da3be-32ef-4e2a-84e5-56ee3f2383df">
+    <ct:object name="BTS" uuid="7c15b605-9c9c-4f48-b6ce-9922dbf9e58f">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="A1" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_HEAT_ST" uuid="cd56e08e-3662-4829-aaf9-0af2b5ac555f">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.A1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="A1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Нагреватель @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.A1</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="67" />
+      </ct:object>
+      <ct:object name="AL_RESET" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="5de400ed-89e1-40f7-bdcd-c158402e414d">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.AL_RESET</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.AL_RESET</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сброс алармов"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="AL_RESET" />
+      </ct:object>
+      <ct:object name="Auto_Man" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="4b9c5480-708f-409c-8a04-63d3bdd13e40">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.Auto_Man</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.Auto_Man</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Режим управления"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="Auto_Man" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="B1" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_VS_ST" uuid="e6014718-0c54-40c7-bb74-c9a034213218">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.B1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.B1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="B1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Вентилятор @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O" />
+      </ct:object>
+      <ct:object name="B1K_HLR" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="655b1e45-a580-480b-b474-d51b8617855b">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.B1K_HLR</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.B1K_HLR</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="B1K_HLR"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Включение кавитатора</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="B1K_HLS" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="bf6474f0-b36e-4872-aa13-e18187d9f942">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.B1K_HLS</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.B1K_HLS</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="B1K_HLS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Выключение кавитатора</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="BTS_ESD" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="3b428a2b-2e2e-4628-b256-7eae898f6b3b">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.BTS_ESD</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.BTS_ESD</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Останов всей системы</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="BTS_ESD" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" aspect="unit.Types.IOS" uuid="6c4c53b6-8b4d-403a-9529-edac099c6035">
+        <attribute type="unit.Server.Attributes.Alarm">
+          <property name="value">{"Aggregator":{"Condition":{"Conditions":[{"Type":"Enumeration"},{"Type":"Dynamic"},{"Subconditions":["On"],"Type":"Discrete"}]},"IsEnabled":true,"Severity":{"Ranges":[{"High":1,"Low":1},{"High":101,"Low":101}]}}}</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="BTS_PERM" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="89a4f24e-1f6f-4062-a293-59f6cc657fef">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.BTS_PERM</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.BTS_PERM</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сброс ESD"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="BTS_PERM" />
+      </ct:object>
+      <ct:object name="H1_1" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MIXER" uuid="737f6dba-4ba5-40f7-a9cf-1ce9a7cf8f2a">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H1_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H1_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H1_1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference_P">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H1_1_MX</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="H1_2" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MIXER" uuid="49777eba-62a9-4a5e-aeb8-32a3872f44c1">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H1_2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H1_2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H1_2"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference_P">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H1_2_MX</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="H3" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_ST" uuid="f854eb80-fba4-4ba4-aa7d-b07b5412267b">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H3</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H3</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H3"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="H4_1" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_ST" uuid="3ac2e17f-55a9-447d-aae4-6441f4d7cab5">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H4_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H4_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H4_1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Компрессор @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="H4_2" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_ST" uuid="e0126f9a-599a-4c22-8a91-d066cdfaabec">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H4_2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H4_2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H4_2"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Компрессор @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="TT_N001" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="6301843d-838b-41ea-9e07-8d8c80f6e909">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.TT_N001</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.TT_N001</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-N001"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Темп-ра в блок-боксе подг-ки пит.воды @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+      </ct:object>
+      <ct:object name="H5_1" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MIXER" uuid="491fedf7-fb0b-4f19-9bbd-70165cbe17b9">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H5_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H5_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H5_1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference_P">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.H5_1_MX</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="LS_1" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="d8bb45db-4174-41da-8bd6-7cee79725ecb">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LS_1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Уровень для режима ожидания</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="LS_2" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="0a64345d-76b6-4c40-b1eb-4471cbf70cb9">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LS_2"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Уровень для режима эконом</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="LS_3" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="9becd4e7-11d9-40db-bc45-d66f1ccb9635">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_3</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_3</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LS_3"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Уровень для режима эконом_2</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="ON_TIME_L2" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP" uuid="ee5f13e4-9206-49c9-a535-1a08d467072a">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.ON_TIME_L2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.ON_TIME_L2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ON_TIME_L2"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Задание времени работы при уровне 2 @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сек"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+      </ct:object>
+      <ct:object name="OFF_TIME_L2" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP" uuid="fabd7e92-2534-4f8e-87f9-c28b4da78009">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.OFF_TIME_L2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.OFF_TIME_L2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="OFF_TIME_L2"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Задание времени паузы при уровне 2 @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сек"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+      </ct:object>
+      <ct:object name="OFF_TIME_L3" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP" uuid="9f4919b1-3cd9-4d22-aeb2-3346aba762af">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.OFF_TIME_L3</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.OFF_TIME_L3</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="OFF_TIME_L3"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Задание времени паузы при уровне 3 @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сек"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+      </ct:object>
+      <ct:object name="ON_TIME_L3" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP" uuid="0ceb3dea-f1ea-4b3e-845c-dd379ef6b738">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.ON_TIME_L3</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.ON_TIME_L3</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ON_TIME_L3"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Задание времени работы при уровне 3 @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сек"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+      </ct:object>
+      <ct:object name="LS_4" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="0fddc2ad-7f54-4dc3-a3e4-fe9e0063bace">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_4</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.LS_4</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LS_4"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Уровень для норм. режима</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="M1" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MIXER" uuid="9f54f28c-ae5d-4dcd-ad7a-c6300801b655">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.M1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.M1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="M1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Миксер @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference_P">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.M1_MX</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="M2" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MIXER" uuid="32a06e4f-8c26-4a7a-bafb-b968ea5b57c9">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.M2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.M2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="M2"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Миксер @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference_P">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.M2_MX</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="Perm_status" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="1020b7b5-15fa-4a62-bf25-64d9cf55b278">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.Perm_status</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.Perm_status</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Разрешение включения установки</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="Perm_status" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="QF1" aspect="Types.IOS" base-type="Types.Выключатели.IOS_SWITCHER_NCMD" uuid="501ba810-d67d-45bc-ab15-39732dfbba0f">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.QF1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.QF1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="QF1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Автомат ввод 1"></attribute>
+      </ct:object>
+      <ct:object name="QF2" aspect="Types.IOS" base-type="Types.Выключатели.IOS_SWITCHER_NCMD" uuid="06769678-5340-48fe-b561-91350b1874cd">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.QF2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.QF2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="QF2"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Автомат ввод 2"></attribute>
+      </ct:object>
+      <ct:object name="QF9_A_1" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="467c5c53-6378-4b05-b151-c3f0884b470e">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.QF9_A_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.QF9_A_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="QF9_A_1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Питание кавитатора отключено</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="RM1_A" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="05f9d419-bab1-4b59-877d-e83264a74ac5">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.RM1_A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.RM1_A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="RM1_A"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Питание на вводе 1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="RM2_A" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="9917e3f8-04d2-4b09-b499-664ec38c7235">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.RM2_A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.RM2_A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="RM2_A"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Питание на вводе 2"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="SYST_AUTO" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="00955c96-79e1-45f6-8270-cf18604578eb">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.SYST_AUTO</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.SYST_AUTO</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Команда Автоматический режим</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="SYST_AUTO" />
+      </ct:object>
+      <ct:object name="SYST_MAN" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="be16fa92-4044-4928-b679-81fefb7fe5fd">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.SYST_MAN</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.SYST_MAN</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Команда Ручной режим</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="SYST_MAN" />
+      </ct:object>
+      <ct:object name="T1_HLC" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="daf36c50-0692-4e90-b3cb-44c30c242e2b">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.T1_HLC</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.T1_HLC</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="T1_HLC"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Команда закрыть задвижку</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="T1_HLO" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="cf20d9cb-4912-48a6-ba77-12a0c475dce4">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.T1_HLO</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.T1_HLO</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="T1_HLO"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Команда открыть задвижку</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="TP1_A" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="b3f71ab6-1db8-4f26-96f9-51b721b90d04">
+        <property name="original">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.TP1_A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0023.P0023JC.P0023JC.P0023JC_CPU.P0023JC.CPC.P0023.JC.BTS.TP1_A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TP1_A"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0023_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0023_BTS"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0023JC"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Термо реле"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+    </ct:object>
+  </ct:object>
+  <plc:plc name="PLC_P0023.P0023JC" uuid="dad25f40-2411-4b6b-9aad-ff0c92a73610">
+    <plc:crate name="P0023JC" uuid="fdd43aa1-7fd1-4b37-8cf8-0f7f8f8ac5b6">
+      <plc:cpu name="P0023JC_CPU" uuid="5276de7d-6368-47fa-a540-0af2968d3c65">
+        <eth:ethernet-adapter name="P0023JC_Eth1" address="11.180.18.1" network="Ethernet1" uuid="c482ea70-03f3-4e94-959b-5553a58875be">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.136" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0023JC_Eth2" address="11.180.19.1" network="Ethernet2" uuid="3946b0e5-b800-4264-a600-5007cb438b52">
+          <attribute type="unit.System.Attributes.Comment" value="11.180.19.1" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0023JC_EIPAdapter" route="backpane;0" address-map="P0023JC.CIP_P0023JC" uuid="dcc7391f-52ab-48d3-b2cd-3a8a55353c38" />
+        <dp:application-object name="P0023JC" uuid="31e79afa-b9ce-4843-a033-2cc1758729fd">
+          <eip:cip-address-map name="CIP_P0023JC" file="P0023_Astrahan\CIP_P0023JC.xml" uuid="2557cb3d-03ce-4a7a-bad0-9038e7233c3e" />
+          <ct:object name="CPC" uuid="9b31610d-558c-4416-a02e-341b0f45b955">
+            <ct:object name="P0023" uuid="8c6e2910-8d79-4a2a-9b6c-493e0fe39ede">
+              <ct:object name="JC" uuid="3efe39c4-dbfd-4e42-b3df-2518dd348a43">
+                <attribute type="unit.System.Attributes.Description" />
+                <ct:object name="BTS" uuid="6502a9ee-df8f-4e53-bf2c-2bfa4a4e64b1">
+                  <ct:object name="A1" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_HEAT_ST" uuid="99f3c865-af17-4531-a94b-c2da323d41ba"></ct:object>
+                  <ct:object name="AL_RESET" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="6909da63-ae2d-41a6-b63a-3a0c31be0539"></ct:object>
+                  <ct:object name="Auto_Man" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="fe09301f-9935-499f-8cec-4b8e8a3cc052"></ct:object>
+                  <ct:object name="B1" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_VS_ST" uuid="a3541af9-4743-42b7-97d6-d0f3924e4b04"></ct:object>
+                  <ct:object name="B1K_HLR" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="e8f7b904-d0a7-409b-b95f-1b8f3709675d"></ct:object>
+                  <ct:object name="B1K_HLS" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="af96b192-66e4-4d80-ab16-db711b5b0cd2"></ct:object>
+                  <ct:object name="BTS_ESD" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="f0dd8178-f6ad-4e4f-b19d-24f9e6226c3d"></ct:object>
+                  <ct:object name="BTS_PERM" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="11f61882-0f2e-47f6-85e1-01bc1862ea7c"></ct:object>
+                  <ct:object name="H1_1" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="899d1087-6dff-4095-af1f-6efa7c17c6af"></ct:object>
+                  <ct:object name="H1_2" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="4c205000-8565-48d6-90cc-748b51622d83"></ct:object>
+                  <ct:object name="H3" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="87391994-b47c-4d25-9347-aa664ae1d6c8"></ct:object>
+                  <ct:object name="H4_1" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="9dc3b7a5-78a7-44a0-b0ef-014febe9ff34"></ct:object>
+                  <ct:object name="H4_2" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="bfbbdc13-b1c1-40ff-976d-962245f4f0e6"></ct:object>
+                  <ct:object name="H5_1" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="f7731089-a31e-40d6-85a3-21d505ee465d"></ct:object>
+                  <ct:object name="LS_1" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="4ed86b7f-43a7-4db0-962e-a21a31f6476a"></ct:object>
+                  <ct:object name="LS_2" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="3564b07f-4ec8-4566-a213-ec0d45618eb7"></ct:object>
+                  <ct:object name="LS_3" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="cced387b-4ef6-4eed-b670-be783a33de16"></ct:object>
+                  <ct:object name="LS_4" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="bed58232-d9fc-40de-b99b-3b90ada8c8fb"></ct:object>
+                  <ct:object name="M1" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="8604bf6f-4f51-4328-a4e0-ac86b6d6f9f5"></ct:object>
+                  <ct:object name="M2" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="4e3c51de-23d4-4d6c-ac8d-33c76fc7dd07"></ct:object>
+                  <ct:object name="Perm_status" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="07db7cc0-2f89-495c-8892-bad84908b2b7"></ct:object>
+                  <ct:object name="QF1" aspect="Types.PCL" base-type="Types.Выключатели.M_SWITCHER_NCMD" uuid="505fe8bf-333d-4338-85c2-ea4f64bc793c"></ct:object>
+                  <ct:object name="QF2" aspect="Types.PCL" base-type="Types.Выключатели.M_SWITCHER_NCMD" uuid="beb0f1b4-4ffb-4b73-b434-891172672d50"></ct:object>
+                  <ct:object name="ON_TIME_L2" aspect="Types.PCL" base-type="Types.Уставка.M_SP" uuid="e2404c39-be3e-41e8-8824-d92895b9bf05"></ct:object>
+                  <ct:object name="ON_TIME_L3" aspect="Types.PCL" base-type="Types.Уставка.M_SP" uuid="e6beb134-70db-4a11-8b36-4b18f554d8e8"></ct:object>
+                  <ct:object name="OFF_TIME_L2" aspect="Types.PCL" base-type="Types.Уставка.M_SP" uuid="39099145-046a-4676-83d8-b6f71cd3468e"></ct:object>
+                  <ct:object name="OFF_TIME_L3" aspect="Types.PCL" base-type="Types.Уставка.M_SP" uuid="2e1d0160-bc85-413b-a74b-c4c4c971e640"></ct:object>
+                  <ct:object name="QF9_A_1" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="6c9408f4-bf6b-4e37-9605-3b3f46b9e9e8"></ct:object>
+                  <ct:object name="RM1_A" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="12589c07-197d-49b0-9a85-a689caaa2ca9"></ct:object>
+                  <ct:object name="RM2_A" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="de08b319-b745-431d-a7f2-c8fdf32bdee5"></ct:object>
+                  <ct:object name="SYST_AUTO" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="6b631b13-07f0-4a9d-8110-0019b3d3176d"></ct:object>
+                  <ct:object name="SYST_MAN" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="46007468-4f0d-456f-a187-86fd759998ff"></ct:object>
+                  <ct:object name="T1_HLC" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="f3f990ed-cb97-4777-8157-56870519ff6b"></ct:object>
+                  <ct:object name="T1_HLO" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="5e473c22-baed-466c-a204-8e4cb102d9e5"></ct:object>
+                  <ct:object name="TP1_A" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="75e0b748-702c-4f03-9890-bd26ec86aa43"></ct:object>
+                  <ct:object name="H1_1_MX" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MIXER" uuid="e673176f-5beb-4dad-8b9b-71dc8fd567a5"></ct:object>
+                  <ct:object name="H1_2_MX" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MIXER" uuid="4122adde-f8cc-4690-bfc0-6f3aee0527db"></ct:object>
+                  <ct:object name="H5_1_MX" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MIXER" uuid="7b67c6bb-9d64-414e-bfe4-1225c4db572b"></ct:object>
+                  <ct:object name="M1_MX" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MIXER" uuid="93c1b5eb-ebbb-46a5-af8c-8d5203d87782"></ct:object>
+                  <ct:object name="M2_MX" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MIXER" uuid="59c7ece6-dffd-4a64-8eff-445d36b5b8c7"></ct:object>
+                  <ct:object name="TT_N001" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="7443d8b1-bcf1-4f5a-9fa2-7259252f2523"></ct:object>
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+</omx>

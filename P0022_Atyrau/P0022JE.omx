@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <plc:plc name="PLC_P0022.P0022JE" uuid="1cffd92d-038a-45d7-897f-b032c8069ade">
+    <plc:crate name="P0022JE" uuid="f575f7b1-9480-4e73-8c83-6967021dfecb">
+      <plc:cpu name="P0022JE_CPU" uuid="488783ff-29c6-44f3-9ab2-b00cc784424d">
+        <eth:ethernet-adapter name="P0022JE_Eth1" address="11.150.150.129" network="Ethernet1" uuid="d5f90769-97bb-4b9e-9569-672f740191f3">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.205" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0022JE_Eth2" address="11.150.150.161" network="Ethernet2" uuid="a64bf268-63b0-4949-bd3b-21123caa6980">
+          <attribute type="unit.System.Attributes.Comment" value="11.150.150.161" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0022JE_EIPAdapter" address-map="P0022JE_CPU.P0022JE.CIP_P0022JE" route="backpane;0" uuid="94b8415d-29c6-4c80-a5e6-03551362f0e0" />
+        <dp:application-object name="P0022JE" uuid="14361f67-9387-41e0-afa7-cb842ff7459d">
+          <ct:object name="CPC" uuid="eaef8f0d-c404-4f14-9545-09f2cb345ddc">
+            <ct:object name="P0022" uuid="74c12aac-3c7a-46ee-80c7-8ccd996a0e64">
+              <ct:object name="PL0203_A002_D_TANKS" uuid="fcedfddf-c077-4b7b-a93c-debbcdea7980">
+                <ct:object name="AA0900" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="bd428689-6479-46e0-a8da-875515537e8c"></ct:object>
+                <ct:object name="AR0900" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="94408c7c-2857-4bef-a20b-b458965a304d"></ct:object>
+                <ct:object name="XV1671" aspect="Types.PCL" base-type="unit.Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT" uuid="83964ad8-3eeb-4272-bf28-7557aa9eafe7"></ct:object>
+                <ct:object name="XV2071" aspect="Types.PCL" base-type="unit.Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT" uuid="a6c1da4c-7edf-4d4c-af52-59b18ce6e216"></ct:object>
+                <ct:object name="LAHH1670" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="466f7279-3bfa-4271-952b-55bc1b225144" />
+                <ct:object name="LAHH2070" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="0ba9bb74-e0fb-48b6-9e38-81bf2afa7e97" />
+                <ct:object name="LIT1670" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="c1a5fce9-5249-4c7b-ba22-585ea429ab30" />
+                <ct:object name="LIT2070" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="43bf8cf2-df17-443a-89e2-b5771dd477f4" />
+                <ct:object name="PT1670" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="29608b50-0f7e-445b-bc05-15c3c24eb80d" />
+                <ct:object name="PT1672" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="3bea4164-a288-4eb6-a0dd-40fb8bda24a3" />
+                <ct:object name="PT2072" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="1846993a-b043-4bda-9f68-4cbe58eb9cd7" />
+                <ct:object name="PT2070" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="d218da0c-a6ed-4e68-8243-a6a2e1dda416" />
+                <ct:object name="2070" aspect="Types.PCL" base-type="unit.Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="458dc93b-1d2a-4b76-8043-dbde38077778"></ct:object>
+                <ct:object name="1670" aspect="Types.PCL" base-type="unit.Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" uuid="ceae8ab8-6755-4004-a221-43f4922999a8"></ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+          <eip:cip-address-map name="CIP_P0022JE" file="P0022_Atyrau\CIP_P0022JE.xml" uuid="38ca0121-dc29-45c0-8fc9-2df5862034aa" />
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+  <ct:object name="Domain.CPC_tree.CPC.P0022.JE" uuid="f580339b-8e9d-4c28-b092-729158d6d9c0">
+    <attribute type="unit.System.Attributes.Description" />
+    <ct:object name="PL0203_A002_D_TANKS" uuid="82ed475b-03a5-4f99-a4ed-a8e93aa6b0ef">
+      <ct:object name="AA0900" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="f5d0fe38-fe7c-4ccc-9594-5b8b9388d060">
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Подтверждение тревог</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="AA-0900" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.AA0900</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.AA0900</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="a8691d71-ffa4-41e0-8356-45c655f442bb">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="AR0900" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="0ddaf5d1-ab81-4056-8aca-e791dffd1acb">
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сброс тревог" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="AR-0900" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.AR0900</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.AR0900</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="VEA001" uuid="4956ecd8-861a-4258-a602-e8ec230a36f2" base-type="Types.Объект.IOS_Obj">
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="VE-A001" />
+        <attribute type="unit.System.Attributes.Description" value="Ёмкость @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="LIT2070" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="77bc28f0-1c9a-469c-beba-7e1f57929c2b">
+          <attribute type="unit.System.Attributes.Description" value="Уровень @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LIT-2070" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="%" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LIT2070</property>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="100" />
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="18.75" />
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="15" />
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="110" />
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="79" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="false" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LIT2070</property>
+          </r:init-ref>
+        </ct:object>
+        <ct:object name="PT2070" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="52c1c0a9-61a1-4c24-9039-df45a58a1ad1">
+          <attribute type="unit.System.Attributes.Description" value="Давление @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PT-2070" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT2070</property>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="161" />
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="161" />
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="101.2" />
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0" />
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="161" />
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="102.6" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="false" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0.1" />
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="41" />
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="41" />
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT2070</property>
+          </r:init-ref>
+        </ct:object>
+        <ct:object name="LAHH2070" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="4cee79e9-d0ea-4335-a869-44eff73dae93">
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LAHH-2070" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийный высокий уровень</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LAHH2070</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LAHH2070</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        </ct:object>
+        <ct:object name="XV2071" base-type="unit.Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT" access-scope="global" aspect="Types.IOS" access-level="public" uuid="c3061a5b-a96c-4033-b4d8-a1c2c447c410">
+          <attribute type="unit.Types.Attributes.Common.Sign" value="XV-2071" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.XV2071</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.XV2071</property>
+          </r:init-ref>
+        </ct:object>
+        <ct:object name="2070" base-type="unit.Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_ST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="f49c6520-10fd-4a67-8035-95688cea0ff9">
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PU-A001" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="48" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.2070</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.2070</property>
+          </r:init-ref>
+          <ct:object name="PT2072" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="99e3d956-573b-4a38-b947-741a5448eac1">
+            <attribute type="unit.System.Attributes.Description" value="Давление на выбросе @(object:unit.Types.Attributes.Common.Sign)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="PT-2072" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+            <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT2072</property>
+            <attribute type="unit.Types.Attributes.AP.Max_raw" value="2070" />
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2070" />
+            <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+            <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="false" />
+            <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+            <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false" />
+            <attribute type="unit.Types.Attributes.AP.L_Limit" value="101" />
+            <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-1" />
+            <attribute type="unit.Types.Attributes.AP.HH_Limit" value="610" />
+            <attribute type="unit.Types.Attributes.AP.H_Limit" value="610" />
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="true" />
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="false" />
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="false" />
+            <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="10" />
+            <attribute type="unit.Types.Attributes.AP.Min_raw" value="-98" />
+            <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-98" />
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT2072</property>
+            </r:init-ref>
+          </ct:object>
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Res" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Osn" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Res" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Osn" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Expand" value="0" />
+          <attribute type="unit.Types.Attributes.VS.State.EnableSt_StatrForbidd" value="0" />
+          <attribute type="unit.Types.Attributes.VS.State.EnableSt_Ready" value="0" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="VEA002" base-type="Types.Объект.IOS_Obj" uuid="dd307afe-9e9f-44b5-b1df-9956ea9b3118">
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="VE-A002" />
+        <attribute type="unit.System.Attributes.Description" value="Ёмкость @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="LAHH1670" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="5ceb834c-31ab-443b-94b3-f3948f7e9ff7">
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LAHH-1670" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийный высокий уровень</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LAHH1670</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LAHH1670</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        </ct:object>
+        <ct:object name="LIT1670" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="66b919cb-15d7-4119-bbb3-74762348f8f1">
+          <attribute type="unit.System.Attributes.Description" value="Уровень @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LIT-1670" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="%" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LIT1670</property>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="100" />
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="18.75" />
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="15" />
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="110" />
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="79" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="false" />
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.LIT1670</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+        </ct:object>
+        <ct:object name="PT1670" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="e892ddfa-0a7c-4cc2-80a8-938b8df06d1c">
+          <attribute type="unit.System.Attributes.Description" value="Давление @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PT-1670" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT1670</property>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="161" />
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="161" />
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="101.2" />
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0" />
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="161" />
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="102.6" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="false" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="true" />
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0.1" />
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT1670</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="41" />
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="41" />
+        </ct:object>
+        <ct:object name="XV1671" base-type="unit.Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT" access-scope="global" aspect="Types.IOS" access-level="public" uuid="eacc2903-e892-4055-9616-6e749ba8ab66">
+          <attribute type="unit.Types.Attributes.Common.Sign" value="XV-1671" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.XV1671</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.XV1671</property>
+          </r:init-ref>
+        </ct:object>
+        <ct:object name="1670" base-type="unit.Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_ST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="2a3fa3a2-5af8-41ce-ac39-3dc415ee14b1">
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PU-A002" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+          <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="48" />
+          <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.1670</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.1670</property>
+          </r:init-ref>
+          <ct:object name="PT1672" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="8a158b9c-ae10-4744-97af-3a8e288f5784">
+            <attribute type="unit.System.Attributes.Description" value="Давление на выбросе @(object:unit.Types.Attributes.Common.Sign)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="PT-1672" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_PL0203_A002_D_TANKS" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JE" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+            <property name="original">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT1672</property>
+            <attribute type="unit.Types.Attributes.AP.Max_raw" value="2070" />
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2070" />
+            <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+            <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="false" />
+            <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+            <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false" />
+            <attribute type="unit.Types.Attributes.AP.L_Limit" value="101" />
+            <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-1" />
+            <attribute type="unit.Types.Attributes.AP.HH_Limit" value="610" />
+            <attribute type="unit.Types.Attributes.AP.H_Limit" value="610" />
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="true" />
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="false" />
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="false" />
+            <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="10" />
+            <attribute type="unit.Types.Attributes.AP.Min_raw" value="-98" />
+            <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-98" />
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0022.P0022JE.P0022JE.P0022JE_CPU.P0022JE.CPC.P0022.PL0203_A002_D_TANKS.PT1672</property>
+            </r:init-ref>
+          </ct:object>
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Res" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Osn" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Res" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Osn" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Expand" value="0" />
+          <attribute type="unit.Types.Attributes.VS.State.EnableSt_StatrForbidd" value="0" />
+          <attribute type="unit.Types.Attributes.VS.State.EnableSt_Ready" value="0" />
+        </ct:object>
+      </ct:object>
+    </ct:object>
+  </ct:object>
+</omx>

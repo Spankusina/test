@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:ct="automation.control" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <plc:plc name="PLC_P0030.P0030ZA" uuid="a7bc7c46-ce06-47ce-8d73-0d28b18bd6b5">
+    <plc:crate name="P0030ZA" uuid="6548010a-ac5e-4278-90f7-e6c52aa76435">
+      <plc:cpu name="P0030ZA_CPU" uuid="2f88dfc7-8828-4494-a259-996d1cbfaa45">
+        <eth:ethernet-adapter name="P0030ZA_Eth1" address="11.140.38.1" network="Ethernet1" uuid="2f4a9d8c-9582-474f-9571-128b6c48bb6c">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.170" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0030ZA_Eth2" address="11.140.38.129" network="Ethernet2" uuid="2f9aa4b9-5d42-4448-beca-e26279e485aa">
+          <attribute type="unit.System.Attributes.Comment" value="11.140.38.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0030ZA_EIPAdapter" address-map="P0030ZA_CPU.P0030ZA.CIP_P0030ZA" route="backpane;0" uuid="42df4c46-a5e2-493a-9a3f-d08d487801b3" />
+        <dp:application-object name="P0030ZA" uuid="b4d24f89-0a77-4552-98de-e97f9daa0382">
+          <ct:object name="CPC" uuid="5e12ea94-3180-424c-8943-4decdc84598a">
+            <ct:object name="P0030" uuid="06ce1d79-48f9-4b11-ad3e-07d172a844f5">
+              <ct:object name="ZA" uuid="93d11377-4e3d-4ca8-81c2-dbbfd5f60ae5">
+                <ct:object name="EXT_WATER_SUPPLY" uuid="c5269525-0922-4a61-97b6-26abe5c3ef0b">
+                  <ct:object name="XV0946" aspect="Types.PCL" base-type="unit.Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT" uuid="6c68a710-fed2-4091-aabc-8d9c4aaedd43"></ct:object>
+                  <ct:object name="LAHH0947" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="2987773e-610f-4311-bf08-d13267441702" />
+                  <ct:object name="XA0940A" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="0124cd06-82ef-4f0f-8aa6-d28813c750c9" />
+                  <ct:object name="XA0940B" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="d672b4af-1780-491e-9eac-343117fd3d72" />
+                  <ct:object name="PLC_CLT_MINOR_FLT" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="7e375256-16f9-46dc-8147-fc700ad54815" />
+                  <ct:object name="PIT0945" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="ba74596a-4742-42af-8920-39fb777fab48" />
+                  <ct:object name="TT0001" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="7826ba5a-4479-4b55-b313-3ca53672f104" />
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+          <eip:cip-address-map name="CIP_P0030ZA" file="P0030_Isatay\CIP_P0030ZA.xml" uuid="62c052ef-1155-4571-b901-a6cff778fac2" />
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+  <ct:object name="Domain.CPC_tree.CPC.P0030.ZA" uuid="c2691d6f-975f-40be-97f6-0894d1257c5b">
+    <ct:object name="EXT_WATER_SUPPLY" uuid="97d75c3c-3ee1-4e6b-bdb8-d1f114898e7a">
+      <ct:object name="XV0946" base-type="unit.Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT" access-scope="global" aspect="Types.IOS" access-level="public" uuid="b7ae354b-8af5-4a9f-9d0c-92f59918fa0d">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0946" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030ZA" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <property name="original">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.XV0946</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.XV0946</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="LAHH0947" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="70d9a906-8fdc-4e36-8094-a003dbe9916e">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LAHH-0947" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030ZA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Внешнее водоснабжение. Аварийный уровень в колодце</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.LAHH0947</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.LAHH0947</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="f00c7b91-2972-4715-a82c-2d9be34f6d61">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="XA0940A" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="958c6e89-a969-4126-b04d-d53ae98113ef">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XA-0940A" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030ZA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). CP-P0030ZA Питание 220VAC на входе ИБП Авария</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.XA0940A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.XA0940A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XA0940B" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="16931b7f-1e7f-4cf4-9030-cb6e45f86aa2">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XA-0940B" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030ZA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). CP-P0030ZA Питание 220VAC на ОВКВ Авария</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.XA0940B</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.XA0940B</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PLC_CLT_MINOR_FLT" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="d8c83c68-394f-4762-ac06-576fcc8f6461">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_CLT_MINOR_FLT" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030ZA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Незначительный сбой ПЛК</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.PLC_CLT_MINOR_FLT</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.PLC_CLT_MINOR_FLT</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PIT0945" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="32bb9037-3d4d-4966-8072-e66cf9fab413">
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Внешнее водоснабжение. Давление @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PIT-0945" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030ZA" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+        <property name="original">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.PIT0945</property>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="1000" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="1000" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="false" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="100" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="20" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="550" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="100" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.PIT0945</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="true" />
+      </ct:object>
+      <ct:object name="TT0001" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="b5c34a9b-f2e2-4b19-82d4-103c820cb003">
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Температура в шкафу CP-P0030ZA @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0001" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030ZA" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+        <property name="original">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.TT0001</property>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="150" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="150" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="5" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="40" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="30" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030ZA.P0030ZA.P0030ZA_CPU.P0030ZA.CPC.P0030.ZA.EXT_WATER_SUPPLY.TT0001</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="true" />
+      </ct:object>
+    </ct:object>
+    <attribute type="unit.System.Attributes.Description" />
+  </ct:object>
+</omx>

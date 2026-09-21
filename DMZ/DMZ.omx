@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:dp="automation.deployment" xmlns:eth="automation.ethernet" xmlns:r="automation.reference" xmlns:hs="history" xmlns:ct="automation.control">
+  <dp:application-object name="Domain.DMZ_tree" uuid="15c44ef5-73d1-4181-a33c-4d466f470bbf">
+    <ct:object name="CPC" uuid="ba413032-2a53-4cd2-8eb8-e2fec4c4a5f0">
+      <r:subject-ref name="_CPC" object="Domain.CPC_tree.CPC" uuid="208184bd-2666-4f82-a738-d698a92b9c9c">
+        <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+        <attribute type="unit.Server.Attributes.ExpandReferenceDynamically" />
+        <attribute type="unit.Server.Attributes.NodeRelativePath" value="." />
+      </r:subject-ref>
+    </ct:object>
+  </dp:application-object>
+  <dp:application-object name="Domain.ARM_DMZ_tree" uuid="9c0134d2-e80d-49cd-af7f-5ec215fc2bb4">
+    <r:subject-ref name="CPC" object="DMZ_tree.CPC" uuid="b0c02f17-f613-4e2e-b247-9e956d0b752b">
+      <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+      <attribute type="unit.Server.Attributes.ExpandReferenceDynamically" />
+    </r:subject-ref>
+  </dp:application-object>
+  <dp:domain-node name="Domain.m42vds-hss01a" uuid="4e2aee05-7610-4d52-984e-1bcb8a1131cb" address="m42vds-hss01a" storage-path="/opt/Automiq/Settings/DomainStorage/cache/server/">
+    <eth:ethernet-adapter name="EthernetAdapter" uuid="3c935163-ca2d-4a6a-9b35-2505cb4cd53c" address="100.124.80.193" network="Ethernet1">
+      <attribute type="unit.System.Attributes.Comment" value="100.124.80.193" />
+    </eth:ethernet-adapter>
+    <hs:historian name="Historian" instance="tcp:4949" uuid="5c6b5a29-c0ae-463e-8f97-6d73c31a4e50">
+      <hs:historian-database name="AEHistory" usage="events" uuid="b848f123-a270-42c3-aa20-0a0e73904c53" />
+      <hs:historian-database name="DAHistory" usage="values" uuid="8e48270a-3ff6-4ca4-b52c-8ea4ec1a5304" />
+    </hs:historian>
+  </dp:domain-node>
+  <dp:domain-node name="Domain.p22vds-hss01a" address="p22vds-hss01a" storage-path="/opt/Automiq/Settings/DomainStorage/cache/server/" uuid="87496fd4-0a55-4e5c-805b-825d4aec00d4">
+    <eth:ethernet-adapter name="EthernetAdapter" address="100.68.80.193" network="Ethernet1" uuid="f3c9cd8d-2a8e-4825-b10c-1d3f15e6c8d5">
+      <attribute type="unit.System.Attributes.Comment" value="100.68.80.193" />
+    </eth:ethernet-adapter>
+    <hs:historian name="Historian" instance="tcp:4949" uuid="b2afe7ba-0819-495a-867c-fa34a86938ad">
+      <hs:historian-database name="AEHistory" usage="events" uuid="7e6e8bf1-ea02-4209-8fb9-330f23fc488f" />
+      <hs:historian-database name="DAHistory" usage="values" uuid="560d1441-7ab5-4b13-a664-d49f9aacafa5" />
+    </hs:historian>
+  </dp:domain-node>
+</omx>

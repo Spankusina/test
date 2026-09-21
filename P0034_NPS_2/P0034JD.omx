@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:r="automation.reference" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet">
+  <ct:object name="Domain.CPC_tree.CPC.P0034.JD" uuid="1ce55cb4-703e-4ef0-9ccc-05fe7e0f7032">
+    <ct:object name="TREATED_SEWAGE_SYS" uuid="594b8731-6f85-48cc-8d68-f95102493012">
+      <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="5c3a3ce0-9b65-4d65-a525-9bc9911047ba">
+        <property name="original">PLC_P0034.P0034JD.P0034JD.P0034JD_CPU.P0034JD.CPC.JD.TREATED_SEWAGE_SYS.TT0001</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0034.P0034JD.P0034JD.P0034JD_CPU.P0034JD.CPC.JD.TREATED_SEWAGE_SYS.TT0001</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Температура в блок-боксе @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0034_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0001" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0034_TREATED_SEWAGE_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0034JD" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°С" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="500" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="1535599d-c82f-4c09-8a7f-ffccc89e9586">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="UA0101" base-type="Types.Простой дискретный параметр.IOS_DP_S" aspect="Types.IOS" uuid="0a5e2907-5a0f-42c8-b6a1-cb51df9bb59a">
+        <property name="original">PLC_P0034.P0034JD.P0034JD.P0034JD_CPU.P0034JD.CPC.JD.TREATED_SEWAGE_SYS.UA0101</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0034.P0034JD.P0034JD.P0034JD_CPU.P0034JD.CPC.JD.TREATED_SEWAGE_SYS.UA0101</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UA-0101" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0034JD" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0034_TREATED_SEWAGE_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0034_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неисправность системы</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+    </ct:object>
+  </ct:object>
+  <plc:plc name="PLC_P0034.P0034JD" uuid="f516ce6f-82ec-49bd-a502-d73e998aa200">
+    <plc:crate name="P0034JD" uuid="f2fa13dd-a297-452b-aa51-d0d82b1d514e">
+      <plc:cpu name="P0034JD_CPU" uuid="c00b5d4b-4c23-4c31-bc0b-74e8ce9b297b">
+        <eth:ethernet-adapter name="P0034JD_Eth1" address="11.80.42.1" network="Ethernet1" uuid="7dda4803-e6bc-44bf-89da-7cb33b93aacb">
+          <attribute type="unit.System.Attributes.Comment" value="192.168.1.2" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0034JD_Eth2" address="11.80.42.129" network="Ethernet2" uuid="ad5f8f2c-c265-44d5-bfad-8c811b48486e">
+          <attribute type="unit.System.Attributes.Comment" value="11.80.42.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0034JD_EIPAdapter" route="backpane;0" address-map="P0034JD.CIP_P0034JD" uuid="042ef133-8fb6-45fc-90bb-fc831f8103b9" />
+        <dp:application-object name="P0034JD" uuid="03c5d911-4d17-491f-b37c-df1f7969b729">
+          <eip:cip-address-map name="CIP_P0034JD" file="P0034_NPS_2\CIP_P0034JD.xml" uuid="a6052ffb-984e-4903-8653-f0e48ce69ac1" />
+          <ct:object name="CPC" uuid="4ebaa25d-0c4e-4ae3-99ec-f349933d8c65">
+            <ct:object name="JD" uuid="08643949-2f61-4e53-aebc-8b7a73f2a16d">
+              <ct:object name="TREATED_SEWAGE_SYS" uuid="a1a7c990-4e7b-4405-b801-6861300a617c">
+                <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="Types.PCL" uuid="a5b4c048-c3a5-4233-88f0-20735d2ddef0" />
+                <ct:object name="UA0101" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="02a7a606-dfc9-43f1-bd27-938af1cc3d67" />
+              </ct:object>
+            </ct:object>
+          </ct:object>
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+</omx>

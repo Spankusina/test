@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:r="automation.reference" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet">
+  <ct:object name="Domain.CPC_tree.CPC.P0024.JI" uuid="a937f788-4e9b-4254-8362-8fd78aa5f587">
+    <ct:object name="LUKOIL" uuid="486cf29f-456c-4ed9-a8e5-ddbac3d8c90b">
+      <ct:object name="COM_FAIL_R" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="958de633-8c94-4b74-b669-94363937e7cf">
+        <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.COM_FAIL_R</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.COM_FAIL_R</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сбой связи с Лукойл"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="COMFAIL" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="d050d576-b522-4de9-9ddc-b39aac8da569">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="H11" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="e8469f50-504d-4e3c-a224-cf3429505efe">
+        <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H11</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H11</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H-11"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="H12" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="e88c263e-1917-46d4-b671-6217839e42e9">
+        <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H12</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H12</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H-12"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="H13" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="0cbb2bb4-b074-4c1e-a87b-df749dbf40a2">
+        <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H13</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H13</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H-13"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="H14" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="f6e6445a-6025-42ba-8ede-590009388983">
+        <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H14</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.H14</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="H-14"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="PT_C56" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="2ce288d7-3256-4e90-a5be-06f66da887a7">
+        <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.PT_C56</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.PT_C56</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PT_C-56"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давление нефти на выходе БС @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="40"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="1000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+      </ct:object>
+      <ct:object name="PT_C57" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="f8f8e51c-7f40-4161-92a2-635c7ac4cb4e">
+        <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.PT_C57</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.PT_C57</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PT_C-57"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давление нефти на входе БС @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="40"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="1000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+      </ct:object>
+      <ct:object name="Tank1" uuid="0f18e533-bbfa-4f74-8a53-f0c75d1e0540" base-type="Types.Объект.IOS_Obj">
+        <attribute type="unit.System.Attributes.Description" value="Резервуар РВСП-1" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="РВСП-1" />
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <ct:object name="Level" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="b165cc16-99b0-453c-8e42-b88a3532d3f9">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_12</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_12</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LA-12"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Уровень @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="12020"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="9900"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="14950"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="360"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+        </ct:object>
+        <ct:object name="Temp" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="27d20132-c699-4a97-86bc-8b0b2b0e534f">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T1</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T1</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="T-1"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Средняя температура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+        </ct:object>
+      </ct:object>
+      <ct:object name="Tank2" base-type="Types.Объект.IOS_Obj" uuid="270cf97f-ecbc-4d21-9544-b8068d0188d8">
+        <attribute type="unit.System.Attributes.Description" value="Резервуар РВСП-2" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="РВСП-2" />
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <ct:object name="Level" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="a5972cb3-f859-4b35-a5f0-d46dfcc1fc90">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_22</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_22</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LA-22"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Уровень @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="500"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="501"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="14950"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="360"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        </ct:object>
+        <ct:object name="Temp" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="5d209746-f1e3-43a3-928b-7680e271a9f9">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T2</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T2</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="T-2"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Средняя температура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+        </ct:object>
+      </ct:object>
+      <ct:object name="Tank3" base-type="Types.Объект.IOS_Obj" uuid="e1cf3ba1-3a2d-4c21-9564-c99e20a30893">
+        <attribute type="unit.System.Attributes.Description" value="Резервуар РВСП-3" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="РВСП-3" />
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <ct:object name="Level" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="a54b25a5-3cf2-4f86-aef7-dfaa657ea77d">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_32</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_32</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LA-32"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Уровень @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="12942"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="10500"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="14990"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="400"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+        </ct:object>
+        <ct:object name="Temp" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="455ffef1-3029-42c9-be84-ab0b20c87324">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T3</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T3</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="T-3"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Средняя температура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+        </ct:object>
+      </ct:object>
+      <ct:object name="Tank4" base-type="Types.Объект.IOS_Obj" uuid="8aa0fa5a-5ac1-4d3e-86b6-770f0938f1f1">
+        <attribute type="unit.System.Attributes.Description" value="Резервуар РВСП-4" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="РВСП-4" />
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <ct:object name="Level" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="85e4b2f1-ad64-494f-ae11-3fba7bd62f04">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_42</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.LA_42</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LA-42"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Уровень @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="500"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="501"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="14970"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="380"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+        </ct:object>
+        <ct:object name="Temp" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="f82ddf50-74e9-466a-b491-34ccf038c2ff">
+          <property name="original">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T4</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0024.P0024JI.P0024JI.P0024JI_CPU.P0024JI.CPC.P0024.JI.LUKOIL.T4</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0024_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0024_INJECTION_FILTER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0024JI"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="T-4"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Средняя температура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+        </ct:object>
+      </ct:object>
+    </ct:object>
+  </ct:object>
+  <plc:plc name="PLC_P0024.P0024JI" uuid="53db255a-ffee-4ced-a622-8140ebc038b9">
+    <plc:crate name="P0024JI" uuid="6dca0f10-f106-40ba-b4a7-8ce611c57d50">
+      <plc:cpu name="P0024JI_CPU" uuid="14491b56-d401-4c52-8adf-7e7fea446857">
+        <eth:ethernet-adapter name="P0024JI_Eth1" address="11.90.22.1" network="Ethernet1" uuid="fc8528d1-05b9-4ef4-942b-a9317b103086">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.142" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0024JI_Eth2" address="11.90.22.129" network="Ethernet2" uuid="bcbb8516-52a7-4524-9b78-a72e04633c0b">
+          <attribute type="unit.System.Attributes.Comment" value="11.90.22.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0024JI_EIPAdapter" route="backpane;0" address-map="P0024JI.CIP_P0024JI" uuid="792b7016-8f69-47ab-bfb1-e2cd8e6825bc" />
+        <dp:application-object name="P0024JI" uuid="ca12a423-f808-482f-a0d3-bf290f51cd7f">
+          <eip:cip-address-map name="CIP_P0024JI" file="P0024_Koms\CIP_P0024JI.xml" uuid="b2cbd194-84c0-4cde-8e57-e66571a96f62" />
+          <ct:object name="CPC" uuid="058beee7-99ef-44e5-a9d3-caafd095514a">
+            <ct:object name="P0024" uuid="90d0fca7-4562-45ad-bd13-2c926d1990a2">
+              <ct:object name="JI" uuid="b4864cf4-29bc-48ed-bf92-25e07be8c095">
+                <ct:object name="LUKOIL" uuid="c90a975e-354a-4cff-92d9-9f726ce00654">
+                  <ct:object name="COM_FAIL_R" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="354207ad-32ea-4c83-9b98-fc941ce24ced"></ct:object>
+                  <ct:object name="H11" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="52bf00bb-a8f2-4b1b-9108-e162b7a190db"></ct:object>
+                  <ct:object name="H12" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="f7a92ae9-a400-41cc-a510-c62bcaa21b0a"></ct:object>
+                  <ct:object name="H13" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="737567f2-14eb-48ae-adb7-bd03fc026ecd"></ct:object>
+                  <ct:object name="H14" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="f2caea25-ffae-40eb-8157-271f0397a07e"></ct:object>
+                  <ct:object name="LA_12" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="b00bd0fb-2b68-48f4-855c-98e6c86feba6"></ct:object>
+                  <ct:object name="LA_22" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="33adfc0d-be9e-40d6-97b1-8959e1423b3e"></ct:object>
+                  <ct:object name="LA_32" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="a48ce11f-0611-4936-ab62-1fbe6369c402"></ct:object>
+                  <ct:object name="LA_42" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="d939ab8b-35d6-4758-91df-f724a602f162"></ct:object>
+                  <ct:object name="PT_C56" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="ab8951d8-ecd8-441b-b351-2f926da82885"></ct:object>
+                  <ct:object name="PT_C57" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="a8550129-f89b-4842-ab10-b92aa89d6d90"></ct:object>
+                  <ct:object name="T1" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="8fed164c-317c-43a4-bc2e-1314151781ec"></ct:object>
+                  <ct:object name="T2" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="98df9288-372c-4a6f-b840-11908dee0c3e"></ct:object>
+                  <ct:object name="T3" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="12bc6a9e-7413-45ba-a79a-1f3ea731e0fe"></ct:object>
+                  <ct:object name="T4" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="26c48eeb-c43e-47a5-bf2b-1bfa1665a59a"></ct:object>
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+</omx>

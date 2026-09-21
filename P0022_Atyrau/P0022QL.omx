@@ -1,0 +1,1655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <plc:plc name="PLC_P0022.P0022QL" uuid="e776689a-fbeb-4d14-9b40-4bdece9d7d1e">
+    <plc:crate name="P0022QL" uuid="976a1549-969e-486c-972a-4952e566535f">
+      <plc:cpu name="P0022QL_CPU" uuid="594e4481-8ec2-4ca7-a3d6-27b99170ec32">
+        <eth:ethernet-adapter name="P0022QL_Eth1" address="11.150.8.1" network="Ethernet1" uuid="631e1f47-f3e2-4cc9-8d39-58c2706a226d">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.214" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0022QL_Eth2" address="11.150.8.129" network="Ethernet2" uuid="19a269d1-0585-4098-aa7d-7a4471c67fa1">
+          <attribute type="unit.System.Attributes.Comment" value="11.150.8.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0022QL_EIPAdapter" address-map="P0022QL_CPU.P0022QL.CIP_P0022QL" route="backpane;0" uuid="62ee8b73-f77e-42c8-909f-0655d7432510" />
+        <dp:application-object name="P0022QL" uuid="4a28ea84-3f6a-4852-83de-b0c061af1053">
+          <ct:object name="CPC" uuid="6bb20482-66ac-473c-bae9-47fa298869da">
+            <ct:object name="P0022" uuid="00a199bd-8c6b-4034-a3e3-cf9ce4efc253">
+              <ct:object name="QL" uuid="966c5d10-0eea-43b7-ac23-2f6e4f44b492">
+                <ct:object name="QUALITY_LOOP_B" uuid="ff47e70d-9456-465a-b733-a06c2b1d023d">
+                  <ct:object name="SY_RST_FA" uuid="2102000E-007B-000C-0001-1fbc06a16da5" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="FAN_AB" uuid="2102000E-007B-0012-0001-130e6772b1b3" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="ESV0998" uuid="2102000E-007B-0010-0001-1900361cd3d6" aspect="Types.PCL" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV"></ct:object>
+                  <ct:object name="ESV0999" uuid="2102000E-007B-0010-0001-27f500c98e01" aspect="Types.PCL" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV"></ct:object>
+                  <ct:object name="FAN_A" uuid="2102000E-007B-0011-0001-12c79e2e88c9" aspect="Types.PCL" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN"></ct:object>
+                  <ct:object name="FAN_B" uuid="2102000E-007B-0011-0001-2147c8789c39" aspect="Types.PCL" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN"></ct:object>
+                  <ct:object name="FCV9304" uuid="2102000E-007B-0018-0001-1183ddde0ca1" aspect="Types.PCL" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV"></ct:object>
+                  <ct:object name="HEATER" uuid="2102000E-007B-0011-0001-3155ab5a581c" aspect="Types.PCL" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN"></ct:object>
+                  <ct:object name="LS9309A" uuid="2102000E-007B-0003-0001-1c7bd7871412" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="LS9309B" uuid="2102000E-007B-0003-0001-27a3fcde233e" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PU9302A" uuid="2102000E-007B-0011-0001-4ded7de5c049" aspect="Types.PCL" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN"></ct:object>
+                  <ct:object name="PU9302B" uuid="2102000E-007B-0011-0001-54461bcaddaf" aspect="Types.PCL" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN"></ct:object>
+                  <ct:object name="FLW_ISOKINET" uuid="2102000E-007B-0003-0001-34e88c66dca2" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="QAL_GAS_HI" uuid="2102000E-007B-0003-0001-477ebc3ef9d5" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="ADS_F0" uuid="2102000E-007B-0003-0001-539535a58a0a" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="ADS_F1" uuid="2102000E-007B-0003-0001-694dee22db71" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="ADS_F2" uuid="2102000E-007B-0003-0001-7d4341f0ba88" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="ADS_F3" uuid="2102000E-007B-0003-0001-8a3f8d10b7ab" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="BDS_F0" uuid="2102000E-007B-0003-0001-908b26a8eeca" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="BDS_F1" uuid="2102000E-007B-0003-0001-1059e63e2582" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="BDS_F2" uuid="2102000E-007B-0003-0001-11b88f76939f" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="BDS_F3" uuid="2102000E-007B-0003-0001-1297e349ace9" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="S_QAL_GAS_HH" uuid="2102000E-007B-0003-0001-13032cf6a25d" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="QAL_MASS_AB" uuid="2102000E-007B-0012-0001-2ba0bd553849" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="ADS_F" uuid="2102000E-007B-0003-0001-149b647b9d3b" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="BDS_F" uuid="2102000E-007B-0003-0001-150a7f1aa38a" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="SKID_QAL_FIRE" uuid="2102000E-007B-0003-0001-16ca889e678f" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="SKID_QAL_CRFIRE" uuid="2102000E-007B-0003-0001-17b1b2ad9f33" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="SKID_ESD" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="6fce7f7f-11a3-432d-85f0-df1bec5c37bc"></ct:object>
+                  <ct:object name="SAMP_1_ACTV" uuid="2102000E-007B-0003-0001-1860d01c6acb" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="SAMP_2_ACTV" uuid="2102000E-007B-0003-0001-194ff5650fc6" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="XV9300" uuid="2102000E-007B-0010-0001-3adbe784d8d7" aspect="Types.PCL" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV"></ct:object>
+                  <ct:object name="XV9301" uuid="2102000E-007B-0010-0001-48186a293557" aspect="Types.PCL" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV"></ct:object>
+                  <ct:object name="PR_PRS12_MAIN_AB" uuid="2102000E-007B-0012-0001-3bd6d1d5a4ab" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="A_RSET" uuid="2102000E-007B-000C-0001-21c4efab0514" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="B_RSET" uuid="2102000E-007B-000C-0001-34c3cb70bea5" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="BSW_MAIN_AB" uuid="2102000E-007B-0012-0001-4ff4c5cb4e48" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="CAN_A_AB" uuid="2102000E-007B-000C-0001-44143f2167b7" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="CAN_A_RS" uuid="2102000E-007B-000C-0001-50a6e91d448d" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="CAN_A_US" uuid="2102000E-007B-000C-0001-60d8cd504a6c" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="CAN_B_AB" uuid="2102000E-007B-000C-0001-72e3c4f74ef7" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="CAN_B_RS" uuid="2102000E-007B-000C-0001-83462f7c920f" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="CAN_B_US" uuid="2102000E-007B-000C-0001-9729e62e844b" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="DNS_MAIN_AB" uuid="2102000E-007B-0012-0001-5eef72bb70fa" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="PUMP_R" uuid="2102000E-007B-0012-0001-6863e557cde2" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="PRM_VSC_AB" uuid="2102000E-007B-0012-0001-7d58fd0b2e3e" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="REGULATE" uuid="2102000E-007B-0012-0001-8b4fd20f4bd4" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="SKID_RUN" uuid="2102000E-007B-0012-0001-9ef0400b85a8" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" />
+                  <ct:object name="SKID_STAT" uuid="2102000E-007B-0012-0001-10dbf9f3ab84" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="SY_REMOTE" uuid="2102000E-007B-0012-0001-11d95643db24" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB"></ct:object>
+                  <ct:object name="SY_WATCHDOG_TO" uuid="2102000E-007B-000C-0001-10ba52904161" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="Schvr_AIR_TEMP" uuid="2102000E-007B-0002-0001-10ea5b05b8d3" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="BSW_A" uuid="2102000E-007B-0002-0001-238bad1f4e0d" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="BSW_B" uuid="2102000E-007B-0002-0001-38acb6a15ecb" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="CURR_VOL" uuid="2102000E-007B-0016-0001-102b4f605683" aspect="Types.PCL" base-type="Types.Уставка.M_SP"></ct:object>
+                  <ct:object name="DNS_A" uuid="2102000E-007B-0002-0001-494f0ae6197f" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="FLW" uuid="2102000E-007B-0002-0001-5acbdaadf53f" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="NXTB_VOL" uuid="2102000E-007B-0016-0001-2b5358574597" aspect="Types.PCL" base-type="Types.Уставка.M_SP"></ct:object>
+                  <ct:object name="PT9304" uuid="2102000E-007B-0002-0001-6cda252d493c" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="TT9303" uuid="2102000E-007B-0002-0001-76b33ab936df" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="TT0998" uuid="2102000E-007B-0002-0001-8f637693c2d3" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="BSW_MAIN" uuid="2102000E-007B-0002-0001-95b870fbe39c" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="DNS_MAIN" uuid="2102000E-007B-0002-0001-10cef563386e" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="PRM_VSC_MAIN" uuid="2102000E-007B-0002-0001-114dd1cdb3e9" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="RATIO" uuid="2102000E-007B-0016-0001-37a49f00e6d1" aspect="Types.PCL" base-type="Types.Уставка.M_SP"></ct:object>
+                  <ct:object name="RES_VOL" uuid="2102000E-007B-0016-0001-44c0c4ea8f2a" aspect="Types.PCL" base-type="Types.Уставка.M_SP"></ct:object>
+                  <ct:object name="VOL_PCUR" uuid="2102000E-007B-0016-0001-51a287645a03" aspect="Types.PCL" base-type="Types.Уставка.M_SP"></ct:object>
+                  <ct:object name="VOL_PULS" uuid="2102000E-007B-0016-0001-6bdda431f9ee" aspect="Types.PCL" base-type="Types.Уставка.M_SP"></ct:object>
+                  <ct:object name="VOL_TOT" uuid="2102000E-007B-0016-0001-7251780c9e13" aspect="Types.PCL" base-type="Types.Уставка.M_SP"></ct:object>
+                  <ct:object name="AT9304A" uuid="2102000E-007B-0002-0001-12d8bb3aafc3" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="AT9304B" uuid="2102000E-007B-0002-0001-13d36428abe4" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="WT9308A" uuid="2102000E-007B-0004-0001-1842edb72edd" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="WT9308B" uuid="2102000E-007B-0004-0001-29aa1e70687d" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="PDT0998" uuid="2102000E-007B-0002-0001-14b39bafadee" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="PR_TMP2" uuid="2102000E-007B-0004-0001-3ef0972909c5" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="PT0998" uuid="2102000E-007B-0002-0001-151d81ff3bda" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="TT9313" uuid="2102000E-007B-0002-0001-16ee84f8790b" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="FT9306" uuid="2102000E-007B-0002-0001-170673938ad4" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="MN_F" uuid="2102000E-007B-0004-0001-456424e8c758" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="VN_F" uuid="2102000E-007B-0004-0001-52dad5562298" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="VOL_CR_F" uuid="2102000E-007B-0004-0001-653a19c4423b" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="VOL_MAX_F" uuid="2102000E-007B-0004-0001-75dcd5f82e39" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="VOL_DRP_F" uuid="2102000E-007B-0004-0001-87d4f6c25bfc" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S"></ct:object>
+                  <ct:object name="TT9304" uuid="2102000E-007B-0002-0001-18b02c54a46f" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="SKID_START" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="115dee74-166c-44c4-b743-12129d2c2cae"></ct:object>
+                  <ct:object name="SKID_STOP" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="153646b5-ce70-4e6c-a83d-e6cdf7f46e36"></ct:object>
+                  <attribute type="unit.System.Attributes.Description" />
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+          <eip:cip-address-map name="CIP_P0022QL" file="P0022_Atyrau\CIP_P0022QL.xml" uuid="39f53df4-fe50-412c-9c79-06fecc2cf452" />
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+  <ct:object name="Domain.CPC_tree.CPC.P0022.QL" uuid="7b223dc0-353c-4b7b-9a42-c24ee9537d48">
+    <ct:object name="QUALITY_LOOP_B" uuid="dfe50305-2f35-4873-b23b-c031349ca046">
+      <ct:object name="FAN_AB" uuid="2102000E-007B-0012-0002-1a3c4ac34e60" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_SIKN">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FAN_AB</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FAN_AB"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FAN_AB"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <ct:object name="FAN_A" uuid="2102000E-007B-0011-0002-1270da3757c3" aspect="Types.IOS" base-type="unit.Types.СИКН.Вспомсистемы.IOS_UNIT_SIKN">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FAN_A</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FAN_A"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="FAN_A"></attribute>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Вентилятор @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.Type_Object" value="3" />
+          <attribute type="unit.Types.Attributes.VS.Type.Type_Pump" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Type.Type_FAN" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Maint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Stop" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Start" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_SetMaint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_RST" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_ResMaint" value="0" />
+        </ct:object>
+        <ct:object name="FAN_B" uuid="2102000E-007B-0011-0002-299113bc48df" aspect="Types.IOS" base-type="unit.Types.СИКН.Вспомсистемы.IOS_UNIT_SIKN">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FAN_B</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FAN_B"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="FAN_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Вентилятор @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.Type_Object" value="3" />
+          <attribute type="unit.Types.Attributes.VS.Type.Type_Pump" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Type.Type_FAN" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Maint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Stop" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Start" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_SetMaint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_RST" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_ResMaint" value="0" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.System.Attributes.Description" />
+      </ct:object>
+      <ct:object name="ESV0998" uuid="2102000E-007B-0010-0002-17c404d76dd6" aspect="Types.IOS" base-type="unit.Types.СИКН.ЗадвижкаСИКН.IOS_VALVE_SIKN">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ESV0998</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ESV0998"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ESV-0998"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура  @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <attribute type="unit.Types.Attributes.Valve.Cmd.EnableCom_RST" value="0" />
+      </ct:object>
+      <ct:object name="ESV0999" uuid="2102000E-007B-0010-0002-20f374b116ff" aspect="Types.IOS" base-type="unit.Types.СИКН.ЗадвижкаСИКН.IOS_VALVE_SIKN">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ESV0999</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ESV0999"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ESV-0999"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура  @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <attribute type="unit.Types.Attributes.Valve.Cmd.EnableCom_RST" value="0" />
+      </ct:object>
+      <ct:object name="ESD" access-scope="global" access-level="public" base-type="Types.Дискретный параметр.IOS_DP_SBOR" uuid="20870985-e43b-4406-a35f-968b39730fa1">
+        <ct:object name="ESD_ALM" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" aspect="Types.IOS" access-level="public" uuid="036fd683-3e21-4647-83c5-d3556203d764">
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <ct:object name="QAL_GAS_HI" uuid="2102000E-007B-0003-0002-46b076c200d4" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.QAL_GAS_HI</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.QAL_GAS_HI"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="QAL_GAS_HI"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Предельная загазованность в БИК</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="warning.wav" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="2" />
+          </ct:object>
+          <ct:object name="QAL_GAS_HH" uuid="2102000E-007B-0003-0002-13de92e4206f" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.S_QAL_GAS_HH</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.S_QAL_GAS_HH"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="S_QAL_GAS_HH"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийная загазованность в БИК</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="SKID_QAL_CRFIRE" uuid="2102000E-007B-0003-0002-17ce3c260933" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_QAL_CRFIRE</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_QAL_CRFIRE"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="SKID_QAL_CRFIRE"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Отказ СИКН: Пожар в БУ БИК</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="SKID_QAL_FIRE" uuid="2102000E-007B-0003-0002-16f2f4f2b06e" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_QAL_FIRE</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_QAL_FIRE"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="SKID_QAL_FIRE"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Пожар в БИК" />
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="SKID_ESD" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S" uuid="e17b6ac2-92ab-4713-93db-0146cfb3b949">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_ESD</property>
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_ESD</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="ESD"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). S1ESD"></attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="НПС Атырау. СИКН A009" />
+          <attribute type="unit.System.Attributes.Description" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ESD" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="НПС Атырау. СИКН A009" />
+        <ct:object name="TU" uuid="960c4653-b4c0-4715-a0ad-ff42181999a3">
+          <attribute type="unit.System.Attributes.Description" />
+          <ct:object name="RST" uuid="2102000E-007B-000C-0002-1ef49c2f272e" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SY_RST_FA</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SY_RST_FA"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сброс тревог"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="SY_RST_FA" />
+          </ct:object>
+        </ct:object>
+        <attribute type="unit.System.Attributes.Description" />
+      </ct:object>
+      <ct:object name="FCV9304" uuid="2102000E-007B-0018-0002-128604b3e835" aspect="Types.IOS" base-type="unit.Types.СИКН.Регулятор расхода СИКН.IOS_FCV">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FCV9304</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FCV9304"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FCV-9304"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Регулятор @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="HEATER" uuid="2102000E-007B-0011-0002-35c4f5f1bfe2" aspect="Types.IOS" base-type="unit.Types.СИКН.Вспомсистемы.IOS_HEAT_SIKN">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.HEATER</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.HEATER"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="HEATER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Обогреватель @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_SetMaint" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_RST" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_ResMaint" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Type.Type_Heater" value="1" />
+        <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Maint" value="0" />
+      </ct:object>
+      <ct:object name="LS9309A" uuid="2102000E-007B-0003-0002-1fb513af8235" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.LS9309A</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.LS9309A"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LS-9309A"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Выс. уровень пробоотб 1</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="LS9309B" uuid="2102000E-007B-0003-0002-2df4508d2208" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.LS9309B</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.LS9309B"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LS-9309B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Выс. уровень пробоотб 2</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XV9300" uuid="2102000E-007B-0010-0002-32fc3b599672" aspect="Types.IOS" base-type="unit.Types.СИКН.ЗадвижкаСИКН.IOS_VALVE_SIKN">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.XV9300</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.XV9300"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-9300"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура  @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <attribute type="unit.Types.Attributes.Valve.Cmd.EnableCom_RST" value="0" />
+      </ct:object>
+      <ct:object name="XV9301" uuid="2102000E-007B-0010-0002-429b27624b70" aspect="Types.IOS" base-type="unit.Types.СИКН.ЗадвижкаСИКН.IOS_VALVE_SIKN">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.XV9301</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.XV9301"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-9301"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура  @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <attribute type="unit.Types.Attributes.Valve.Cmd.EnableCom_RST" value="0" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="3e01bbb9-9c16-4cf1-8209-09703c463b92">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="PUMP_R" uuid="2102000E-007B-0012-0002-655ed291e326" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_SIKN">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PUMP_R</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PUMP_R"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PUMP_R"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <ct:object name="PU9302A" uuid="2102000E-007B-0011-0002-44111c296397" aspect="Types.IOS" base-type="unit.Types.СИКН.Вспомсистемы.IOS_UNIT_SIKN">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PU9302A</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PU9302A"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PU-9302A"></attribute>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Maint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Stop" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Type.Type_Group" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Start" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_SetMaint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_RST" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_ResMaint" value="0" />
+        </ct:object>
+        <ct:object name="PU9302B" uuid="2102000E-007B-0011-0002-5edfb701adc5" aspect="Types.IOS" base-type="unit.Types.СИКН.Вспомсистемы.IOS_UNIT_SIKN">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PU9302B</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PU9302B"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PU-9302B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.VS.Type.Type_Group" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Type.Type_Pump" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_ResMaint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_RST" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_SetMaint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Start" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Stop" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Maint" value="0" />
+          <attribute type="unit.Types.Attributes.VS.State.EnableSt_Work" value="1" />
+          <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="1" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.System.Attributes.Description" value="Группа @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="REGULATE" uuid="2102000E-007B-0012-0002-80ac83f84e1b" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_RegulateQ">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.REGULATE</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.REGULATE"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="REGULATE"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Режим регулирования изокинетическим расходом @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="SKID_RUN" uuid="2102000E-007B-0012-0002-995d976c9098" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_RUN</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_RUN</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="SKID_START"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.System.Attributes.Description" value="Состояние В работе/Остановлен" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="SKID_MODE" uuid="2102000E-007B-0012-0002-1098848bc3d7" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_AUT">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_STAT</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_STAT"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="SKID_STAT"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.System.Attributes.Description" value="Режим Автотматический/РУЧНОЙ" />
+      </ct:object>
+      <ct:object name="SY_REMOTE" uuid="2102000E-007B-0012-0002-11cb75f00aa7" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_Remote">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SY_REMOTE</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SY_REMOTE"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="SY_REMOTE"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Режим управления СИКН @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="TT9313" uuid="2102000E-007B-0002-0002-1f01d51195e7" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.Schvr_AIR_TEMP</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.Schvr_AIR_TEMP"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">БИК. Температура воздуха @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="50"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="50"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="-50"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-9313" />
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+      </ct:object>
+      <ct:object name="CURR_VOL" uuid="2102000E-007B-0016-0002-187dc15a4b29" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CURR_VOL</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CURR_VOL"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="CURR_VOL"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Задание количества нефти для текущей партии @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="200000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³"></attribute>
+      </ct:object>
+      <ct:object name="FT0383" uuid="2102000E-007B-0002-0002-5744912d734c" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FLW</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FLW"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="БИК. Расход нефти @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="20"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="9"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="3"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="4"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="9"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FT-0383" />
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="NXTB_VOL" uuid="2102000E-007B-0016-0002-269c3412755e" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.NXTB_VOL</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.NXTB_VOL"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="NXTB_VOL"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Количество нефти между датчиками пробоотборника для следующей партии @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="200000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="т"></attribute>
+      </ct:object>
+      <ct:object name="PT9304" uuid="2102000E-007B-0002-0002-6ca14aedada8" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PT9304</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PT9304"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PT-9304"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">БИК. Показ датчика давл нефти @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="2500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="-400"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="1400"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1550"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="3"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        <ct:object name="MAIN" uuid="84a1ba57-be42-4181-8fd7-cf63608bb955">
+          <attribute type="unit.System.Attributes.Description" />
+          <ct:object name="AB" uuid="2102000E-007B-0012-0002-37257916053b" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_SIKN">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PR_PRS12_MAIN_AB</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PR_PRS12_MAIN_AB"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="PR_PRS12_MAIN_AB"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+            <attribute type="unit.System.Attributes.Description" />
+          </ct:object>
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+      </ct:object>
+      <ct:object name="TU" uuid="5e2fdce0-c51d-49ae-99b4-a5712cf67541">
+        <attribute type="unit.System.Attributes.Description" />
+        <ct:timer name="Timer" period="10000" uuid="a97369f0-fbe9-4d10-92c5-7964f349b4cd" />
+        <ct:handler name="IZMP1" access-level="public" uuid="3e3407c1-5a63-43f9-a167-006c0c168fd8">
+          <ct:trigger on="Timer" cause="change" />
+          <property name="source-code">if ((Ref_Replication_This.Role.Value == 2) &amp;&amp; (Ref_Replication_This.Role.Quality &gt;= 192) &amp;&amp; ModState.Connected) 
+{SY_WATCHDOG_TO.CMD = true;}</property>
+        </ct:handler>
+        <ct:object name="SY_WATCHDOG_TO" uuid="2102000E-007B-000C-0002-1000c3b4f3ec" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SY_WATCHDOG_TO</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SY_WATCHDOG_TO"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Мониторинг связи с СИКН</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="SY_WATCHDOG_TO" />
+        </ct:object>
+        <ct:object name="SKID_START" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="dfe34d2a-09c5-4cb9-9444-15c288c26757">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_START</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_START</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Команда запуска СИКН в авто режиме</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="SKID_START" />
+        </ct:object>
+        <ct:object name="SKID_STOP" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD" uuid="87eae855-755f-4a82-8c58-cc19d115973a">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_STOP</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SKID_STOP</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Останов СИКН"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="SKID_STOP" />
+        </ct:object>
+        <r:subject-ref name="ModState" uuid="3140ec40-3ea6-4048-941c-053755c8c48b" object="CPC_tree.Service.Modules.CIP_P0022.P0022QL.P0022QL_CPU.Status" />
+        <r:subject-ref name="Ref_Replication_This" object="CPC_tree.Service.Replication.This" uuid="2af131d4-dc86-4a33-bfee-77175d9d6898" />
+      </ct:object>
+      <ct:object name="RATIO" uuid="2102000E-007B-0016-0002-37d4ef3734d9" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.RATIO</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.RATIO"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="RATIO"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Коэффициент изокинетичности @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="200000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+      </ct:object>
+      <ct:object name="RES_VOL" uuid="2102000E-007B-0016-0002-42c4f31c0f81" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.RES_VOL</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.RES_VOL"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="RES_VOL"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Заданное количество нефти следующей партии для резервного пробоотборника @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="200000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³"></attribute>
+      </ct:object>
+      <ct:object name="VOL_PCUR" uuid="2102000E-007B-0016-0002-515a08c0c55c" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_PCUR</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_PCUR"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="VOL_PCUR"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Количество нефти между датчиками пробоотборника для текущей партии</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="200000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³"></attribute>
+      </ct:object>
+      <ct:object name="VOL_PULS" uuid="2102000E-007B-0016-0002-6d4aa22ff23d" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_PULS</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_PULS"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="VOL_PULS"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Кол н м/у доз пробоотборника для текущей партии @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³"></attribute>
+      </ct:object>
+      <ct:object name="VOL_TOT" uuid="2102000E-007B-0016-0002-77ac23d140c3" aspect="Types.IOS" base-type="Types.Уставка.IOS_SP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_TOT</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_TOT"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="VOL_TOT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Пробоотборник: FC объем в сутки"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="т"></attribute>
+      </ct:object>
+      <ct:object name="PDT0998" uuid="2102000E-007B-0002-0002-142782c8873c" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PDT0998</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PDT0998"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PDT-0998"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">БИК. Переп давл на фильтре @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="-10"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="90"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="100"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-10"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="TT0998" uuid="2102000E-007B-0004-0002-3268a1d2d7d8" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PR_TMP2</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PR_TMP2"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0998"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">БИК. Температура нефти @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-5" />
+      </ct:object>
+      <ct:object name="PT0998" uuid="2102000E-007B-0002-0002-156a1182429e" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PT0998</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PT0998"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PT-0998"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">БИК. Показ датчика давл нефти @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="2500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="-400"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="2400"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="2500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="3"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-500"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="CR_TEMP" uuid="2102000E-007B-0002-0002-16d711208919" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT9313</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT9313"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-9313"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">БИК. Температура в Блоке управления @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="50"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="50"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="-50"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+      </ct:object>
+      <ct:object name="FT9306" uuid="2102000E-007B-0002-0002-17564d855d4f" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+        <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FT9306</property>
+        <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FT9306"></r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FT-9306"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">БИК. Расход нефти в трубопроводе @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="20"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="6000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        <ct:object name="DS" base-type="unit.Types.Дискретный параметр.IOS_DP_SBOR" aspect="unit.Types.IOS" uuid="969ebfed-d293-49e4-bc9d-26ea4af31866">
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="DS" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+          <attribute type="unit.System.Attributes.Description" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(parent:unit.Types.Attributes.Common.DescriptionRUS)" />
+          <ct:object name="ISOKINET" uuid="2102000E-007B-0003-0002-3ef7acda76a4" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FLW_ISOKINET</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.FLW_ISOKINET"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="FLW_ISOKINET"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Расход нефти в БИК"></attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+      </ct:object>
+      <ct:object name="BSW" uuid="b748e14d-92b8-4345-9728-a451bc2d9799">
+        <attribute type="unit.System.Attributes.Description" />
+        <ct:object name="A" uuid="2102000E-007B-0002-0002-2ad5a57a8a4a" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_A</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_A"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Влагомер А @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="2"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="%"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="-10000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1000000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-10000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="BSW-9307A" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+          <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+        </ct:object>
+        <ct:object name="B" uuid="2102000E-007B-0002-0002-34ada94bd7a9" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_B</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_B"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Влагомер В @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="2"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="%"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="-10000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-10000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="BSW-9307B" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+          <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+        </ct:object>
+        <ct:object name="MAIN" uuid="2102000E-007B-0002-0002-992d5bcfe357" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_MAIN</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_MAIN"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">БИК. Показание осн влагомера @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="2"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="%"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="-10000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-10000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <ct:object name="AB" uuid="2102000E-007B-0012-0002-4b3e1433f91a" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_SIKN">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_MAIN_AB</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BSW_MAIN_AB"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="BSW_MAIN_AB"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">Смена основного датчика влагомера @(object:unit.Types.Attributes.Common.Sign)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.SIKN.B_false" value="true" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="BSW" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="DNS" uuid="8717588a-d674-4c18-ae8c-c80faf009bcf">
+        <attribute type="unit.System.Attributes.Description" />
+        <ct:object name="A" uuid="2102000E-007B-0002-0002-4140913f1372" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.DNS_A</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.DNS_A"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Плотномер А @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="1000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="870"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кг/м³"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="750"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="850"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="870"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="750"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="750"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="DT-9305A" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+        <ct:object name="B" uuid="2102000E-007B-0002-0002-10dd679ed0eb" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.DNS_MAIN</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.DNS_MAIN"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Плотномер В @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="1000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="870"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кг/м³"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="750"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="850"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="870"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="750"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="750"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="DT-9305B" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+        <ct:object name="MAIN" uuid="bbf1c5cf-3afd-4bd9-b547-b959853aa4f9">
+          <attribute type="unit.System.Attributes.Description" />
+          <ct:object name="AB" uuid="2102000E-007B-0012-0002-5e63a03124dc" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_SIKN">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.DNS_MAIN_AB</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.DNS_MAIN_AB"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="DNS_MAIN_AB"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+            <attribute type="unit.System.Attributes.Description" value="Смена плотномера А/В @(object:unit.Types.Attributes.Common.Sign)" />
+            <attribute type="unit.Types.Attributes.SIKN.B_false" value="true" />
+          </ct:object>
+        </ct:object>
+      </ct:object>
+      <ct:object name="QAL_MASS" uuid="ca8c2ed5-8eaf-481f-9e2e-5f12b80d7c31">
+        <attribute type="unit.System.Attributes.Description" />
+        <ct:object name="A" uuid="2102000E-007B-0004-0002-154587a263ba" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.WT9308A</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.WT9308A"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="WT-9308A"></attribute>
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">Масса неф в емк пробоотбор A @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кг"></attribute>
+          <ct:object name="DS" base-type="unit.Types.Дискретный параметр.IOS_DP_SBOR" aspect="unit.Types.IOS" uuid="d773f488-62e7-4d3d-b528-1cda365fac36">
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+            <ct:object name="F4" uuid="2102000E-007B-0003-0002-149194ea030d" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="ADS_F"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Пробоотборник А Отказ</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F0" uuid="2102000E-007B-0003-0002-50a1457d0e90" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F0</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F0"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="ADS_F0"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Недопустимое соотношение п/ф</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F1" uuid="2102000E-007B-0003-0002-6cef16429b3f" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F1</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F1"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="ADS_F1"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Показания весов не менялись</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F2" uuid="2102000E-007B-0003-0002-747356c67c9e" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F2</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F2"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="ADS_F2"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Ёмкость переполнена" />
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F3" uuid="2102000E-007B-0003-0002-8769a986aac9" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F3</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.ADS_F3"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="ADS_F3"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Прервано пользователем</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <attribute type="unit.System.Attributes.Description" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(parent:unit.Types.Attributes.Common.DescriptionRUS)" />
+          </ct:object>
+          <ct:object name="ACTV" uuid="2102000E-007B-0003-0002-18a90e836ccc" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SAMP_1_ACTV</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SAMP_1_ACTV"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="SAMP_1_ACTV"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Активный_пробоотборник_А/В</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60" />
+        </ct:object>
+        <ct:object name="ATU" uuid="10ee575c-63ca-4ff8-8c7e-48b8e76245eb">
+          <attribute type="unit.System.Attributes.Description" />
+          <ct:object name="RSET" uuid="2102000E-007B-000C-0002-297ef4e652ae" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.A_RSET</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.A_RSET"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к A. Сброс отказы и деблок</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="RSET" />
+          </ct:object>
+          <ct:object name="AB" uuid="2102000E-007B-000C-0002-404f176f1d9b" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_A_AB</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_A_AB"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к A. Авар прерв отбор пробы</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="AB" />
+          </ct:object>
+          <ct:object name="RS" uuid="2102000E-007B-000C-0002-5e82c7151a53" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_A_RS</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_A_RS"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к A. Исп перевести в резер</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="RS" />
+          </ct:object>
+          <ct:object name="US" uuid="2102000E-007B-000C-0002-630265894596" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_A_US</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_A_US"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к A. Установить как использ</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="US" />
+          </ct:object>
+        </ct:object>
+        <ct:object name="BTU" uuid="29cf17e5-fb36-4533-8bb4-2c5e4337a22a">
+          <attribute type="unit.System.Attributes.Description" />
+          <ct:object name="AB" uuid="2102000E-007B-000C-0002-7722565164c0" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_B_AB</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_B_AB"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к В. Авар прерв отбор пробы</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="AB" />
+          </ct:object>
+          <ct:object name="RS" uuid="2102000E-007B-000C-0002-8b11c936d222" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_B_RS</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_B_RS"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к В. Исп перевести в резер</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="RS" />
+          </ct:object>
+          <ct:object name="US" uuid="2102000E-007B-000C-0002-911a68de4b24" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_B_US</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.CAN_B_US"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к В. Установить как использ</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="US" />
+          </ct:object>
+          <ct:object name="RSET" uuid="2102000E-007B-000C-0002-32a0457b6a0a" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.B_RSET</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.B_RSET"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Проб-к В. Сброс отказы и деблок</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="RSET" />
+          </ct:object>
+        </ct:object>
+        <ct:object name="ACTIV" base-type="unit.Types.Дискретный параметр.IOS_DP_SBOR" aspect="unit.Types.IOS" uuid="856bb921-1d6d-4f19-b721-840c39520a55">
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="ACTIV" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+          <ct:object name="VOL_CR_F" uuid="2102000E-007B-0004-0002-6415aceb3917" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_CR_F</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_CR_F"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="VOL_CR_F"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">Объём нефти фактический в ёмкости @(object:unit.Types.Attributes.Common.Sign)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="л"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+          </ct:object>
+          <ct:object name="VN_F" uuid="2102000E-007B-0004-0002-50fa6cd13a62" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VN_F</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VN_F"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="VN_F"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">Объём нефти плановый в ёмкости @(object:unit.Types.Attributes.Common.Sign)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="л"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+          </ct:object>
+          <ct:object name="VOL_DRP_F" uuid="2102000E-007B-0004-0002-89d63f1b24eb" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_DRP_F</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_DRP_F"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="VOL_DRP_F"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="Объём одной дозы @(object:unit.Types.Attributes.Common.Sign)" />
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мл"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+          </ct:object>
+          <ct:object name="VOL_MAX_F" uuid="2102000E-007B-0004-0002-779593026674" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_MAX_F</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.VOL_MAX_F"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="VOL_MAX_F"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="Ёмкость @(object:unit.Types.Attributes.Common.Sign)" />
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="л"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+          </ct:object>
+          <ct:object name="MN_F" uuid="2102000E-007B-0004-0002-4d962bc7d122" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.MN_F</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.MN_F"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="MN_F"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">Масса нефти по плану в ёмкости @(object:unit.Types.Attributes.Common.Sign)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кг"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60" />
+          </ct:object>
+          <attribute type="unit.System.Attributes.Description" />
+        </ct:object>
+        <ct:object name="B" uuid="2102000E-007B-0004-0002-2d4188f4a54b" aspect="Types.IOS" base-type="Types.Простой аналоговый параметр.IOS_AP_S">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.WT9308B</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.WT9308B"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="WT-9308B"></attribute>
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">Масса неф в емк пробоотбор B @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кг"></attribute>
+          <ct:object name="DS" base-type="unit.Types.Дискретный параметр.IOS_DP_SBOR" aspect="unit.Types.IOS" uuid="d6e4fbeb-d786-4b5a-8002-1f1ab3799e74">
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+            <ct:object name="F4" uuid="2102000E-007B-0003-0002-15b83fda3a38" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="BDS_F"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Пробоотборник B Отказ</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F0" uuid="2102000E-007B-0003-0002-9ce9526cc194" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F0</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F0"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="BDS_F0"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Недопустимое соотношение п/ф</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F1" uuid="2102000E-007B-0003-0002-1042e76d521d" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F1</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F1"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="BDS_F1"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Показания весов не менялись</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F2" uuid="2102000E-007B-0003-0002-1118ce4e0e48" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F2</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F2"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="BDS_F2"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Ёмкость переполнена" />
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="F3" uuid="2102000E-007B-0003-0002-122f86ed910b" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F3</property>
+              <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.BDS_F3"></r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="BDS_F3"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Прервано пользователем</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <attribute type="unit.System.Attributes.Description" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(parent:unit.Types.Attributes.Common.DescriptionRUS)" />
+          </ct:object>
+          <ct:object name="ACTV" uuid="2102000E-007B-0003-0002-19d1ca68b5af" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SAMP_2_ACTV</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.SAMP_2_ACTV"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="SAMP_2_ACTV"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Активный_пробоотборник_А/В</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60" />
+        </ct:object>
+        <ct:object name="MAIN" uuid="ee5d7cb3-39ce-400a-a20f-b49140c7e648">
+          <attribute type="unit.System.Attributes.Description" />
+          <ct:object name="AB" uuid="2102000E-007B-0012-0002-203fda36cb15" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_SIKN">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.QAL_MASS_AB</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.QAL_MASS_AB"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="QAL_MASS_AB"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">Смена пробоотборника А/В @(object:unit.Types.Attributes.Common.Sign)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.SIKN.B_false" value="true" />
+          </ct:object>
+        </ct:object>
+      </ct:object>
+      <ct:object name="PRM_VSC" uuid="cd1d7640-506c-4f4f-a2da-b67c32baee1a">
+        <attribute type="unit.System.Attributes.Description" />
+        <ct:object name="MAIN" uuid="2102000E-007B-0002-0002-11824faf2925" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PRM_VSC_MAIN</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PRM_VSC_MAIN"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">Показание вискозиметра (основной) @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="200000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="6"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сСт"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="6"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <ct:object name="AB" uuid="2102000E-007B-0012-0002-7f8bc29b7bbc" aspect="Types.IOS" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.IOS_PRIM_SIKN">
+            <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PRM_VSC_AB</property>
+            <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.PRM_VSC_AB"></r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="PRM_VSC_AB"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">Смена вискозиметра А/В @(object:unit.Types.Attributes.Common.Sign)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.SIKN.B_false" value="true" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PRM_VSC" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+        <ct:object name="A" uuid="2102000E-007B-0002-0002-12754594f8f4" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.AT9304A</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.AT9304A"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="AT-9304A"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Вискозиметр A @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="200000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="6"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сСт"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="6"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+        <ct:object name="B" uuid="2102000E-007B-0002-0002-13f9079c0119" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.AT9304B</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.AT9304B"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="AT-9304B"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Вискозиметр B @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="200000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="6"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сСт"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="6"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="PR_TMP" uuid="d3b6c290-39b3-450a-b3e7-720c1bc04b99">
+        <ct:object name="MAIN" uuid="2102000E-007B-0002-0002-8e968f75b327" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT0998</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT0998"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PR_TMP"></attribute>
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">БИК. Показ датчика темп нефти @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="60"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="49"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="50"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="-5"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+        <ct:object name="A" uuid="2102000E-007B-0002-0002-7ac8f91d05c1" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT9303</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT9303"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="TT-9303"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Температура нефти А @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="60"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="49"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="50"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="-5"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+        <ct:object name="B" uuid="2102000E-007B-0002-0002-18eb60a8c568" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+          <property name="original">PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT9304</property>
+          <r:init-ref ref="Reference" target="PLC_P0022.P0022QL.P0022QL.P0022QL_CPU.P0022QL.CPC.P0022.QL.QUALITY_LOOP_B.TT9304"></r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_QUALITY_LOOP_B"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022QL"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="TT-9304"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Температура нефти В @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="60"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="49"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="50"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="-5"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+          <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+        </ct:object>
+      </ct:object>
+      <attribute type="unit.System.Attributes.Description" />
+    </ct:object>
+  </ct:object>
+</omx>

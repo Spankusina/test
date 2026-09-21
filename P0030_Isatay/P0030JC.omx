@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <plc:plc name="PLC_P0030.P0030JC" uuid="812bb4a8-77de-4133-8e88-807fc7d86f49">
+    <plc:crate name="P0030JC" uuid="f8cd43a9-49fe-426c-907c-9735bbc60424">
+      <plc:cpu name="P0030JC_CPU" uuid="313e6756-c943-471f-82c4-df6bd58bb7f1">
+        <eth:ethernet-adapter name="P0030JC_Eth1" address="11.140.39.1" network="Ethernet1" uuid="452f1290-d14d-4b3c-9ba6-92aa5e7237af">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.166" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0030JC_Eth2" address="11.140.39.129" network="Ethernet2" uuid="576fb607-acb0-442c-991a-1c7a94b65848">
+          <attribute type="unit.System.Attributes.Comment" value="11.140.39.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0030JC_EIPAdapter" address-map="P0030JC_CPU.P0030JC.CIP_P0030JC" route="backpane;0" uuid="40f01c6c-0806-4793-af5c-a48df473c44c" />
+        <dp:application-object name="P0030JC" uuid="00a18632-7372-4d20-9adf-8f600ceb6708">
+          <ct:object name="CPC" uuid="56115560-6b5a-4e2b-b05f-9efe4954b9d5">
+            <ct:object name="P0030" uuid="f6100b6e-bca6-4759-9b54-5cbd4fe75829">
+              <ct:object name="JC" uuid="eaf9e2c2-b3d1-479f-9c61-4b0eb6f9b163">
+                <ct:object name="EXT_WATER_SUPPLY" uuid="2977ae62-2c7f-4bfc-993f-99741f4b0305">
+                  <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="Types.PCL" uuid="652c9e50-2510-4f7d-90ca-6ef9d6958cbf" />
+                  <ct:object name="LT_1_1" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="b8a05bb7-74c1-4336-b0e8-ba86bf5b5bc2" />
+                  <ct:object name="LT_1_2" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="c539043a-19d9-49bd-bbc7-2932e6e85c6f" />
+                  <ct:object name="LT_3_1" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="9e194ebb-b37f-482c-a0a8-d1e86934fd1b" />
+                  <ct:object name="LT_3_2" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="4f7e9e9c-a93e-4527-a965-f3607eeae875" />
+                  <ct:object name="TQ_1" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="33092aa1-3f96-4750-a236-751176378b6c" />
+                  <ct:object name="FT_2" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="a2a2189c-7ec0-4777-841a-d26441f40ac7" />
+                  <ct:object name="PT_1" base-type="Types.Аналоговый параметр.M_AP" aspect="Types.PCL" uuid="35acc3cf-a34f-4eed-948c-2b63054d3cf6" />
+                  <ct:object name="UA0101" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="393eb48d-01ea-410a-853a-f11b56422a4b" />
+                  <ct:object name="HS_4_3_1" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="63a358e4-2838-49ad-b9f4-eed552ae3332" />
+                  <ct:object name="HS_4_3_2" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="035a9416-d472-429b-a8be-8ba5ea32109c" />
+                  <ct:object name="XVV10" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" aspect="Types.PCL" uuid="4d33cc0c-1585-471e-92dc-4aeec45ce71f" />
+                  <ct:object name="XVV11" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" aspect="Types.PCL" uuid="d825c061-8f69-44d7-8e84-1388513ff07d" />
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+          <eip:cip-address-map name="CIP_P0030JC" file="P0030_Isatay\CIP_P0030JC.xml" uuid="926bb955-919a-42a8-adec-1d9f683d8063" />
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+  <ct:object name="Domain.CPC_tree.CPC.P0030.JC" uuid="7363f5c1-36ce-499c-9c3e-fc4b5d4738fc">
+    <attribute type="unit.System.Attributes.Description" />
+    <ct:object name="EXT_WATER_SUPPLY" uuid="3a1d3089-f3d5-44b4-9591-2dc75bdb343f">
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="00e81deb-4773-4cdb-82e8-bbba9778ea83">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" access-level="public" uuid="05350eb2-9c7d-413a-afff-c53e8ee4cab5">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.TT0001</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Температура в блок-боксе @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0001" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.TT0001</property>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="400" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+      </ct:object>
+      <ct:object name="LT_1_1" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="bf16f463-36ba-4fde-99c4-52bd6127d5b8">
+        <attribute type="unit.System.Attributes.Description" value="Уровень в резервуаре исходной воды 1.1" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LT-1_1" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_1_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_1_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="1000" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="400" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1850" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="1800" />
+      </ct:object>
+      <ct:object name="LT_1_2" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="5da1a1f1-3092-49db-aafa-baad44bf5049">
+        <attribute type="unit.System.Attributes.Description" value="Уровень в резервуаре исходной воды 1.2" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LT-1_2" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_1_2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_1_2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="1000" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="400" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1850" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="1800" />
+      </ct:object>
+      <ct:object name="LT_3_1" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="0919f8f0-f2c8-4396-b1e2-336662ad68d0">
+        <attribute type="unit.System.Attributes.Description" value="Уровень в резервуаре очищенной воды 3.1" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LT-3_1" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_3_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_3_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="1000" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="400" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1850" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="1800" />
+      </ct:object>
+      <ct:object name="LT_3_2" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="df148aa3-af93-484d-8749-aea30d8f03ec">
+        <attribute type="unit.System.Attributes.Description" value="Уровень в резервуаре очищенной воды 3.2" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LT-3_2" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_3_2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.LT_3_2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="2110" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="1000" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="400" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="1850" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="1800" />
+      </ct:object>
+      <ct:object name="FT_2" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="b1699673-fafe-4065-8edc-e94a20f25cd5">
+        <attribute type="unit.System.Attributes.Description" value="Расход очищенной воды" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FT-2" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.FT_2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.FT_2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="18" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="-0.5" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-0.5" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="5" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="3" />
+      </ct:object>
+      <ct:object name="PT_1" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="475bb321-5691-4b9d-b88a-aec8134368d5">
+        <attribute type="unit.System.Attributes.Description" value="Давление после УУФОВ" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LT-3_2" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="Бар" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.PT_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.PT_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="10" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="1.5" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="1" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="3.5" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="3" />
+      </ct:object>
+      <ct:object name="TQ_1" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" access-level="public" uuid="f9203ff5-53b4-48c7-b927-0960cb722939">
+        <attribute type="unit.System.Attributes.Description" value="Остаточный хлор в воде" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LT-3_2" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мг/ч" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.TQ_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.TQ_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="10" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="false" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="-10" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-10" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0.7" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="0.6" />
+      </ct:object>
+      <ct:object name="UA0101" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="443ebee3-d4d1-437f-942b-6c937f728ec2">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.UA0101</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UA-0101" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неисправность системы</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.UA0101</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="HS_4_3_1" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="c639d72d-aff5-442c-8b07-12607d9d8da1">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="HS-4_3_1" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Выпрямитель гидрохлорида 4.3.1 включен</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.HS_4_3_1</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.HS_4_3_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Need_kvit_OFF" value="0" />
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+        <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+      </ct:object>
+      <ct:object name="HS_4_3_2" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="6b58e8d7-02ca-47d0-95d6-1f53fe1c10d1">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="HS-4_3_2" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Выпрямитель гидрохлорида 4.3.2 включен</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.HS_4_3_2</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.HS_4_3_2</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Need_kvit_OFF" value="0" />
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+        <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+      </ct:object>
+      <ct:object name="XVV10" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" access-scope="global" aspect="Types.IOS" access-level="public" uuid="b829cc2a-16d5-4ef0-8bdc-cb43b2886514">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.XVV10</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-1.0" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.XVV10</property>
+      </ct:object>
+      <ct:object name="XVV11" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" access-scope="global" aspect="Types.IOS" access-level="public" uuid="03a93263-f4bd-408c-b0fa-ca8b3e2c69b0">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.XVV11</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0030JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0030_EXT_WATER_SUPPLY" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-1.1" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0030_O" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <property name="original">PLC_P0030.P0030JC.P0030JC.P0030JC_CPU.P0030JC.CPC.P0030.JC.EXT_WATER_SUPPLY.XVV11</property>
+      </ct:object>
+    </ct:object>
+  </ct:object>
+</omx>

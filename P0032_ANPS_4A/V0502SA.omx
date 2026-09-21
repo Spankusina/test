@@ -1,0 +1,1333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:r="automation.reference" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet">
+  <ct:object name="Domain.CPC_tree.CPC.P0032_LTM.V0502SA" uuid="97766c41-5ae6-4d1b-aeac-6b2ac7dde30f">
+    <ct:object name="ELEC" access-scope="global" access-level="public" uuid="cdab9b20-8ed7-4ad8-be50-1420441ebaf5">
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="97ea3d1a-b638-4872-9da6-58d86b90fee8">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="ET9001" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="14f6038a-0fe1-4d0f-b47d-48506aeb7c07">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9001</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ET-9001" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Потенциал труба-земля @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="В" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9001</property>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0.3" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="3.5" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="0.9" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="10" />
+      </ct:object>
+      <ct:object name="ET9002" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="3fe95caf-aaa4-467b-b83b-2a8556d4fa51">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9002</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ET-9002" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Система КЗ. Напряжение @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="В" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9002</property>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="60" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="40" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+      </ct:object>
+      <ct:object name="ET9022" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="9263c5f1-b33a-4e8b-9dda-24796d454bd4">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9022</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ET-9022" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Батарея 48В. Напряжение @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="В" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9022</property>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="42" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="58" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="55" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="45" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="60" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="60" />
+      </ct:object>
+      <ct:object name="ET9023" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="4d84c2e9-3b65-40c7-b692-7b84eef9307b">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9023</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ET-9023" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Батарея ИБП. Напряжение @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="В" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9023</property>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="500" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="500" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="204" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="240" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="246" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="2" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="198" />
+      </ct:object>
+      <ct:object name="ET9024" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="8dc921eb-5e74-46d8-bac6-8066ed7f8505">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9024</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ET-9024" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Линия 380В. Напряжение @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="В" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="false" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="415" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="415" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="4" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="true" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="350" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="100" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="415" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="415" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="66" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9024</property>
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="HVAC9070" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="cd2878ad-010d-40d3-a4fb-455413aaa483">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.HVAC9070_H</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="HVAC-9070" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Нагреватель ОВКВ включен</property>
+        </attribute>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.HVAC9070_H</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Type.Type_Pump" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Mode_other.EnableAnalog_WorkTimeDay" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Mode_other.EnableAnalog_WorkTime" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Type.Type_Heater" value="1" />
+      </ct:object>
+      <ct:object name="IT9002" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="bdf43935-0f38-4f8e-8eb4-6cb5f348fbd1">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.IT9002</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="IT-9002" />
+        <attribute type="unit.System.Attributes.Description" value="Система КЗ. Ток @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="А" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.IT9002</property>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="50" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="100" />
+      </ct:object>
+      <ct:object name="IT9024" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="a1fca6b9-7ce0-4469-b4b4-ff6aab194b5f">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.IT9024</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="IT-9024" />
+        <attribute type="unit.System.Attributes.Description" value="Линия 380В. Ток @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="100" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="А" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="20" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="38" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="True" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="True" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.IT9024</property>
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="TT9020" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="e4aebfa7-3d71-48c8-bd2e-af1b01b6acc0">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TT9020</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-9020" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Температура в блок-боксе @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="100" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="50" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°С" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="5" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="30" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="35" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True" />
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="True" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="True" />
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="1.5" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-30" />
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="-30" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TT9020</property>
+        <attribute type="unit.Types.Attributes.AP.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="TT9020_rSP" base-type="Types.Уставка.IOS_SP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="7bf0b750-0a4b-42b1-80f9-289292fd8d87">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TT9020_rSP</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-9020_rSP" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Уставка температуры в блок-боксе @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°С" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TT9020_rSP</property>
+      </ct:object>
+      <ct:object name="TT9022" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="db23740c-9f78-4593-bc82-fc78ad649427">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TT9022</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-9022" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Батарея 48В. Температура @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°С" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TT9022</property>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="35" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="30" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="5" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="1.5" />
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="-30" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-30" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="50" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="50" />
+      </ct:object>
+      <ct:object name="UA9037" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="a383e405-31e0-4dad-8a64-fcc737b8a8bc">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.UA9037</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UA-9037" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неисправность преобразователя 48/24В</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.UA9037</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XI9001_ACC" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="e23b45af-be37-43d3-8d81-c872f565c33c">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XI9001_ACC</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XI-9001_ACC" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Время работы КЗ за сутки @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="ч" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XI9001_ACC</property>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100000" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="XI9001_RACC" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="1fbbf927-6a0a-4e30-9cbe-802ba39d2bf6">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XI9001_RACC</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XI-9001_RACC" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Общее время работы КЗ @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="ч" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XI9001_RACC</property>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="200000" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="XSA9000" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="6e99b827-f45c-4a08-a5d1-446d66a4e36f">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XSA9000</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XSA-9000" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Включить режим ''Автоматический'' для 5-ти выключателей</property>
+        </attribute>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XSA9000</property>
+      </ct:object>
+      <ct:object name="XSM9000" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="82caa84d-7ed2-4b4c-b174-9547cc36199e">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XSM9000</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XSM-9000" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Включить режим ''Ручной'' для 5-ти выключателей</property>
+        </attribute>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.XSM9000</property>
+      </ct:object>
+      <ct:object name="YS9010" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="236f2d08-86bc-4404-9c24-663bb4ebe24c">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9010</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9010" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Сирена в шелтере включена</property>
+        </attribute>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9010</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="UA9002" uuid="191f105a-3291-4ac1-b7d0-0b0c78e60504" base-type="unit.Types.Простой дискретный параметр.IOS_DP_S" aspect="Types.IOS">
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.UA9002</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.UA9002</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неисправность системы КЗ</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UA-9002" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+      </ct:object>
+      <ct:object name="9030" base-type="Types.Телемеханика.IOS_BREAKER_MLBV_ACCB1" access-scope="global" access-level="public" uuid="8633e344-80a4-43ec-8477-2bbac88f7b30">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9030</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ACCB1" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Выключатель 380В" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <ct:object name="DS" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" access-level="public" uuid="2b848bcb-55c8-439a-9a58-825b9fc2a8a4">
+          <ct:object name="ET9024_ALS" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" access-level="public" uuid="ebcc7d83-038d-44f0-8429-1c306395b960">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9024_ALS</property>
+            </r:init-ref>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Разгрузка по низкому напряжению</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="ET-9024_ALS" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ET9024_ALS</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="ACCB1_INDEFINITE" base-type="unit.Types.Простой дискретный параметр.IOS_DP_S" aspect="unit.Types.IOS" uuid="2de876a3-6493-4395-938d-c6176a1fbfe8">
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ACCB1_INDEFINITE</property>
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ACCB1_INDEFINITE</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+              <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="ACCB1-INDEFINITE" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неопределённое положение</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="false" />
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="IT9024_ALS" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" access-level="public" uuid="8ef57aa6-accc-40f0-9dc7-adf477d2043c">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.IT9024_ALS</property>
+            </r:init-ref>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Разгрузка по высокому току</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="IT-9024_ALS" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.IT9024_ALS</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="YS9030_INH" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="3516199c-bc04-4872-8dc4-43fa748747c4">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9030_INH</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9030_INH" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). 380В ACCB1 запрет замыкания</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9030_INH</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="YST9030_ALS" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="ef4aa27e-c742-44d3-82de-1cd746b5273a">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YST9030_ALS</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="YST-9030_ALS" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Линия 380В отключена</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YST9030_ALS</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description" />
+        </ct:object>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9030</property>
+        <attribute type="unit.Types.Attributes.Electric.Open_Close" value="false" />
+      </ct:object>
+      <ct:object name="9002" base-type="Types.Телемеханика.IOS_BREAKER_MLBV_XSA" access-scope="global" aspect="Types.IOS" access-level="public" uuid="a3f862d8-22af-4eaa-a64f-476eeb5969af">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9002</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ACCB7" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Выключатель СКЗ" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9002</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="3" />
+        <attribute type="unit.Types.Attributes.Electric.Open_Close" value="false" />
+        <ct:object name="DS" base-type="Types.Дискретный параметр.IOS_DP_SBOR" uuid="97ed266e-a8ad-4fab-9066-5a4ffefcf838">
+          <ct:object name="YS9002_ALS" uuid="95fdf39e-995d-47a5-8f7c-7878a6c9b20d" base-type="unit.Types.Простой дискретный параметр.IOS_DP_S" aspect="Types.IOS">
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9002_ALS</property>
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9002_ALS</property>
+            </r:init-ref>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Система КЗ отключена при разгрузке</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9002_ALS" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+              <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="9022" base-type="Types.Телемеханика.IOS_BREAKER_MLBV_48" access-scope="global" access-level="public" uuid="7117a1cf-9174-474b-bda2-7c72cd79295f">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9022</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="DCCB3" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Выключатель 48В" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9022</property>
+      </ct:object>
+      <ct:object name="9023" base-type="Types.Телемеханика.IOS_IBP_MLBV_2" access-scope="global" access-level="public" uuid="fa4df8d3-47cb-4450-8482-8f6cd9952799">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9023</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Инвертор" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UPS 1" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9023</property>
+      </ct:object>
+      <ct:object name="9035" base-type="Types.Телемеханика.IOS_BREAKER_MLBV_XSA" access-scope="global" access-level="public" uuid="3d85e4da-f539-4224-a20a-fcee5aacaef7">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9035</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="DCCB1" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Выпрямитель 1. Выключатель</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9035</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="3" />
+        <attribute type="unit.Types.Attributes.Electric.Open_Close" value="false" />
+        <ct:object name="DS" base-type="Types.Дискретный параметр.IOS_DP_SBOR" uuid="5bce5e04-1a53-479b-b1b3-ebb1fd7a4d90">
+          <attribute type="unit.System.Attributes.Description" />
+          <ct:object name="YS9035_ALS" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="9878ef1b-8ec4-4633-9402-3e452cf6d58a">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9035_ALS</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9035_ALS" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). ЗУ батареи 48В отключено при разгрузке</property>
+            </attribute>
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9035_ALS</property>
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="Неисправности выпрямителей" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="UA" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="9036" base-type="Types.Телемеханика.IOS_BREAKER_MLBV_XSA" access-scope="global" access-level="public" uuid="aba967e9-07e9-4448-b419-693446a4f201">
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Выпрямитель 2. Выключатель</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="DCCB2" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9036</property>
+        </r:init-ref>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9036</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="3" />
+        <attribute type="unit.Types.Attributes.Electric.Open_Close" value="false" />
+      </ct:object>
+      <ct:object name="9040" base-type="Types.Телемеханика.IOS_BREAKER_MLBV" access-scope="global" access-level="public" uuid="54d63c4d-e4bd-49b0-8376-f90d5836e618">
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Реклоузер" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="P1-502" />
+        <ct:object name="DS" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" access-level="public" uuid="cf7810a1-8792-413c-a338-8f6c4d3fc221">
+          <ct:object name="ESL9040" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="368e41b6-9d24-4e6c-844b-28a72df399a8">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ESL9040</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="ESL-9040" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Потеря напряжения" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ESL9040</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description" />
+        </ct:object>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9040</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="3" />
+        <attribute type="unit.Types.Attributes.Electric.Two_State_bit" value="false" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9040</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Electric.Open_Close" value="false" />
+      </ct:object>
+      <ct:object name="9070" base-type="Types.Телемеханика.IOS_BREAKER_MLBV_XSA" access-scope="global" access-level="public" uuid="b3f0176c-537a-470f-8d94-23771502db4a">
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Выключатель ОВКВ" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ACCB8" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9070</property>
+        </r:init-ref>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9070</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="3" />
+        <attribute type="unit.Types.Attributes.Electric.Open_Close" value="false" />
+        <ct:object name="DS" base-type="Types.Дискретный параметр.IOS_DP_SBOR" uuid="bb215790-2c5b-4709-bd24-ae6d251db476">
+          <ct:object name="YS9070_ALS" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="3526608a-6733-479b-ae72-c9a8f81230c0">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9070_ALS</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9070_ALS" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Система ВКО отключена при разгрузке</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9070_ALS</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="TDAHH9020" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="b499fd7d-bb6c-4ae5-a96f-f0f66e64dbdb">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TDAHH9020</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TDAHH-9020" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сбой системы ОВКВ" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.TDAHH9020</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="YS9000" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" aspect="Types.IOS" access-level="public" uuid="3c803d70-86de-4458-aaae-f97e16f8702a">
+        <attribute type="unit.System.Attributes.Description" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <ct:object name="COMP" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="00baa276-9b8c-4500-a4c6-7e5dfa415b58">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_COMP</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9000_COMP" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Электрика шелтера не включена</property>
+          </attribute>
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_COMP</property>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="1" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="0" />
+          <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+        </ct:object>
+        <ct:object name="FAULT" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="7c8dd058-0b0d-4aff-b2ab-199e58341ad1">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_FAULT</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9000_FAULT" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Сбой последовательного включения эл.оборудования</property>
+          </attribute>
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_FAULT</property>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="1" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="0" />
+          <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+        </ct:object>
+        <ct:object name="PROG" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="7ede5e85-a9c1-4545-91fd-1e3d038bd6fd">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_PROG</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9000_PROG" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Последовательное включение эл.оборудования</property>
+          </attribute>
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_PROG</property>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" />
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="1" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="0" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="1" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="0" />
+        </ct:object>
+        <ct:object name="READY" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="6a1e9c07-9f6c-425f-8aea-362759125f3f">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_READY</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="YS-9000_READY" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Условие включения эл. оборудования шелтера</property>
+          </attribute>
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.YS9000_READY</property>
+          <attribute type="unit.Types.Attributes.DP.INV_DP" value="false" />
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="1" />
+          <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="0" />
+          <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="9050" base-type="Types.Телемеханика.IOS_BREAKER_MLBV" access-scope="global" access-level="public" uuid="52cfe244-248f-4dc6-8abc-e8667d2cf21a">
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Реклоузер" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="P2-502" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <ct:object name="DS" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" access-level="public" uuid="14f0e696-8678-4a3b-ada0-5da04c34393f">
+          <ct:object name="ESL9050" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="3abc30df-8674-4bb8-99d5-ad0ec47863ea">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ESL9050</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="ESL-9050" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Потеря напряжения" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.ESL9050</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description" />
+        </ct:object>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9050</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="3" />
+        <attribute type="unit.Types.Attributes.Electric.Two_State_bit" value="false" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.9050</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Electric.Open_Close" value="false" />
+      </ct:object>
+      <ct:object name="HVAC9070_C" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="d0e7732b-e2db-4ced-843e-151b38cc6faf">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="HVAC-9070C" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Охладитель ОВКВ включен</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.HVAC9070_C</property>
+        </r:init-ref>
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.HVAC9070_C</property>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Type.Type_Pump" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Mode_other.EnableAnalog_WorkTimeDay" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Mode_other.EnableAnalog_WorkTime" value="0" />
+        <attribute type="unit.Types.Attributes.VS.Type.Type_FAN" value="1" />
+      </ct:object>
+      <ct:object name="UA9034" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="b92de397-a080-40cc-83fa-0f0cd68e2c98">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.UA9034</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UA-9034" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_E" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_ELEC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неисправность ЗУ батареи 48В</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.ELEC.UA9034</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="SA" access-scope="global" access-level="public" uuid="8e0c8d14-dcee-4f1b-96c3-72c45a0c8b7c">
+      <ct:object name="ALARM_RESET" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="5dfad295-8656-4696-a960-7d79000f4a63">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.ALARM_RESET</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Команда ''Сбросить тревоги ПЛК''</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ALARM_RESET" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.ALARM_RESET</property>
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="b80f7214-6aff-4d46-aff2-a182f847c849">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="NBR_TRANSM_ERR" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="72895086-3f3b-40ed-b8f8-453b8a3860d2">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.NBR_TRANSM_ERR</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Сбой передачи сигналов о пожаре на НПС</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="NBR_TRANSM_ERR" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.NBR_TRANSM_ERR</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PDIA0001" base-type="Types.Аналоговый параметр.IOS_AP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="ca70ad6d-7e4f-411e-87c5-f71aa39a271d">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PDIA0001</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PDIA-0001" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Перепад давления на МШК @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="-7000" />
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="7" />
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="true" />
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="6900" />
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="100" />
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="-7000" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="7000" />
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="7000" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PDIA0001</property>
+      </ct:object>
+      <ct:object name="PT0003" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="f2316c95-8ede-4a21-ad15-95d62d29fb43">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PT0003</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PT-0003" />
+        <attribute type="unit.System.Attributes.Description" value="Входное давление @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PT0003</property>
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="7000" />
+      </ct:object>
+      <ct:object name="PT0004" base-type="Types.Аналоговый параметр.IOS_AP_NOT_PLC_UST" access-scope="global" aspect="Types.IOS" access-level="public" uuid="a1b0cc9a-352e-41c4-8f8a-1cbf2148705c">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PT0004</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PT-0004" />
+        <attribute type="unit.System.Attributes.Description" value="Выходное давление @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PT0004</property>
+        <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="7000" />
+      </ct:object>
+      <ct:object name="UA9031" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="7ca0ce21-d013-40f8-ac06-12191fc0c5ab">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.UA9031</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UA-9031" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неисправность системы обнаружения пожара</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.UA9031</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XS9031" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="825fed44-ae79-40be-977e-8db18b6005be">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XS9031</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XS-9031" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Обнаружен пожар 2" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XS9031</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XS9031_1" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="663d148c-1bf3-4800-ad37-41df0dc6f011">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XS9031_1</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XS-9031_1" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Обнаружен пожар 1" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XS9031_1</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XV0001" base-type="Types.Телемеханика.IOS_VALVE_MLBV_2" access-scope="global" aspect="Types.IOS" access-level="public" uuid="c5edc3b4-b1a0-430a-be47-262155587e7d">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XV0001</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0001" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description" value="МШК @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="13631" />
+        <attribute type="unit.Types.Attributes.Valve.Two_LR_bit" value="false" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XV0001</property>
+        <attribute type="unit.Types.Attributes.StopNPS" value="31" />
+        <attribute value="1">
+          <property name="type">unit.Types.Attributes.Valve.Mode_other.EnableMode_PermissionLocal</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Valve.Cmd.EnableCom_ResetLocal" value="1" />
+        <attribute type="unit.Types.Attributes.Valve.State.EnableSt_Deenerg" value="0" />
+        <attribute type="unit.Types.Attributes.Valve.Mode_other.EnableMode_LocalBlock" value="0" />
+      </ct:object>
+      <ct:object name="ZIS0002" base-type="Types.Линейная часть.Скребок.IOS_PIG" access-scope="global" aspect="Types.IOS" access-level="public" uuid="5cf02105-9093-4b34-b020-c8e065d1a2d2">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.ZIS0002</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ZIS-0002" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Датчик прохождения СОД</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="9" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.ZIS0002</property>
+      </ct:object>
+      <ct:object name="LS" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" access-level="public" uuid="4a89d591-4eb6-483b-8596-bfe77588fd09">
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LS" />
+        <attribute type="unit.System.Attributes.Description" />
+        <ct:object name="LSH0001" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="50c2929c-c316-4b7d-a9d7-7c63871ca9e3">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0001</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LSH-0001" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Затопление колодца TK-1</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0001</property>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        </ct:object>
+        <ct:object name="LSH0002" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="f75e8d7c-4a27-4e0e-94da-b68ed91e9c73">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0002</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LSH-0002" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Затопление колодца TK-2</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0002</property>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        </ct:object>
+        <ct:object name="LSH0003" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="0b9d3afe-79f6-45de-8e02-25eb1aa5059c">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0003</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LSH-0003" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Затопление колодца КВ-1</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0003</property>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        </ct:object>
+        <ct:object name="LSH0004" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="8a3d7a99-3080-40da-a911-fd2be4daa0f0">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0004</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LSH-0004" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Затопление колодца КВ-4</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.LSH0004</property>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="PS_STOP" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" access-level="public" uuid="471e50e4-f842-40dd-ab4d-cde3e24effb6">
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ALM" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+        <ct:object name="TU" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="cf7b22e8-6047-48ff-bd85-ecace03cfd4f">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PS_STOP</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Стоп всех НПС выше по потоку</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PS_STOP" />
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PS_STOP</property>
+        </ct:object>
+        <ct:object name="ESD_ALM" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" access-level="public" uuid="26b0fb63-f84c-45e5-a794-d6e52cb62cf3">
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="ESD_ALM" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+          <ct:object name="UA1752" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="8feddca7-1987-4cb3-94e1-3fb1c9616fbb">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.UA1752</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="UA-1752" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Сбой передачи данных на НПС</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.UA1752</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <ct:object name="UA1752_MINOR" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="e2e3d141-5143-4acb-ba22-f1d4833448a4">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.UA1752_MINOR</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="UA-1752_MINOR" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Частичный сбой передачи на НПС</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="2" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.UA1752_MINOR</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="warning.wav" />
+            <attribute type="unit.Types.Attributes.Common.Type_HMI" value="1026" />
+            <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+            <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Yellow" value="1" />
+          </ct:object>
+          <ct:object name="XS1752" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="ab9e0f51-4ded-4eac-a5af-a762c374c793">
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XS1752</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="XS-1752" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Останов МНА НПС выше по потоку</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.XS1752</property>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.System.Attributes.Description" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        </ct:object>
+        <ct:object name="PS_TIME_TO_TRIP" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="fb98b403-b407-47c3-8fb3-b9249af80fe9">
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PS_TIME_TO_TRIP</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">@(object:unit.Types.Attributes.Common.Sign). Останов НПС выше по потоку через</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="сек" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PS_TIME_TO_TRIP" />
+          <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.SA.PS_TIME_TO_TRIP</property>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="45000" />
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+        </ct:object>
+        <attribute type="unit.System.Attributes.Description" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+      </ct:object>
+    </ct:object>
+    <attribute type="unit.System.Attributes.Description" />
+    <ct:object name="NO_DISP" uuid="1ca96a6d-8561-48c4-876b-e0b0635d95f3">
+      <ct:object name="PLC_MINOR_FAULT" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="bb455657-97d5-451a-9f3e-b5f3fbffb2ce">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.NO_DISP.PLC_MINOR_FAULT</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0032_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0032_V0502SA_SA" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="V0502SA" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сбой ПЛК" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_MINOR_FAULT" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="2" />
+        <property name="original">PLC_P0032.P0032_V0502SA.P0032_V0502SA.P0032_V0502SA_CPU.P0032_V0502SA.CPC.V0502SA.NO_DISP.PLC_MINOR_FAULT</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="warning.wav" />
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="1026" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+        <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Yellow" value="1" />
+      </ct:object>
+    </ct:object>
+  </ct:object>
+  <plc:plc name="PLC_P0032.P0032_V0502SA" uuid="3d053e9f-0a8e-4d21-b02c-0a56e2525c3c">
+    <plc:crate name="P0032_V0502SA" uuid="2aeb3911-7da4-4634-bac8-5f9b20c02db0">
+      <plc:cpu name="P0032_V0502SA_CPU" uuid="238fad73-d23f-4694-80aa-3bc04ddb6bf8">
+        <eth:ethernet-adapter name="P0032_V0502SA_Eth1" address="11.110.54.1" network="Ethernet1" uuid="f759ba04-e56b-43ba-b994-ad941980a695">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.137" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0032_V0502SA_Eth2" address="11.120.55.1" network="Ethernet2" uuid="eff9ef15-07c6-4712-a62b-b25ad8d65ebc">
+          <attribute type="unit.System.Attributes.Comment" value="11.120.55.1" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0032_V0502SA_EIPAdapter" route="backpane;0" address-map="P0032_V0502SA.CIP_P0032_V0502SA" uuid="5bd199f7-dfbb-4ba8-8e5f-0548e1afe804" />
+        <dp:application-object name="P0032_V0502SA" uuid="e79a3dfa-4441-4cd2-92b2-39902babdba5">
+          <eip:cip-address-map name="CIP_P0032_V0502SA" file="P0032_ANPS_4A\CIP_V0502SA.xml" uuid="1031b4d0-a0f1-471e-85d3-9060d09d0c72" />
+          <ct:object name="CPC" uuid="19b35750-7635-4c30-ba35-a9d1bf3c6faa">
+            <ct:object name="V0502SA" uuid="6c4ed007-5828-4cbc-97e3-51840e80a044">
+              <ct:object name="SA" uuid="553c5141-1b25-43a8-ab3f-8023a8053b43">
+                <ct:object name="ALARM_RESET" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="e5b7c83e-777f-4326-ac18-544439d6e46c"></ct:object>
+                <ct:object name="LSH0001" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="d2d4a901-8aeb-40c5-b1b8-0b5ff98d33b9"></ct:object>
+                <ct:object name="LSH0002" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="b13faa11-7843-48f6-93a1-97ffed2b5a39"></ct:object>
+                <ct:object name="LSH0003" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="30ad297e-dbe9-4983-9c09-cbe92af26892"></ct:object>
+                <ct:object name="LSH0004" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="5da71a6c-90a1-4413-82b8-f58755accfdd"></ct:object>
+                <ct:object name="NBR_TRANSM_ERR" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="fedf3e5a-ee11-4b7e-afa2-3f2819feb73f"></ct:object>
+                <ct:object name="PDIA0001" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="c53fb7e0-a8eb-417f-bf63-550290366c76"></ct:object>
+                <ct:object name="PS_STOP" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="0db2f0bb-aba7-4c24-96a8-14997e46aa15"></ct:object>
+                <ct:object name="PS_TIME_TO_TRIP" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="9be3636c-02ac-42f7-89f4-4cbafd800752"></ct:object>
+                <ct:object name="PT0003" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="4f1cb6c7-2eae-4c20-9bf5-d8e798303aa1"></ct:object>
+                <ct:object name="PT0004" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="899d4e48-af47-47f8-a108-a48e2c8fd25b"></ct:object>
+                <ct:object name="UA1752" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="4af3adf0-3922-4566-8be2-51f001e9e17c"></ct:object>
+                <ct:object name="UA1752_MINOR" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="c5f54c39-5b43-462a-967b-3e52d8503336"></ct:object>
+                <ct:object name="UA9031" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="0e3f5c2e-37b1-4bb6-a185-08a69d182d22"></ct:object>
+                <ct:object name="XS1752" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="eb0d0958-a3bb-49f7-ad4e-fa062c80ea42"></ct:object>
+                <ct:object name="XS9031" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="ff9722a4-0b81-4dac-96b8-e07059822fa6"></ct:object>
+                <ct:object name="XS9031_1" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="466eef02-fda2-4304-a4c0-eeb03bdf279b"></ct:object>
+                <ct:object name="ZIS0002" aspect="Types.PCL" base-type="Types.Линейная часть.Скребок.M_PIG" uuid="da573d72-832e-4def-92aa-f293a0560a3a"></ct:object>
+                <ct:object name="XV0001" aspect="Types.PCL" base-type="Types.Телемеханика.M_VALVE_MLBV" uuid="9c68f374-2827-48ee-935b-5f67f7715df6"></ct:object>
+                <attribute type="unit.System.Attributes.Description" />
+              </ct:object>
+              <ct:object name="ELEC" uuid="4afb5308-7eb2-4d95-a3ce-ad4b80f04979">
+                <attribute type="unit.System.Attributes.Description" />
+                <ct:object name="ESL9040" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="a805b659-7115-4ee1-8fe3-88da15584c5d"></ct:object>
+                <ct:object name="ACCB1_INDEFINITE" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="f13d5c04-1ad3-4777-b4af-e2780b0bb635" />
+                <ct:object name="ESL9050" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="a1265db5-9ea3-43d3-9348-9786b138fbb1"></ct:object>
+                <ct:object name="ET9001" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="34b9e2a4-88c0-49b9-b92f-ce347ec03b45"></ct:object>
+                <ct:object name="ET9002" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="cd3cb4bc-ec02-45ff-8aba-f8eb216f00b8"></ct:object>
+                <ct:object name="ET9022" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="b4ac0e01-59fc-4bf1-9734-940269367212"></ct:object>
+                <ct:object name="ET9023" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="f10a5dae-f74a-4608-b566-1f94013c176c"></ct:object>
+                <ct:object name="ET9024" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="cb8cabc2-3b63-477e-bff7-fdf64bb9bbe3"></ct:object>
+                <ct:object name="HVAC9070_H" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="3b000d80-7240-4cdd-862d-f16277c35888"></ct:object>
+                <ct:object name="HVAC9070_C" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="fd76d1ff-d242-468c-b70e-0571bb6dadb6"></ct:object>
+                <ct:object name="IT9002" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="af32c4ac-7ab4-4096-af4c-69176c34c549"></ct:object>
+                <ct:object name="IT9024" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="e6bce4b1-676c-4605-b400-9551b928eb51"></ct:object>
+                <ct:object name="TDAHH9020" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="4c3031af-2fe5-4f78-9167-72003cbab612"></ct:object>
+                <ct:object name="TT9020" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP" uuid="63accc3e-16d1-46b0-bfb4-1bc4b4985ac2"></ct:object>
+                <ct:object name="TT9022" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP_NOT_PLC_UST" uuid="324f910d-e488-47ea-aeab-b7fcdc49c61f"></ct:object>
+                <ct:object name="UA9034" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="b96590a8-acd0-4ecc-8627-5fb978c4b11b"></ct:object>
+                <ct:object name="UA9037" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="1c7f1497-66ed-44a0-848c-3ef780a50ffc"></ct:object>
+                <ct:object name="UA9002" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="60516be7-d497-44fc-a2b3-c7347260b28d"></ct:object>
+                <ct:object name="XI9001_ACC" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="97682a1a-831b-41ee-a169-95e1c1fa8bce"></ct:object>
+                <ct:object name="XI9001_RACC" aspect="Types.PCL" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="21d7cf17-48b2-46a2-95da-cacc705d066b"></ct:object>
+                <ct:object name="XSA9000" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="9c054afc-1607-4d91-bfe5-9588ef2fcb98"></ct:object>
+                <ct:object name="XSM9000" aspect="Types.PCL" base-type="Types.Команда.M_CMD" uuid="b0b350cf-c392-4b8b-beac-8fcddcff7d27"></ct:object>
+                <ct:object name="YS9000_COMP" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="b9f127ce-a583-4781-9211-b43a81c6839b"></ct:object>
+                <ct:object name="YS9000_FAULT" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="bb957e24-f5d4-4253-9cd6-c6f0da626cd4"></ct:object>
+                <ct:object name="YS9000_PROG" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="9943f0c0-f081-4574-987a-e23c6baa658f"></ct:object>
+                <ct:object name="YS9000_READY" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="5ad17482-71b5-4ac5-af73-4cda316d5c36"></ct:object>
+                <ct:object name="YS9010" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="696a84c8-be40-4211-ba11-249107252b72"></ct:object>
+                <ct:object name="YS9030_INH" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="a1bcedab-0ce9-4b7f-8e20-bf9ec7857335"></ct:object>
+                <ct:object name="YS9035_ALS" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="06c85636-ebb1-45d9-b855-3520ca4873b2"></ct:object>
+                <ct:object name="YS9002_ALS" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="749a7a79-e5f8-4774-aed9-64df76835715"></ct:object>
+                <ct:object name="YS9070_ALS" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="d7cce5f7-c7ba-47bd-af0b-3344ba548875"></ct:object>
+                <ct:object name="YST9030_ALS" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="f47ab670-d884-4027-b52e-f644b9496849"></ct:object>
+                <ct:object name="IT9024_ALS" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="82ec4100-62c3-4617-bdac-80a3b71b5322"></ct:object>
+                <ct:object name="ET9024_ALS" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="68be3dbc-36ff-4822-b650-89b85d69936a"></ct:object>
+                <ct:object name="9002" base-type="Types.Телемеханика.M_BREAKER_MLBV" uuid="7cbc396a-2bbe-4fc9-8cba-c1827ebdb29b" />
+                <ct:object name="9022" base-type="Types.Телемеханика.M_BREAKER_MLBV_48" uuid="867638f2-8e44-4de4-b72d-dd4316507e49" />
+                <ct:object name="9030" base-type="Types.Телемеханика.M_BREAKER_MLBV_ACCB1" uuid="e34e5ccb-dc43-42bc-a6eb-2a634ac4d827" />
+                <ct:object name="9035" base-type="Types.Телемеханика.M_BREAKER_MLBV" uuid="b36bfdfa-6b86-41d2-bab1-9ad63d5747eb" />
+                <ct:object name="9036" base-type="Types.Телемеханика.M_BREAKER_MLBV" uuid="fb5c8fa9-0c5a-4103-ba24-b851d8a2484a" />
+                <ct:object name="9040" base-type="Types.Телемеханика.M_BREAKER_MLBV" uuid="324831e1-5779-403d-a8d8-b821ceb443fb" />
+                <ct:object name="9050" base-type="Types.Телемеханика.M_BREAKER_MLBV" uuid="d40acadf-ac3a-46e7-b1a3-22d364d21bf8" />
+                <ct:object name="9070" base-type="Types.Телемеханика.M_BREAKER_MLBV" uuid="2b263e15-6fa6-4122-b902-54167b49dced" />
+                <ct:object name="9023" base-type="Types.Телемеханика.M_IBP_MLBV" uuid="bc9ddeae-f14a-44f5-9e1a-d1ced54ca10e" />
+                <ct:object name="TT9020_rSP" aspect="Types.PCL" base-type="Types.Уставка.M_SP" uuid="14ba1e8f-c01b-415e-8334-6e685fe3e51a"></ct:object>
+              </ct:object>
+              <attribute type="unit.System.Attributes.Description" />
+              <ct:object name="NO_DISP" uuid="854e0b02-99ee-494e-b864-96b112f11a0f">
+                <ct:object name="PLC_MINOR_FAULT" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S" uuid="9a35e495-dbab-450c-b9a5-75aaee854ce8"></ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+</omx>

@@ -1,0 +1,910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <plc:plc name="PLC_P0022.P0022JI" uuid="1af9765d-5ccc-428e-978f-04e67821d48d">
+    <plc:crate name="P0022JI" uuid="6b6716d4-61df-4f72-969b-85db0ca53ffa">
+      <plc:cpu name="P0022JI_CPU" uuid="5c650585-e215-41b6-b799-affbee99cb09">
+        <eth:ethernet-adapter name="P0022JI_Eth1" address="11.150.21.1" network="Ethernet1" uuid="74e534b1-fbff-4232-aff2-fad9f0017a64">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.207" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0022JI_Eth2" address="11.150.21.129" network="Ethernet2" uuid="ba9389a8-9c45-4e40-b26c-db746966126f">
+          <attribute type="unit.System.Attributes.Comment" value="11.150.21.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0022JI_EIPAdapter" address-map="P0022JI_CPU.P0022JI.CIP_P0022JI" route="backpane;0" uuid="84f5c756-5036-480a-a1c9-793b8a849312" />
+        <dp:application-object name="P0022JI" uuid="e62efacd-c590-4ad0-8980-384cfe3efc04">
+          <ct:object name="CPC" uuid="dbe580c7-d4ed-4851-a058-ad2e275eb9be">
+            <ct:object name="P0022" uuid="44cfd46a-6d54-41dc-a0d7-35be084b0701">
+              <ct:object name="NCOC" uuid="0031ad54-2709-4d63-b62e-f70842935a11">
+                <ct:object name="EZILH001C" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="05747e95-b28b-4a83-b251-ef6c63c610e9"></ct:object>
+                <ct:object name="EZILH002C" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="351c3514-1873-4d59-9b85-04e508e259fd"></ct:object>
+                <ct:object name="EZILH003C" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="9b4ee4a3-b7b4-4bea-b10e-9cfdf28beeb5"></ct:object>
+                <ct:object name="EZILH004B" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="88561c18-8794-450c-86ed-62a7dfa70f98"></ct:object>
+                <ct:object name="EZILH004C" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="63498f33-eb5b-4809-a343-f7a66b19577f"></ct:object>
+                <ct:object name="EZILH005C" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="c1b5a01e-3b72-41e3-9b6c-675e7ef3c063"></ct:object>
+                <ct:object name="EZILH008" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="5aa854b4-c7a7-4385-9edb-af3f2728e841"></ct:object>
+                <ct:object name="EZILH009" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" uuid="fb475df1-fd96-4619-a931-8ee811e82ffc"></ct:object>
+                <ct:object name="DES008001" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="9e560a35-e966-46a2-acc6-b83669b01f51" />
+                <ct:object name="PA031A" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="254663de-db14-4c4a-9b63-c1c3cdbb231a" />
+                <ct:object name="PA031B" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="d30ce9fa-849a-4f32-96c1-5b0d4fb64b94" />
+                <ct:object name="PA031C" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="cf78055e-5893-4f48-824b-dcec8331dcdd" />
+                <ct:object name="PI049" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="80cf3dca-52aa-440d-9aec-48de7ff30b39" />
+                <ct:object name="TI049" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="b652088a-f0f3-4027-9134-4734f62abeed" />
+                <ct:object name="FY009" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="a29c3d44-b87f-4728-83ea-ffdae39f89f1" />
+                <ct:object name="LIC002" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="9eb24831-9c52-4630-8f08-757221007b62" />
+                <ct:object name="LIC005" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="4a21c922-4f1d-4a03-9568-3e2c4bdde5f2" />
+                <ct:object name="LIC008" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="2c96ba01-0120-4cde-9303-a5933fdb14c2" />
+                <ct:object name="PI022A" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="a78432ba-91b5-4a90-80df-2273f8fa2027" />
+                <ct:object name="DES008002" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="8cd657bc-e820-4e82-b455-649707adae82" />
+                <ct:object name="INTL331" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="734661d9-cb96-4ea9-bdbe-e85e328b09bd" />
+                <ct:object name="NCOC_COMM" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="59eef054-3872-440d-8726-34741fee0344" />
+                <ct:object name="PYHH031" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="5739ec8e-34c4-4ddd-bfe5-5285997dda60" />
+                <ct:object name="PYHH038" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="1cafba3c-1cdb-4e3b-ac86-cbc195f3be82" />
+                <ct:object name="PYLL038" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="0ac0b935-ed9e-4ef2-a0cf-babe65321ac9" />
+                <ct:object name="UL010A" uuid="544d12cb-6fc2-4e5a-9d44-5887fdd3a6ec" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" />
+                <ct:object name="UL019A" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="ecac0cb7-97d4-49a6-9fcf-1898e5359917" />
+                <ct:object name="UL019B" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="31bfc13e-57f1-4109-9a35-a213c7aec0c7" />
+                <ct:object name="UL019C" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="5019ca61-decb-46be-83de-f1cfad38ea51" />
+                <ct:object name="UL019D" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="4dc4d09a-ca67-4d2c-9f14-290b99df60bf" />
+                <ct:object name="UL010B" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="3d5a8c43-a808-4b2f-b52d-77946228f04c" />
+                <ct:object name="UL010C" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="3b5635a6-79be-4eef-9c2c-4765080445c4" />
+                <ct:object name="UL010D" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="ea3b22bd-885d-46f0-972b-6fd3c2b3419a" />
+              </ct:object>
+              <ct:object name="KTO" uuid="81a2edd6-3637-46fb-ae88-749b2013589d">
+                <ct:object name="XV0628" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_TG_ST" uuid="37139516-0377-4021-9904-b24eeddb18a2"></ct:object>
+                <ct:object name="XV0069" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_TG_ST" uuid="883ac902-7c14-4d16-bbf0-4cfa7283d6b0"></ct:object>
+                <ct:object name="XV0070" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_TG_ST" uuid="3d2dc140-4740-43dc-9e0f-f40c3eb95c01"></ct:object>
+                <ct:object name="XV0604" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_TG_ST" uuid="f4c4b28f-23d6-4b56-a5b6-d05e016149f3"></ct:object>
+                <ct:object name="PU0001" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="de626028-874a-4e40-97a5-d073e19caed6" />
+                <ct:object name="PU0004" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="94c9c008-5173-40e8-9c22-f0ee3b1abcbb" />
+                <ct:object name="PU0003" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="5b956a7a-4fad-45a5-ab88-d1e5389e73d7" />
+                <ct:object name="PU0002" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_NOCMD" uuid="4d90e99a-7022-4207-bb20-1b8d4cd162eb" />
+              </ct:object>
+              <ct:object name="KPO_INFO" uuid="141d0c68-fdd0-4d9a-9890-c388c9886470">
+                <ct:object name="TIC740" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="fef36c30-95b6-4e15-b886-6e098aca5548" />
+                <ct:object name="FIC554" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="c06b2056-804d-45a9-b970-a3f643d86bcf" />
+                <ct:object name="FIC555" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="8688c801-c849-4fee-9be7-8e71369e3bba" />
+                <ct:object name="FIC851" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="e0528842-f30e-4714-bb87-26589cf35f19" />
+                <ct:object name="TIC730" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="0a29ddf8-8370-4909-8a7e-409656a69a70" />
+                <ct:object name="LI740" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="553ea186-6762-49b3-9238-926ea9081561" />
+                <ct:object name="LI730" base-type="Types.Простой аналоговый параметр.M_AP_S" uuid="1b695079-c52f-481f-9099-98f2cf40f7b9" />
+              </ct:object>
+            </ct:object>
+          </ct:object>
+          <eip:cip-address-map name="CIP_P0022JI" file="P0022_Atyrau\CIP_P0022JI.xml" uuid="6f196047-2419-4878-a3e9-14ac13b43d3c" />
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+  <ct:object name="Domain.CPC_tree.CPC.P0022.JI" uuid="204761c9-7370-42dc-a915-89f9d09588d3">
+    <ct:object name="NCOC" uuid="ce59663b-b85d-499b-a761-82a13660c261">
+      <ct:object name="EZILH001C" uuid="b70cd521-d6fc-43bb-b366-837c98bd6f7b" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH001C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH001C</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-001C" />
+      </ct:object>
+      <ct:object name="EZILH002C" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" uuid="4b601629-da49-4844-9bd8-03c6d300602b">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH002C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH002C</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-002C" />
+      </ct:object>
+      <ct:object name="EZILH003C" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" uuid="ae69249e-e627-4929-be7c-5240bb13bdd8">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH003C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH003C</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-003C" />
+      </ct:object>
+      <ct:object name="EZILH004B" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" uuid="9de039d3-ad3a-4420-9773-cab49f29b7ae">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH004B</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH004B</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-004B" />
+      </ct:object>
+      <ct:object name="EZILH004C" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" uuid="2da41935-12e1-48ec-9c06-60e326fd1826">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH004C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH004C</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-004C" />
+      </ct:object>
+      <ct:object name="EZILH005C" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" uuid="a739c3ef-2605-41fb-81e3-d28fef8b1542">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH005C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH005C</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-005C" />
+      </ct:object>
+      <ct:object name="EZILH008" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" uuid="5e8235bf-2ea8-43e7-8179-04c3d904dabd">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH008</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH008</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-008" />
+      </ct:object>
+      <ct:object name="EZILH009" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" uuid="116f582a-b32b-41e9-b3c5-fe3f0ad82f9c">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH009</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.EZILH009</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-009" />
+      </ct:object>
+      <ct:object name="DES008001" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="a2d485ff-87ce-4cf8-b65b-16e774fb3f7e">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="DES008001" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Сирена главный вход OE5</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.DES008001</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.DES008001</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="3424fcbd-81eb-4af6-adbb-e4a3bef4fb76">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="PA031A" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="f7813ae6-1c39-480c-80f0-13f69d7b004a">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PA031A</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="Bar" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PA-031A" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давление на входе КТК @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PA031A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="PA031B" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="be6698bf-18fa-43b4-865d-860e56b82986">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PA031B</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="Bar" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PA-031B" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давление на входе КТК @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PA031B</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="PA031C" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="f45b200a-6208-4d6d-9a32-40e63193e312">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PA031C</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="Bar" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PA-031C" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давление на входе КТК @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PA031C</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="PI049" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="a2357408-d90d-4512-a0ce-30b3b5ccc5a1">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PI049</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="Bar" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PI-049" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давление на входе КТК @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PI049</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="99" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="TI049" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="615fafee-29b6-4724-9bd1-fcc764d8426f">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.TI049</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TI-049" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Температура на входе КТК @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.TI049</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+      </ct:object>
+      <ct:object name="FY009" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="289f6276-dc53-4cf2-9800-c0752848bd70">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.FY009</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FY-009" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Расход на КТК компенсированный @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.FY009</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="525000" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="PI022A" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="ef4ae16d-4983-4667-8098-822e86207816">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PI022A</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="Bar" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PI-022A" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давление выкида экспортных насосов @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PI022A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="20" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="DES008002" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="8d70fcdb-444c-47f6-84d6-41570bddd3c8">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="DES008002" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сирена шелтер OE5" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.DES008002</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.DES008002</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="INTL331" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="f42e8530-a106-4614-8682-e03664f0b6dd">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="INTL331" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Авар СТОП из операторной OPF</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.INTL331</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.INTL331</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="NCOC_COMM" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="e6a95ff4-3bea-4724-80ae-85cf8e52d31c">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="NCOC_COMM" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Сбой связи с NCOC" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.NCOC_COMM</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.NCOC_COMM</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PYHH031" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="96a34789-991c-4892-afd4-583f6c68ac7f">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PYHH-031" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийное высокое давление в HIPPS</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PYHH031</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PYHH031</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PYHH038" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="da0a7522-3c3a-4df5-9504-bd5deed78e35">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PYHH-038" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийное высокое давление</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PYHH038</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PYHH038</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PYLL038" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="3f0b15f9-96e3-4e24-b525-72070de9fc81">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PYLL-038" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийное низкое давление</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PYLL038</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.PYLL038</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="UL010A" uuid="4a10e0c4-c687-459a-b6ce-46442aa2f7f4" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-010A" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Подпорный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="UL010B" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="28a54337-3722-437b-9cf6-54322d42a603">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010B</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010B</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-010B" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Подпорный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="UL010C" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="47b0ea2d-62b4-4b46-92ff-10eb0ff7050c">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010C</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-010C" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Подпорный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="UL010D" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="d8aa0eed-baba-4c05-b239-95eb3882aeeb">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010D</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL010D</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-010D" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Подпорный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="UL019A" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="a496dc39-eb48-49c4-81a1-9c352c3c2f20">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-019A" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="UL019B" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="f8158b04-1cb6-4604-900b-6b7f783143d8">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019B</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019B</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-019B" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="UL019C" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="77041c25-ed92-4e6b-bdcf-245f7844ab99">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019C</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-019C" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="UL019D" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="816032fb-cad2-4358-85be-bf6c9a7eb15f">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019D</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.UL019D</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UL-019D" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Экспортный насос @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="Tank1" uuid="20e78756-5b54-416f-ad9c-2441423b2e49">
+        <ct:object name="Level" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="24d5b1c3-62ee-4cc3-a196-de079aacf567">
+          <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.LIC002</property>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="mm" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LIC-002" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">NCOC Резервуар 1 уровень @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.LIC002</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18500" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="Резервуар 1" />
+        <attribute type="unit.System.Attributes.Description" value="Ёмкость" />
+        <attribute type="unit.Types.Attributes.Type_Object" value="1" />
+      </ct:object>
+      <ct:object name="Tank2" uuid="bbee90eb-52aa-4b5c-91a7-6eca44382037">
+        <ct:object name="Level" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="6ec1dff3-3152-468e-b90d-536503725c4a">
+          <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.LIC005</property>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="mm" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LIC-005" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">NCOC Резервуар 2 уровень @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.LIC005</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18500" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="Резервуар 2" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Ёмкость" />
+      </ct:object>
+      <ct:object name="Tank3" uuid="7f9c2b59-200b-4f4d-bf06-06a75a20dc85">
+        <ct:object name="Level" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="cb1eece2-4c4a-406e-b7cb-08b203cddef2">
+          <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.LIC008</property>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="mm" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LIC-008" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_D" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">NCOC Резервуар 3 уровень @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.NCOC.LIC008</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="18500" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="Резервуар 3" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_NCOC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Ёмкость" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="KTO" uuid="0846c8a5-a622-44c6-bdc7-5a55b6d1a113">
+      <ct:object name="PU0001" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="adafd49b-5469-427a-8376-0f3a2c049c5c">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0001</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PU-0001" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0001</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="39f8ce83-92a5-4697-81cc-87bec1eb5448">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="PU0004" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="5c7090f1-1cfc-484e-9e03-1a5e9a5a7c0e">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0004</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PU-0004" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0004</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="XV0628" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_TG_ST" uuid="bf11cb00-30d2-4937-8832-ca257ac00c8b">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0628</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0628"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0628</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="XV0604" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_TG_ST" uuid="7f6cfd85-541d-448c-9c87-4bb445a1fffa">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0604</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0604"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0604</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="XV0069" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_TG_ST" uuid="253c4e03-51d0-4504-9c2a-77d59fb804f6">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0069</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0069"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0069</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="XV0070" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_TG_ST" uuid="899150a6-7222-4f42-a4f3-6d24387ae8ce">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0070</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0070"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.XV0070</property>
+        </r:init-ref>
+      </ct:object>
+      <ct:object name="PU0003" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="6a218963-d3d2-4473-8d12-56181f4a9a92">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0003</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PU-0003" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0003</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="0" />
+      </ct:object>
+      <ct:object name="PU0002" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_NOCMD" uuid="43fe800a-b8d4-406f-a875-4fc8924f20f8">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0002</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PU-0002" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_KTO" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)" />
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KTO.PU0002</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.VS.Type.EnableALM" value="0" />
+      </ct:object>
+    </ct:object>
+    <attribute type="unit.System.Attributes.Description" />
+    <ct:object name="INJECTION_FILTER_2" uuid="35663d73-c067-42d5-b7ae-e4f47f72f8a5">
+      <ct:object name="TB01A" uuid="e5b9e8bf-2a15-410d-b6d8-0da6676520aa" base-type="Types.Объект.IOS_Obj_Tank" aspect="Types.IOS">
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TB-01A" />
+        <attribute type="unit.System.Attributes.Description" value="Резервуар @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="Level" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="c2e76a1c-0f0d-40c2-a0a0-05d432ed2e9c">
+          <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.LI740</property>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="%" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LI-740" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">Уровень нефти в резервуаре TB-01A @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.LI740</property>
+          </r:init-ref>
+        </ct:object>
+        <ct:object name="Temp" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="3bb424d6-23bb-40a9-a98c-0a308407722b">
+          <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.TIC740</property>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="TIC-740" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">Температура нефти в резервуаре TB-01A @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.TIC740</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="33" />
+      </ct:object>
+      <ct:object name="TB01B" uuid="90d3e34f-f2c0-4948-8dc8-14a37698e7fe" base-type="Types.Объект.IOS_Obj_Tank" aspect="Types.IOS">
+        <attribute type="unit.System.Attributes.Description" value="Резервуар @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TB-01B" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <ct:object name="Level" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="d52c5718-6988-4add-b074-b379e01d6503">
+          <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.LI730</property>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="%" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LI-730" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">Уровень нефти в резервуаре TB-01B @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.LI730</property>
+          </r:init-ref>
+        </ct:object>
+        <ct:object name="Temp" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="25588925-dcb1-49c6-bece-36ca17885baa">
+          <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.TIC730</property>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="TIC-730" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+          <attribute type="unit.System.Attributes.Description">
+            <property name="value">Температура нефти в резервуаре TB-01B @(object:unit.Types.Attributes.Common.Sign)</property>
+          </attribute>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.TIC730</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="33" />
+      </ct:object>
+      <ct:object name="FIC554" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="0ac8b9be-6e69-4369-9fd3-9debe7b9b468">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.FIC554</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FIC-554" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Объемный расход нефти (прием на терминал КПО) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.FIC554</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10000" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+      </ct:object>
+      <ct:object name="FIC555" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="b0bb2199-9f12-425f-8775-3c5e15df07f8">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.FIC555</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FIC-555" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Объемный расход нефти (прием на РВС КПО) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.FIC555</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10000" />
+      </ct:object>
+      <ct:object name="FIC851" base-type="Types.Простой аналоговый параметр.IOS_AP_S" uuid="b85bfcf9-d03d-4ce7-93a8-f758b50caca3">
+        <property name="original">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.FIC851</property>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0022JI" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0022_INJECTION_FILTER_2" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FIC-851" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0022_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Объемный расход нефти (откачка с РВС КПО) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0022.P0022JI.P0022JI.P0022JI_CPU.P0022JI.CPC.P0022.KPO_INFO.FIC851</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="10000" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="cd395ef9-1704-4e73-b0ac-47da9ddc7a11">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+  </ct:object>
+</omx>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:r="automation.reference" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet">
+  <ct:object name="Domain.CPC_tree.CPC.P0033.JC" uuid="06ab4f5f-22c8-466a-82c8-6526e7d536bd">
+    <ct:object name="ARTESIAN_WELL_SYS" uuid="f15c210e-0074-42c5-84f8-67b1e1ba0c6a">
+      <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" access-level="public" uuid="7f7cb9ba-de99-4ec0-bf75-d67288bb44e6">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.TT0001</property>
+        </r:init-ref>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Температура в блок-боксе @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0033_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0001" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0033_ARTESIAN_WELL_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0033JC" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°С" />
+        <property name="original">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.TT0001</property>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="dfd4f898-fce7-4d08-95e5-495a06177eb6">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="UA0101" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" access-level="public" uuid="de656e94-36f9-4b82-8eed-1db596d69eb4">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.UA0101</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="UA-0101" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0033JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0033_ARTESIAN_WELL_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0033_O" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Неисправность системы</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <property name="original">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.UA0101</property>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XVV10" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" access-scope="global" aspect="Types.IOS" access-level="public" uuid="c3f5e3ea-53ec-42dc-a762-76b5bfc1dcbc">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.XVV10</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0033JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0033_ARTESIAN_WELL_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-1.0" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0033_O" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <property name="original">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.XVV10</property>
+      </ct:object>
+      <ct:object name="XVV11" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" access-scope="global" aspect="Types.IOS" access-level="public" uuid="f84cf1dd-af59-44b1-808c-b7e7e1d4c817">
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.XVV11</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0033JC" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0033_ARTESIAN_WELL_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-1.1" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0033_O" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <property name="original">PLC_P0033.P0033JC.P0033JC.P0033JC_CPU.P0033JC.CPC.P0033.JC.ARTESIAN_WELL_SYS.XVV11</property>
+      </ct:object>
+    </ct:object>
+  </ct:object>
+  <plc:plc name="PLC_P0033.P0033JC" uuid="4cd60211-714c-4f43-a6f2-fe4dc3ee672f">
+    <plc:crate name="P0033JC" uuid="01b5640d-9ffe-4bd1-9c2a-3c2385a54837">
+      <plc:cpu name="P0033JC_CPU" uuid="84c3a3d2-ab85-4593-818f-5b6057dd8ebe">
+        <eth:ethernet-adapter name="P0033JC_Eth1" address="11.100.39.1" network="Ethernet1" uuid="3bf88a1d-1f7a-4759-963e-ba39627efd9d">
+          <attribute type="unit.System.Attributes.Comment" value="172.16.122.50" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0033JC_Eth2" address="11.100.39.129" network="Ethernet2" uuid="22912f85-367c-4f13-844e-1f2c783b8cc7">
+          <attribute type="unit.System.Attributes.Comment" value="11.100.39.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0033JC_EIPAdapter" route="backpane;0" address-map="P0033JC.CIP_P0033JC" uuid="71579776-e826-4a6e-9a74-b956dbbf4764" />
+        <dp:application-object name="P0033JC" uuid="3b94c971-63cc-4868-b4df-24086c01968a">
+          <eip:cip-address-map name="CIP_P0033JC" file="P0033_ANPS_5A\CIP_P0033JC.xml" uuid="38bcf4cb-37ed-444d-a7ee-719440dcc221" />
+          <ct:object name="CPC" uuid="131435c4-21cb-4de0-a538-e4588495ccb8">
+            <ct:object name="P0033" uuid="245d0f41-1fc6-426a-9502-d59d9d70a7be">
+              <ct:object name="JC" uuid="24042485-330d-4b6c-8a3b-e2453894e7f9">
+                <ct:object name="ARTESIAN_WELL_SYS" uuid="85df387c-c71b-4e71-b00a-3471047d3d62">
+                  <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="Types.PCL" uuid="763b9443-6289-4ed4-91bf-3d184a4b9994" />
+                  <ct:object name="UA0101" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="Types.PCL" uuid="c6b71cb4-1c1d-4cba-9c75-0b37e15ba372" />
+                  <ct:object name="XVV10" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" aspect="Types.PCL" uuid="85942ad4-dcfd-41e4-9d6c-c965c9228cfd" />
+                  <ct:object name="XVV11" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" aspect="Types.PCL" uuid="0c407ac3-0d34-4465-8245-372906e10ef9" />
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+</omx>

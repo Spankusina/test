@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:r="automation.reference" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet">
+  <ct:object name="Domain.CPC_tree.CPC.M0042.NAR" uuid="231d98e1-8cde-42cc-b63c-67cd2b030634">
+    <ct:object name="CLOSED_DRAIN" access-scope="global" access-level="public" uuid="931a52d8-2852-4c32-83a6-fdfc4f9f7766">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="LSH0502" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.CLOSED_DRAIN.LSH0502" access-level="public" uuid="b5229cac-35f2-4c78-8337-6b3d1ec1d43e">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.CLOSED_DRAIN.LSH0502" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[LSH-0502]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_CLOSED_DRAIN" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Выключатель высокого уровня" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="7f135298-95cd-4912-868f-59214b2a40d1">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+      <ct:object name="SUD001A" base-type="Types.Объект.IOS_Obj" access-scope="global" access-level="public" uuid="cfb5978e-bfd9-42ea-8f71-70566f6c13fe">
+        <attribute type="unit.System.Attributes.Description" value="Ёмкость @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[SU-D001A]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_CLOSED_DRAIN" />
+        <ct:object name="TT0503" base-type="Types.Аналоговый параметр.IOS_AP_BSMT" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.CLOSED_DRAIN.TT0503" access-level="public" uuid="33634b75-9690-417c-bd77-298782c65cd9">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.CLOSED_DRAIN.TT0503" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_O" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_CLOSED_DRAIN" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[TT-0503]" />
+          <attribute type="unit.System.Attributes.Description" value="Температура @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="100" />
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100" />
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="0" />
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="0" />
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="90" />
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True" />
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False" />
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false" />
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False" />
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="False" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="False" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="False" />
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="False" />
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0" />
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0" />
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0" />
+          <attribute type="unit.Types.Attributes.История.SaveValueInHistory" value="true" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="TKH001" base-type="Types.Объект.IOS_Obj" access-scope="global" access-level="public" uuid="22d1e0be-f2ce-48bf-8991-0b3c8d2ca2d5">
+        <attribute type="unit.System.Attributes.Description" value="Ёмкость @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[TK-H001]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_CLOSED_DRAIN" />
+        <ct:object name="LAHH0708" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.CLOSED_DRAIN.LAHH0708" access-level="public" uuid="48b06c80-3232-431e-9aca-76f2a7626b6a">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.CLOSED_DRAIN.LAHH0708" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[LSHH-0708]" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_CLOSED_DRAIN" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Аварийный высокий уровень 42-TK-H001" />
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        </ct:object>
+      </ct:object>
+    </ct:object>
+    <ct:object name="DELIVERY_OUTLET" access-scope="global" access-level="public" uuid="ddf5b07b-0383-4783-99d1-8e2b4e90788c">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="ESV0050" base-type="unit.Types.БСМТ.Задвижка.IOS_VALVE_NAR" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESV0050" access-level="public" uuid="85541e35-4f4b-4ef1-9a80-8ba09efda832">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESV0050" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESV-0050]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="ESD_ALM" base-type="Types.Дискретный параметр.IOS_DP_SBOR_ESD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="531f1193-6e9b-4c7b-86ab-260b88bf72a5">
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <r:subject-ref name="PSHH0006" object="OFFSHORE.PSHH0006" const-access="false" aspected="false" uuid="9a9ede59-7ff0-4fcf-ad85-f76579d18e0a">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="ESD1000" object="DELIVERY_OUTLET.ESD_1000.ESD_ALM.ESD1000" const-access="false" aspected="false" uuid="c4df7cfd-a104-49a2-bd0e-f5d98a76d63c">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <ct:object name="XSA0050" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSA0050" access-level="public" uuid="6db777e9-2a96-4151-8f7b-39872f91e32a">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSA0050" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[XSA-0050]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Стоп от ПЛК ОН" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+        </ct:object>
+        <ct:object name="S_ESD2" base-type="unit.Types.БСМТ.Последовательность СОД.IOS_SEQ" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.S_ESD2" access-level="public" uuid="3bf7ba3e-b00c-49b2-8c13-73853327b01b">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.S_ESD2" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_0" value="Команда ''Активировать ESD 2 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_1" value="Команда ''Cбросить ESD 2 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_0" value="ESD 2 Шаг 0 Задвижка открыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_1" value="ESD 2 Шаг 1 Задержка перед закрытием" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_2" value="ESD 2 Шаг 2 Задвижка закрывается" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_3" value="ESD 2 Шаг 3 Задвижка закрыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_4" value="ESD 2 Шаг 4 Нажат сброс ESD в поле" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_5" value="ESD 2 Шаг 5 Нажат сброс ESD в SCADA" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[S-ESD2]" />
+          <attribute type="unit.System.Attributes.Description" value="Последовательность аварийной остановки @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        </ct:object>
+        <r:subject-ref name="S_ALA" object="MT_OVERVIEW.S_ALA" const-access="false" aspected="false" uuid="eb8d6509-5712-45a2-991c-e6ca3c9648c6">
+          <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          <attribute type="unit.Server.Attributes.ExpandReference" />
+        </r:subject-ref>
+      </ct:object>
+      <ct:object name="ESV0080" base-type="unit.Types.БСМТ.Задвижка.IOS_VALVE_NAR" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESV0080" access-level="public" uuid="e7318289-c634-48f3-a65c-4d48e6d002ca">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESV0080" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESV-0080]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="ESD_ALM" base-type="Types.Дискретный параметр.IOS_DP_SBOR_ESD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="e181fe34-37d4-4851-be42-d8aed18e3f6e">
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <ct:object name="XSA0080" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSA0080" access-level="public" uuid="3de1535d-15fb-43bb-b501-71cf8bc1468f">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSA0080" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[XSA-0080]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Стоп от ПЛК ОН" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <r:subject-ref name="ESD1000" object="DELIVERY_OUTLET.ESD_1000.ESD_ALM.ESD1000" const-access="false" aspected="false" uuid="c86c72ee-c29e-467a-806b-89ff1bc72b07">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <ct:object name="PAHH0001B" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="5a8580c8-75ca-4d60-b4a2-d35d60def905">
+            <r:init-ref ref="Reference">
+              <property name="target">Domain.PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.PAHH0001B</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[PAHH-0001B]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0045_OFFSHORE" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийная остановка на ВПУ 2</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <property name="original">Domain.PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.PAHH0001B</property>
+          </ct:object>
+          <ct:object name="PAHH0001A" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="26a48822-60a1-42d6-a1b6-af88938c1a1f">
+            <r:init-ref ref="Reference">
+              <property name="target">Domain.PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.PAHH0001A</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[PAHH-0001A]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0045_OFFSHORE" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийная остановка на ВПУ 1</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <property name="original">Domain.PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.PAHH0001A</property>
+          </ct:object>
+          <ct:object name="PAHH0001C" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" access-level="public" uuid="63d055ff-642d-412c-a165-5ed73ee39afc">
+            <r:init-ref ref="Reference">
+              <property name="target">Domain.PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.PAHH0001C</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[PAHH-0001C]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0045_OFFSHORE" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Аварийная остановка на ВПУ 3</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <property name="original">Domain.PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.PAHH0001C</property>
+          </ct:object>
+        </ct:object>
+        <ct:object name="S_ESD3" base-type="unit.Types.БСМТ.Последовательность СОД.IOS_SEQ" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.S_ESD3" access-level="public" uuid="95e86a4c-ad50-4997-8292-1a2e7b86e713">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.S_ESD3" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_0" value="Команда ''Активировать ESD 3 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_1" value="Команда ''Cбросить ESD 3 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_2" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_0" value="ESD 3 Шаг 0 Задвижка открыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_1" value="ESD 3 Шаг 1 Задержка перед закрытием" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_2" value="ESD 3 Шаг 2 Задвижка закрывается" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_3" value="ESD 3 Шаг 3 Задвижка закрыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_4" value="ESD 3 Шаг 4 Нажат сброс ESD в поле" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_5" value="ESD 3 Шаг 5 Нажат сброс ESD в SCADA" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[S-ESD3]" />
+          <attribute type="unit.System.Attributes.Description" value="Последовательность аварийной остановки @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        </ct:object>
+        <r:subject-ref name="S_ALA" object="MT_OVERVIEW.S_ALA" const-access="false" aspected="false" uuid="3f76f859-6c33-4630-bcb3-5908e47f4fa2">
+          <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          <attribute type="unit.Server.Attributes.ExpandReference" />
+        </r:subject-ref>
+      </ct:object>
+      <ct:object name="ESVF0007" base-type="unit.Types.БСМТ.Задвижка.IOS_VALVE_NAR" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESVF0007" access-level="public" uuid="590a81fe-e23d-4808-8385-f7561eb852ce">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESVF0007" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESVF-0007]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="ESD_ALM" base-type="Types.Дискретный параметр.IOS_DP_SBOR_ESD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="1712aacc-c64e-4153-a953-abd2261def91">
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <ct:object name="XSAF0007" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSAF0007" access-level="public" uuid="e6b9acf8-1acb-41b1-86b1-c71c08e1d686">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSAF0007" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[XSAF-0007]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Стоп от ПЛК ОН" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <r:subject-ref name="ESD1000" object="DELIVERY_OUTLET.ESD_1000.ESD_ALM.ESD1000" const-access="false" aspected="false" uuid="1982cc1d-33ee-4342-8ed1-ec1cf49fd80e">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="PSHH0046" object="OFFSHORE.PSHH0046" const-access="false" aspected="false" uuid="6eaf2824-103d-4039-b51a-82fb1956a997">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+        </ct:object>
+        <ct:object name="S_ESD5" base-type="unit.Types.БСМТ.Последовательность СОД.IOS_SEQ" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OVERVIEW.S_ESD5" access-level="public" uuid="4935f7a3-aeb2-4117-be6c-b176aacaf86d">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OVERVIEW.S_ESD5" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_0" value="Команда ''Активировать ESD 5 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_1" value="Команда ''Cбросить ESD 5 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_0" value="ESD 5 Шаг 0 Задвижка открыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_1" value="ESD 5 Шаг 1 Задержка перед закрытием" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_2" value="ESD 5 Шаг 2 Задвижка закрывается" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_3" value="ESD 5 Шаг 3 Задвижка закрыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_4" value="ESD 5 Шаг 4 Нажат сброс ESD в поле" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_5" value="ESD 5 Шаг 5 Нажат сброс ESD в SCADA" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.System.Attributes.Description" value="Последовательность аварийной остановки @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0041_42_OVERVIEW" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[S-ESD5]" />
+        </ct:object>
+        <r:subject-ref name="S_ALA" object="MT_OVERVIEW.S_ALA" const-access="false" aspected="false" uuid="bde71f57-d882-4598-89b3-56098e8c41bf">
+          <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          <attribute type="unit.Server.Attributes.ExpandReference" />
+        </r:subject-ref>
+      </ct:object>
+      <ct:object name="ESD_1000" base-type="Types.Дискретный параметр.IOS_DP_SBOR_ESD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="21675e3b-93ff-4efe-b10d-1e89b99fde99">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESD-1000]" />
+        <attribute type="unit.System.Attributes.Description" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <ct:object name="S_ESD1000" base-type="unit.Types.БСМТ.Последовательность СОД.IOS_SEQ" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DBNP_1000.S_ESD1000" access-level="public" uuid="ebcf5149-90e3-4f4f-a252-cbf02b85e3eb">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DBNP_1000.S_ESD1000" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_0" value="Команда ''Активировать ESD 1000 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_1" value="Команда ''Cбросить ESD 1000 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_0" value="ESD 1000 Шаг 0 Задвижки открыты" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_1" value="ESD 1000 Шаг 1 Задержка перед закрытием" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_2" value="ESD 1000 Шаг 2 Задвижки закрываются" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_3" value="ESD 1000 Шаг 3 Задвижки закрыты" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_4" value="ESD 1000 Шаг 4 Нажат сброс ESD в поле" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_5" value="ESD 1000 Шаг 5 Нажат сброс ESD в SCADA" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.System.Attributes.Description" value="Последовательность аварийной остановки @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="DBNP_1000" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[S_ESD-1000]" />
+        </ct:object>
+        <r:subject-ref name="S_ALA" object="MT_OVERVIEW.S_ALA" const-access="false" aspected="false" uuid="339d20f9-c0f6-43fa-b552-9811eccab120">
+          <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          <attribute type="unit.Server.Attributes.ExpandReference" />
+        </r:subject-ref>
+        <ct:object name="ESD_ALM" base-type="Types.Дискретный параметр.IOS_DP_SBOR_ESD" access-scope="global" aspect="Types.IOS" access-level="public" uuid="60d7fbb3-8e31-4d43-95ca-599dfc451646">
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <ct:object name="ESD1000" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESD1000" access-level="public" uuid="f1a8c14f-4c1d-42fe-bf20-e9cd119dcc07">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESD1000" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[ESD-1000]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). ESD 1000 Активен" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+            <attribute type="unit.Types.Attributes.DP.Type.Type_ESD" value="0" />
+            <attribute type="unit.Types.Attributes.DP.Type.Type_USD" value="1" />
+          </ct:object>
+          <ct:object name="HSE1101" base-type="Types.Дискретный параметр.IOS_DP_LF" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1101" access-level="public" uuid="8c230767-90d5-44f9-b383-ddb90459325c">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1101" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1101]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка ESD в районе камеры 42-LR-A001" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <ct:object name="HSE1102" base-type="Types.Дискретный параметр.IOS_DP_LF" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1102" access-level="public" uuid="b0f4b11d-56fd-44d4-a4fb-7d2ff0149ea4">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1102" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1102]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка ESD в районе камеры 42-LR-A101" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <ct:object name="HSE1103" base-type="Types.Дискретный параметр.IOS_DP_LF" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1103" access-level="public" uuid="aa0dec4c-f1ce-476d-bed1-897449fe8bc3">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1103" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1103]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка ESD в районе камеры 42-LR-A102" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <ct:object name="HSE1105" base-type="Types.Дискретный параметр.IOS_DP_LF" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1105" access-level="public" uuid="40341a32-2c12-4d13-8527-b7a13d64fad4">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1105" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1105]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка ESD в районе Пож.депо АБК-1" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <ct:object name="HSE1106" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1106" access-level="public" uuid="377e50f6-5271-433a-b7f7-682d705b58fb">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1106" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1106]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Нажатие кнопки на площадке СИКН" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <ct:object name="HSE1107" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1107" access-level="public" uuid="8ec94d2d-b3e1-4f43-a607-f4438a305532">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1107" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1107]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Нажатие кнопки на площадке СИКН" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <ct:object name="HSEF1102" base-type="Types.Дискретный параметр.IOS_DP_LF" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSEF1102" access-level="public" uuid="ac2676aa-e232-49b8-bd0b-199e233727ba">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSEF1102" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSEF-1102]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Линия погрузки 3" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <r:subject-ref name="LAHH0708" object="JAR.CLOSED_DRAIN.TKH001.LS.LAHH0708" const-access="false" aspected="false" uuid="fcb4ec26-652d-4f5a-818d-bd54ceed02d4">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="LAHH2001" object="JAR.DRAINTANKS_H0034.LAHH2001" const-access="false" aspected="false" uuid="fdc19606-8e7b-4a26-9836-431783d749e6">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="XS1000" object="OUTLET_INLET.XS1000.XS1000" const-access="false" aspected="false" uuid="29734235-79bf-45ee-b91c-1afef5657ca6">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <ct:object name="HSE1104" base-type="Types.Дискретный параметр.IOS_DP_LF" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1104" access-level="public" uuid="7e90bf23-fe80-4eb6-a70d-4e7bb8ca7216">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1104" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1104]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка ESD в районе Мат. склада" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <r:subject-ref name="LAHH0718" object="JAR.CLOSED_DRAIN.TKH005.LS.LSHH0718" const-access="false" aspected="false" uuid="e8d3f736-ad75-4289-b4d9-dfeed38e2f61">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="LAHH0301" object="JAR.DRAIN_SYSTEM_OIL.TK-H002.LS.LAHH0301" const-access="false" aspected="false" uuid="01510548-4c13-4c6c-a199-8998e4126d70">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="LAHH0216" object="JAR.MULTIPURPOSE_TANK.TKI002.LS.LSHH0216" const-access="false" aspected="false" uuid="d473d02c-0671-41a4-a48e-e903c3cd2047">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="LAHH0218" object="JAR.MULTIPURPOSE_TANK.TKI002.LS.LSHH0218" const-access="false" aspected="false" uuid="53fd4bbc-d1dc-4a6b-82d8-e0e85593d572">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <r:subject-ref name="LY0200" object="JAR.MULTIPURPOSE_TANK.TKI001.LS.LY0200" const-access="false" aspected="false" uuid="1e7d8866-32c9-4dd3-ace1-1ced7e3c51a6">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+        </ct:object>
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="386780c7-fa2a-438d-badc-1c03a3a3d0bf">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="DRAINTANKS_H0034" access-scope="global" access-level="public" uuid="09ddcd9d-93bd-43aa-abb8-8d4685cb66fa">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="LAHH2001" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DRAINTANKS_H0034.LAHH2001" access-level="public" uuid="04471107-2faf-42d6-8d5d-2395dd82cecf">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DRAINTANKS_H0034.LAHH2001" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[LSHH-2001]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DRAINTANKS_H0034" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Аварийный высокий уровень 42-TK-H003/H004" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="35357fed-5431-4cb2-b1d3-dc0ae2b4845f">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="MT_OVERVIEW" access-scope="global" access-level="public" uuid="f8b58832-5a7f-4b8c-86e0-399e6233d40f">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="S_ALA" base-type="unit.Types.БСМТ.Последовательность СОД.IOS_SEQ" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.MT_OVERVIEW.S_ALA" access-level="public" uuid="5f97229e-2dd0-4c55-844d-de1a424713bb">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.MT_OVERVIEW.S_ALA" />
+        <attribute type="unit.Types.Attributes.SEQ.HSS_0" value="Команда ''Подтвердить ESD аларм''" />
+        <attribute type="unit.Types.Attributes.SEQ.HSS_1" value="Команда ''Отменить ESD аларм''" />
+        <attribute type="unit.Types.Attributes.SEQ.HSS_2" value="Команда HSS_2" />
+        <attribute type="unit.Types.Attributes.SEQ.Step_0" value="ШАГ 0 Сирена ESD на БС отключена" />
+        <attribute type="unit.Types.Attributes.SEQ.Step_1" value="ШАГ 1 Сирена ESD на БС включена" />
+        <attribute type="unit.Types.Attributes.SEQ.Step_2" value="ШАГ 2 Сирена ESD на БС Не Отменена" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.System.Attributes.Description" value="Последовательность @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="MT_OVERVIEW" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[S-ALA]" />
+      </ct:object>
+      <ct:object name="UAM042NA" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OVERVIEW.UAM042NA" access-level="public" uuid="950a0c01-0771-4128-935f-b80c504a2ace">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OVERVIEW.UAM042NA" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[UA-M041NA]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="MT_OVERVIEW" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Выкл. выс. давл" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="841f46a2-7df6-4a12-a39f-87c3c1722a15">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="NO_DISP" access-scope="global" access-level="public" uuid="86f05604-ca68-44f2-80f5-479d6337df52">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="HSE1001" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.HSE1001" access-level="public" uuid="2a056fb2-05e7-4ec2-85b2-df0e9040f926">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.HSE1001" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1001]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Кнопка &quot;ESD#1. Аварийное закрытие ESV-0090&quot; @(object:unit.Types.Attributes.Common.Sign)" />
+      </ct:object>
+      <ct:object name="ESV0540" base-type="unit.Types.БСМТ.Задвижка.IOS_VALVE_NAR" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.FUEL_STORAGE.ESV0540" access-level="public" uuid="fc48fd7e-3d37-4985-b871-2537ec27741e">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.FUEL_STORAGE.ESV0540" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESV-0540]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="S_ESD4" base-type="unit.Types.БСМТ.Последовательность СОД.IOS_SEQ" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.FUEL_STORAGE.S_ESD4" access-level="public" uuid="db92be90-6839-47ae-9329-0f51e7d3ad89">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.FUEL_STORAGE.S_ESD4" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_0" value="Команда ''Активировать ESD 4 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_1" value="Команда ''Cбросить ESD 4 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_0" value="ESD 4 Шаг 0 Задвижка открыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_1" value="ESD 4 Шаг 1 Задержка перед закрытием" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_2" value="ESD 4 Шаг 2 Задвижка закрывается" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_3" value="ESD 4 Шаг 3 Задвижка закрыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_4" value="ESD 4 Шаг 4 Нажат сброс ESD в поле" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_5" value="ESD 4 Шаг 5 Нажат сброс ESD в SCADA" />
+          <attribute type="unit.System.Attributes.Description" value="Последовательность аварийной остановки @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[S_ESD4]" />
+        </ct:object>
+        <r:subject-ref name="S_ALA" object="MT_OVERVIEW.S_ALA" const-access="false" aspected="false" uuid="901195f6-44e6-4780-9e8b-3a506600ee3f">
+          <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          <attribute type="unit.Server.Attributes.ExpandReference" />
+        </r:subject-ref>
+      </ct:object>
+      <ct:object name="ESD1101" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESD1101" access-level="public" uuid="b2dc3730-15b5-4186-9d3f-60e9a49a456a">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESD1101" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESD-1101]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). ESD на SPM 1" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.Type.Type_ESD" value="1" />
+      </ct:object>
+      <ct:object name="ESD1102" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESD1102" access-level="public" uuid="56de79a9-89de-4c1d-9ce4-b7a3de9b4d98">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESD1102" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESD-1102]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). ESD на SPM 2" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.Type.Type_ESD" value="1" />
+      </ct:object>
+      <ct:object name="ESDF1102" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESDF1102" access-level="public" uuid="2ce74b4a-9b08-4942-a630-5acec252bdd2">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.ESDF1102" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESDF-1102]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). ESD на SPM 3" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        <attribute type="unit.Types.Attributes.DP.Type.Type_ESD" value="1" />
+      </ct:object>
+      <ct:object name="FXH0310E" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.FXH0310E" access-level="public" uuid="7dc4239e-b533-46bd-a148-f0b90e8a8553">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.FXH0310E" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[FXH-0310E]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Наличие потока" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+      </ct:object>
+      <ct:object name="HS1005B" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1005B" access-level="public" uuid="b109de33-f8c9-4300-8469-61674092f34c">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1005B" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HS-1005B]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка на БС ''Подтверждение ESD на РП'' (Нет на экране OaSyS)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HS1003B" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1003B" access-level="public" uuid="46b5e234-6796-4fc6-95a8-2969569039f4">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1003B" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HS-1003B]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка на БС &quot;Аварийное закрытие ESV-0065 на РП&quot;" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HS1002B" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1002B" access-level="public" uuid="7134d1b4-c4bb-4275-9bbd-2fdc1979a329">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1002B" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HS-1002B]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка на БС &quot;Аварийное закрытие ESV-0085 на РП&quot;" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HS1001B" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1001B" access-level="public" uuid="42f25135-2889-41b4-94a3-83c75fab17fe">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1001B" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HS-1001B]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка на БС &quot;Аварийное закрытие ESV-0002 на РП&quot;" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HS1007" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1007" access-level="public" uuid="3273ca2c-452a-47b9-9f8e-027ca7e7a5ab">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HS1007" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HS-1007]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). БС. Кнопка ''Подтверждение ESD'' (Нет на экране OaSyS)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HSAC1004B" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSAC1004B" access-level="public" uuid="74ae6448-1dd4-4a2e-a080-59e98c7622a4">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSAC1004B" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HSAC-1004B]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Кнопка на БС ''Квитирование тревоги на РП'' (Нет на экране OaSyS)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HSAC1006" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSAC1006" access-level="public" uuid="0c8964af-e0d5-4eff-bd7c-2c0fb58850e1">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSAC1006" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HSAC-1006]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). БС. Кнопка ''Квитирование тревоги'' (Нет на экране OaSyS)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HST1006" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HST1006" access-level="public" uuid="4d170cd6-499f-415f-b5d2-371c9795ac4d">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HST1006" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HST-1006]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). БС. Кнопка ''Тест Ламп''" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HSE1000" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1000" access-level="public" uuid="e4014dd8-3520-4cf6-a828-cfd322735c16">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1000" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1004]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Последовательность ESD#1000 активирована @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.DP.INV_DP" value="true" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+      </ct:object>
+      <ct:object name="HSE1002" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1002" access-level="public" uuid="ac22b412-fcdd-41dc-abc4-c7ae757d9ed1">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1002" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1002]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Кнопка &quot;ESD#2. Аварийное закрытие ESV-0050&quot; @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HSE1003" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1003" access-level="public" uuid="611f3c42-602d-4340-a845-011b995fd676">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1003" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1003]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Кнопка &quot;ESD#3. Аварийное закрытие ESV-0080&quot; @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="HSE1007" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1007" access-level="public" uuid="fe31f1de-117f-41f6-9b6b-d356e28bec2c">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.HSE1007" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[HSE-1007]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Кнопка ''ESD#5. Аварийное закрытие ESVF-0007'' @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="PAHH0006" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PAHH0006" access-level="public" uuid="06d16493-d7c4-4efe-a999-43c537a20679">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PAHH0006" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[PSHH-0006]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Команда ''Запрос на ESD от ВПУ 1''" />
+      </ct:object>
+      <ct:object name="PAHH0026" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PAHH0026" access-level="public" uuid="fd1d9e4e-c777-4f24-b787-7833517a78a8">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PAHH0026" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[PSHH-0026]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Команда ''Запрос на ESD от ВПУ 2''" />
+      </ct:object>
+      <ct:object name="PAHH0046" base-type="Types.Команда.IOS_CMD" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PAHH0046" access-level="public" uuid="75f1278f-9de7-4ecb-b184-b054385e4da1">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PAHH0046" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[PSHH-0046]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_NO_DISP" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Команда ''Запрос на ESD от ВПУ 3''" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="OFFSHORE" access-scope="global" access-level="public" uuid="12b3995a-55b8-4895-9d60-9692ad5f5a0c">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="PSHH0006" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PSHH0006" access-level="public" uuid="73fea3aa-e961-4343-9450-f88d707c81a8">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PSHH0006" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[PSHH-0006]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0045_OFFSHORE" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Аварийное высокое давление на ВПУ 1" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+      </ct:object>
+      <ct:object name="PSHH0046" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PSHH0046" access-level="public" uuid="f97d9c58-120e-4724-bc84-12d663b69eb8">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OFFSHORE.PSHH0046" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[PSHH-0046]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0045_OFFSHORE" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Аварийное высокое давление на ВПУ 3" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="b9c4fd0a-375f-4698-9167-ec6ee1bc5ba9">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="OUTLET_INLET" access-scope="global" access-level="public" uuid="2f60a61a-eb47-4d7d-989f-59412d98421a">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="ESV0090" base-type="unit.Types.БСМТ.Задвижка.IOS_VALVE_NAR" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.ESV0090" access-level="public" uuid="ba162ce7-8e34-4c17-a750-c07e1154e1d0">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.ESV0090" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[ESV-0090]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0041_42_OUTLET_INLET" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <ct:object name="ESD_ALM" base-type="Types.Дискретный параметр.IOS_DP_SBOR_ESD" access-scope="global" access-level="public" uuid="19683342-224d-4391-bf89-2d0f97d23ed9">
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <r:subject-ref name="ESD1000" object="DELIVERY_OUTLET.ESD_1000.ESD_ALM.ESD1000" const-access="false" aspected="false" uuid="5b8eb007-eb23-41cd-86cb-b7bec0f48b43">
+            <attribute type="unit.Server.Attributes.ExpandReference" />
+            <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          </r:subject-ref>
+          <ct:object name="PALL0053" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.PALL0053" access-level="public" uuid="ab0d71b1-c4ab-4de3-895a-dcf568c9096e">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.PALL0053" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[PSLL-0053]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0041_42_OUTLET_INLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Предельное низкое давление на выходе РП" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+          <ct:object name="XSA0090" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSA0090" access-level="public" uuid="b8fcec7f-4939-4c85-9ded-db4e58feab70">
+            <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.DELIVERY_OUTLET.XSA0090" />
+            <attribute type="unit.Types.Attributes.Common.Sign" value="[XSA-0090]" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0042_DELIVERY_OUTLET" />
+            <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). остановка по запросу ПЛК M0042JAR" />
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+          </ct:object>
+        </ct:object>
+        <r:subject-ref name="S_ALA" object="MT_OVERVIEW.S_ALA" const-access="false" aspected="false" uuid="e88f2faa-4ecc-4a16-a425-5cb966bba18a">
+          <attribute type="unit.Server.Attributes.AggregateReferencedConditions" />
+          <attribute type="unit.Server.Attributes.ExpandReference" />
+        </r:subject-ref>
+        <ct:object name="S_ESD1" base-type="unit.Types.БСМТ.Последовательность СОД.IOS_SEQ" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.S_ESD1" access-level="public" uuid="a6f41463-2d86-42ff-89ea-6a61349414fb">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.S_ESD1" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_0" value="Команда ''Активировать ESD 1 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.HSS_1" value="Команда ''Cбросить ESD 1 на БС''" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_1" value="ESD 1 Шаг 1 Задержка перед закрытием" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_0" value="ESD 1 Шаг 0 Задвижка открыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_2" value="ESD 1 Шаг 2 Задвижка закрывается" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_3" value="ESD 1 Шаг 3 Задвижка закрыта" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_4" value="ESD 1 Шаг 4 Нажат сброс ESD в поле" />
+          <attribute type="unit.Types.Attributes.SEQ.Step_5" value="ESD 1 Шаг 5 Нажат сброс ESD в SCADA" />
+          <attribute type="unit.System.Attributes.Description" value="Последовательность аварийной остановки @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0041_42_OUTLET_INLET" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[S-ESD1]" />
+        </ct:object>
+      </ct:object>
+      <ct:object name="XS1000" base-type="Types.Дискретный параметр.IOS_DP_SBOR" access-scope="global" access-level="public" uuid="76ba144c-577f-4af6-91cf-42133c18b7b6">
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[XS-1000]" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <ct:object name="XS1000" base-type="Types.Дискретный параметр.IOS_DP" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.XS1000" access-level="public" uuid="93503f73-b2f8-4f29-87cc-c078c23e444c">
+          <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.OUTLET_INLET.XS1000" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="[XS-1000]" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0041_42_OUTLET_INLET" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+          <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Общий сигнал о пожаре" />
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="M0041_42_OUTLET_INLET" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="97e7a3f4-d966-47b8-bfbb-4f78b007d9ec">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="SURGE_SUPPRESSION1" access-scope="global" access-level="public" uuid="1c2c06c5-1a88-4694-bc5f-9a8aebc9dd91">
+      <attribute type="unit.System.Attributes.Description" />
+      <ct:object name="COMM_M41NAR_FAIL" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.SURGE_SUPPRESSION1.COMM_M41NAR_FAIL" access-level="public" uuid="d1cddd7f-ef1a-47e9-8c66-32af98c43ff9">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.SURGE_SUPPRESSION1.COMM_M41NAR_FAIL" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[COMM-M41NAR_FAIL]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="CPC_SURGE_SUPPRESSION1" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Частичный сбой передачи в M0041NAR @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="COMM_M41NAR_LOST" base-type="Types.Простой дискретный параметр.IOS_DP_S" access-scope="global" aspect="Types.IOS" original="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.SURGE_SUPPRESSION1.COMM_M41NAR_LOST" access-level="public" uuid="ec5a7a23-d086-4221-a63d-b38dc696f858">
+        <r:init-ref ref="Reference" target="PLC_M0042.M0042NAR.Crate1.CPU.M0042NAR.CPC.M0042.NAR.SURGE_SUPPRESSION1.COMM_M41NAR_LOST" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="[COMM-M41NAR_LOST]" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="M0040_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="CPC_SURGE_SUPPRESSION1" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="M0042NAR" />
+        <attribute type="unit.System.Attributes.Description" value="Полный сбой передачи в M0041NAR @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="151" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="acec6deb-0472-4658-8d8b-2606a758c965">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+  </ct:object>
+  <plc:plc name="PLC_M0042.M0042NAR" uuid="3459e190-a27d-4a4d-8c95-769d4fcc8914">
+    <plc:crate name="Crate1" uuid="9d674c9c-a843-4435-a7df-bdff20b81682">
+      <plc:cpu name="CPU" uuid="01cbd5d1-0574-4603-ad3b-1ce0c4d07b3f">
+        <eth:ethernet-adapter name="Eth2" address="172.16.74.103" network="Ethernet2" uuid="185dd6c4-7a1f-4cfa-84d3-06914cfd1136">
+          <attribute type="unit.System.Attributes.Comment" value="11.0.19.129" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="Eth1" address="11.0.19.1" network="Ethernet1" uuid="b93e1992-79aa-4fa8-ba43-56037106f8a8">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.134" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="EIPAdapter" address-map="M0042NAR.CIP_M0042NAR" route="backpane;0" uuid="9f5c7604-cb69-463d-b183-3541f96fc830" />
+        <dp:application-object name="M0042NAR" uuid="92ec84f4-1caf-410f-be40-a78e86d7bf01">
+          <eip:cip-address-map name="CIP_M0042NAR" file="M0042_BS\CIP_M0042NAR.xml" uuid="b0eecf38-344c-4e2b-b469-4d13e664831b" />
+          <attribute type="unit.System.Attributes.Description" value="КТК" />
+          <ct:object name="CPC" uuid="2ac10628-a9c7-4e30-b16f-8cc1c37f73b7">
+            <attribute type="unit.System.Attributes.Description" value="БСМТ" />
+            <ct:object name="M0042" access-scope="global" access-level="public" uuid="5d66c3be-85b3-48fa-aff7-bed7c703425e">
+              <ct:object name="NAR" access-scope="global" access-level="public" uuid="3b3f153d-c049-4125-8b0e-36a2f32c13f2">
+                <ct:object name="FUEL_STORAGE" access-scope="global" access-level="public" uuid="a13e5f56-2cd3-4dab-bde6-3e3de26e9d92">
+                  <ct:object name="ESV0540" base-type="unit.Types.БСМТ.Задвижка.M_VALVE_NAR" access-scope="global" aspect="Types.PCL" access-level="public" uuid="fdfc48d3-3c54-4ce6-86bf-f67a617a7247" />
+                  <ct:object name="S_ESD4" base-type="unit.Types.БСМТ.Последовательность СОД.M_SEQ" access-scope="global" aspect="Types.PCL" access-level="public" uuid="0cc0b698-12b9-4566-8535-a58a4894627f" />
+                </ct:object>
+                <ct:object name="SURGE_SUPPRESSION1" access-scope="global" access-level="public" uuid="4a96068d-6302-437b-b489-7d5dc678e6ea">
+                  <ct:object name="COMM_M41NAR_FAIL" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="361f6bbd-07f3-4f47-b451-3de05336a7c5" />
+                  <ct:object name="COMM_M41NAR_LOST" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="799687a3-74bc-485d-b0e2-0b718d034bdd" />
+                </ct:object>
+                <ct:object name="OUTLET_INLET" access-scope="global" access-level="public" uuid="676497bb-81a9-4705-821e-20414e89c9d0">
+                  <ct:object name="ESV0090" base-type="unit.Types.БСМТ.Задвижка.M_VALVE_NAR" access-scope="global" aspect="Types.PCL" access-level="public" uuid="82f15f0b-5502-4a82-96f6-5dd565c82d87" />
+                  <ct:object name="PALL0053" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="d4f64ee0-4125-4fef-bf0a-0afd6dbd1007" />
+                  <ct:object name="XS1000" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="eadb12d4-d935-4338-8026-7eb6918c5048" />
+                  <ct:object name="S_ESD1" base-type="unit.Types.БСМТ.Последовательность СОД.M_SEQ" access-scope="global" aspect="Types.PCL" access-level="public" uuid="64c30f85-8797-457b-97f4-ee3c3684b008" />
+                  <ct:object name="HSE1001" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="adcf7ce3-51e2-4958-9745-0cc581854e3f" />
+                </ct:object>
+                <ct:object name="CLOSED_DRAIN" access-scope="global" access-level="public" uuid="3c55d3cd-bcac-413a-9567-97dc7bc0ed13">
+                  <ct:object name="LAHH0708" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="e2766383-9cfd-4cc4-a018-7b65d0c49a8b" />
+                  <ct:object name="LSH0502" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="ae64bce5-ca83-4d88-acfd-f0d2b9451f86" />
+                  <ct:object name="TT0503" base-type="Types.Аналоговый параметр.M_AP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="77385651-3a96-466c-a158-859320c0a07e" />
+                </ct:object>
+                <ct:object name="DELIVERY_OUTLET" access-scope="global" access-level="public" uuid="eb2f03f7-7930-453a-9e3b-fd13d96c654d">
+                  <ct:object name="ESD1000" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="04e92f7f-03fa-4e09-a882-984567309631" />
+                  <ct:object name="ESD1101" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="cbd0b2dd-c71c-41b4-a95c-3e568f2ee5d0" />
+                  <ct:object name="ESD1102" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="98d69afc-a761-4388-abe6-904537ea793b" />
+                  <ct:object name="ESDF1102" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="66a9e791-687f-4a6a-b222-99a85e110832" />
+                  <ct:object name="ESV0050" base-type="unit.Types.БСМТ.Задвижка.M_VALVE_NAR" access-scope="global" aspect="Types.PCL" access-level="public" uuid="6f94a80b-7caf-4392-9165-d338a1adc708" />
+                  <ct:object name="ESV0080" base-type="unit.Types.БСМТ.Задвижка.M_VALVE_NAR" access-scope="global" aspect="Types.PCL" access-level="public" uuid="f86797b8-c387-477e-be71-9287d344260f" />
+                  <ct:object name="ESVF0007" base-type="unit.Types.БСМТ.Задвижка.M_VALVE_NAR" access-scope="global" aspect="Types.PCL" access-level="public" uuid="7b273264-1f0a-4c12-8a4e-462e4ddc5840" />
+                  <ct:object name="FXH0300E" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="d45a31c0-e940-40e1-aec1-61fd71215417" />
+                  <ct:object name="FXH0310E" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="28d85ede-a366-413b-9f41-100572b1ac08" />
+                  <ct:object name="HS1005B" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="c33389eb-d5a9-4aa4-a830-8495d7bbcc26" />
+                  <ct:object name="HS1003B" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="6768fb11-95a9-4a9f-ac74-dcf26cfe68c1" />
+                  <ct:object name="HS1002B" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="a6bf8fcb-b32d-46a0-8b1e-399f51d63be5" />
+                  <ct:object name="HS1001B" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="66c16002-8a26-4942-b439-9c4c8e85813a" />
+                  <ct:object name="HS1007" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="9e46ca3e-2f0b-45a7-ab6d-593923c754f2" />
+                  <ct:object name="HSAC1004B" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="d7a96ae9-b810-49a7-9a40-783e54ce8fe9" />
+                  <ct:object name="HSAC1006" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="858c573d-8b1b-4cb1-a0c9-ca69b9067722" />
+                  <ct:object name="HSE1002" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="03de6665-e8d0-472f-8d10-52375143d2f7" />
+                  <ct:object name="HSE1003" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="b9ab15e5-818d-4659-be88-50b33d232826" />
+                  <ct:object name="HSE1000" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="3e67395b-e9e4-4244-8e2c-5c25636cbadd" />
+                  <ct:object name="HSE1007" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="10afe0c2-fb14-46e6-8483-0013fe35654c" />
+                  <ct:object name="HSE1101" base-type="Types.Дискретный параметр.M_DP_LF" access-scope="global" aspect="Types.PCL" access-level="public" uuid="b28bb418-5df8-4d45-8f27-b4c8e78ad1b6" />
+                  <ct:object name="HSE1102" base-type="Types.Дискретный параметр.M_DP_LF" access-scope="global" aspect="Types.PCL" access-level="public" uuid="16715ebf-3c55-4ee4-9fa2-3a7e778a3c1b" />
+                  <ct:object name="HSE1103" base-type="Types.Дискретный параметр.M_DP_LF" access-scope="global" aspect="Types.PCL" access-level="public" uuid="0ae445ea-77fb-4a9b-bb76-454043d91263" />
+                  <ct:object name="HSE1104" base-type="Types.Дискретный параметр.M_DP_LF" access-scope="global" aspect="Types.PCL" access-level="public" uuid="c19b237a-3621-4c03-b0d3-fe0a4bb60b67" />
+                  <ct:object name="HSE1105" base-type="Types.Дискретный параметр.M_DP_LF" access-scope="global" aspect="Types.PCL" access-level="public" uuid="33bcafac-e750-4f42-b29d-700782bf8801" />
+                  <ct:object name="HSE1106" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="05d8bc55-8c5c-4d35-9a57-3822935ce899" />
+                  <ct:object name="HSE1107" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="c513c876-2f8c-490c-8f93-6aaf11096a8f" />
+                  <ct:object name="HSEF1102" base-type="Types.Дискретный параметр.M_DP_LF" access-scope="global" aspect="Types.PCL" access-level="public" uuid="bfca4bac-0b6c-48ef-8ecf-b3c90f0a5d66" />
+                  <ct:object name="HST1006" base-type="Types.Простой дискретный параметр.M_DP_S" access-scope="global" aspect="Types.PCL" access-level="public" uuid="a5bb6d10-aa23-4197-be1b-a220c9d98013" />
+                  <ct:object name="LAHH0301" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="8dab7fd3-7486-49dd-a6a4-00b4edef7e38" />
+                  <ct:object name="XSA0050" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="c8ec2305-f071-4465-8534-c2dc9bd2e6fb" />
+                  <ct:object name="XSA0080" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="65609abb-3827-419e-84c0-63de7ef24c27" />
+                  <ct:object name="XSA0090" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="3172f8e7-2a13-40d3-8d54-cb3c24f0280f" />
+                  <ct:object name="XSAF0007" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="8e9ca54c-fc44-499b-af26-6febe2d26f8a" />
+                  <ct:object name="S_ESD2" base-type="unit.Types.БСМТ.Последовательность СОД.M_SEQ" access-scope="global" aspect="Types.PCL" access-level="public" uuid="ff91aad0-5f9f-43d9-a740-3ac7eb6ad601" />
+                  <ct:object name="S_ESD3" base-type="unit.Types.БСМТ.Последовательность СОД.M_SEQ" access-scope="global" aspect="Types.PCL" access-level="public" uuid="d5679507-dca3-4276-aa23-3303d373c88b" />
+                  <ct:object name="PAHH0001B" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="a88d26c6-2640-433e-82cd-7786e5962709" />
+                  <ct:object name="PAHH0001A" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="6abfcdf1-73dd-4688-b454-1f46683aad65" />
+                  <ct:object name="PAHH0001C" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="336a7f52-bfea-4dbb-a3e8-e8b943240253" />
+                </ct:object>
+                <ct:object name="DRAINTANKS_H0034" access-scope="global" access-level="public" uuid="91106b11-2f7e-406c-a8b1-ab0bc565c7e7">
+                  <ct:object name="LAHH2001" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="0b60a31a-b4f6-4d17-a354-88a4c05e66c9" />
+                </ct:object>
+                <ct:object name="OFFSHORE" access-scope="global" access-level="public" uuid="6375eb0d-eb48-46b5-bde2-b38b891fed8b">
+                  <ct:object name="PAHH0006" base-type="Types.Команда.M_CMD" access-scope="global" aspect="Types.PCL" access-level="public" uuid="d77e6173-148f-47a0-8f95-dd4a637ae7dc" />
+                  <ct:object name="PAHH0026" base-type="Types.Команда.M_CMD" access-scope="global" aspect="Types.PCL" access-level="public" uuid="cf7a55ff-0703-4d27-824f-c090bce21e66" />
+                  <ct:object name="PAHH0046" base-type="Types.Команда.M_CMD" access-scope="global" aspect="Types.PCL" access-level="public" uuid="8511eba8-f3b2-4fbb-a3a8-0dbb43b41c35" />
+                  <ct:object name="PSHH0006" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="351151cd-2b3d-4431-8cb9-c707e3213290" />
+                  <ct:object name="PSHH0046" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="97fbbfa7-4796-4986-b3ff-a181a114c99c" />
+                </ct:object>
+                <ct:object name="MT_OVERVIEW" access-scope="global" access-level="public" uuid="169ee6c1-be26-4d89-a60a-98f33dc64619">
+                  <ct:object name="S_ALA" base-type="unit.Types.БСМТ.Последовательность СОД.M_SEQ" access-scope="global" aspect="Types.PCL" access-level="public" uuid="5c167029-2bc5-4944-b9fb-9de5a5b2e2a7" />
+                </ct:object>
+                <ct:object name="DBNP_1000" access-scope="global" access-level="public" uuid="098fc2e3-da2c-4c26-86ba-7f21ee854ae7">
+                  <ct:object name="S_ESD1000" base-type="unit.Types.БСМТ.Последовательность СОД.M_SEQ" access-scope="global" aspect="Types.PCL" access-level="public" uuid="9fbdcc0e-9d80-4e31-97fe-9f15dc2df98d" />
+                </ct:object>
+                <ct:object name="OVERVIEW" access-scope="global" access-level="public" uuid="b0363861-d5e0-4f14-a041-2b1514df41b0">
+                  <ct:object name="S_ESD5" base-type="unit.Types.БСМТ.Последовательность СОД.M_SEQ" access-scope="global" aspect="Types.PCL" access-level="public" uuid="bc2d8c4f-c213-4a85-b9fa-ecea80e4578c" />
+                  <ct:object name="UAM042NA" base-type="Types.Дискретный параметр.M_DP" access-scope="global" aspect="Types.PCL" access-level="public" uuid="e1088aec-edfb-4c30-8919-12f5fa73e0c6" />
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+</omx>

@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet">
+  <plc:plc name="PLC_M0042.M0042IB" uuid="e5cd62f7-0d74-42c7-aeff-047fab44474b">
+    <plc:crate name="Crate1" uuid="76978c33-46fb-4f37-9726-93cc4a7cbac6">
+      <plc:cpu name="CPU" uuid="db68ae42-9ea2-4767-9921-586afa20b833">
+        <eth:ethernet-adapter name="Eth2" address="172.16.74.204" network="Ethernet2" uuid="fde62a6f-c9fc-4c78-bc13-bf7a16310879">
+          <attribute type="unit.System.Attributes.Comment" value="11.170.13.129" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="Eth1" address="11.170.13.1" network="Ethernet1" uuid="8ba9b23b-9f7b-48c8-a303-28dc480dae07">
+          <attribute type="unit.System.Attributes.Comment" value="10.95.102.137" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="EIPAdapter" address-map="M0042IB.CIP_M0042IB" route="backpane;0" uuid="7e199d4b-e63c-43d1-8e35-04970cb9cadc" />
+        <dp:application-object name="M0042IB" uuid="0674e94f-b1e1-4588-9fa0-944f20712aa5">
+          <eip:cip-address-map name="CIP_M0042IB" file="M0042_BS\CIP_M0042IB.xml" uuid="5fbb6508-eb67-4b1a-89c6-594ddfd62fc6" />
+          <ct:object name="CPC" uuid="9019899a-4ac6-433b-93b4-bfa47b78f748">
+            <ct:object name="M0042_IB" uuid="fd591de6-0d0a-4a7c-a092-e5bfa5dedd73">
+              <ct:object name="M0042_PK42_A570_OV" uuid="4e56fcb6-ef91-4635-b3f2-4f04fc22f59e">
+                <ct:object name="FCV231" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV" aspect="unit.Types.PCL" uuid="806a9cd8-153d-47fc-929d-d08f1c5b49ae" />
+                <ct:object name="XV201A" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="c9cab212-205f-41fc-ab5c-820cc2561346" />
+                <ct:object name="S1MR1_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="a7693ad2-e948-452a-9491-9f7a5eb3a291" />
+                <ct:object name="S1MR1_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="9c18c49f-c160-4cc2-80b7-1e2a436ae8fb" />
+                <ct:object name="S1MR1" base-type="unit.Types.СИКН.Измерительная линия СИКН.FB_M_L" aspect="unit.Types.PCL" uuid="2b861523-891f-4812-a5ba-ca7d15231ca3" />
+                <ct:object name="S1MR1_DPI" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="116a8b7a-9d8d-46d4-acb0-bbcbdc907f3c" />
+                <ct:object name="XV211A" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="9e2d7a63-c5a2-4988-a812-7df05fe14d6f" />
+                <ct:object name="XV221A" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="32f9215b-0748-48d5-8572-4b9a16a7b975" />
+                <ct:object name="S1MR1_FLW" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="9b1f818d-0477-4c6f-9577-e649773a5224" />
+                <ct:object name="FCV232" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV" aspect="unit.Types.PCL" uuid="efcd2ec2-a7b8-4712-af9e-f2ca396a9552" />
+                <ct:object name="XV202" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="234696cc-49b2-480b-8768-ac08c5f82a1d" />
+                <ct:object name="S1MR2_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="1bffeca9-695f-440c-8afe-1b6eb7ff8e2e" />
+                <ct:object name="S1MR2_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="66f7f95e-460f-4630-b636-e10eaa98523d" />
+                <ct:object name="S1MR2" base-type="unit.Types.СИКН.Измерительная линия СИКН.FB_M_L" aspect="unit.Types.PCL" uuid="08e4b948-cd81-42af-a7b2-77f540e8253f" />
+                <ct:object name="S1MR2_DPI" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="550af6fd-e87c-4ec1-bfa9-0d092f3889b1" />
+                <ct:object name="XV212" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="96789a81-f6c0-4b55-8994-be630e79821a" />
+                <ct:object name="XV222" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="0daebfd7-fe06-4853-a228-7a45808ffa94" />
+                <ct:object name="S1MR2_FLW" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="7cbef6c6-4f23-4a94-96aa-86eb611290a4" />
+                <ct:object name="FCV233" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV" aspect="unit.Types.PCL" uuid="fd9466ef-e983-4070-8873-ed8863534a5c" />
+                <ct:object name="XV203" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="afbe8d83-7b5f-4711-80f7-ba41e3a13c2b" />
+                <ct:object name="S1MR3_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="dbf2e570-dee1-4bd6-8d9f-44ff55509821" />
+                <ct:object name="S1MR3_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="a2b3ef7a-927d-40ce-84c1-3dd7d10386b2" />
+                <ct:object name="S1MR3" base-type="unit.Types.СИКН.Измерительная линия СИКН.FB_M_L" aspect="unit.Types.PCL" uuid="01b2e1f2-0acd-47a2-b97b-8e6534e0dc7a" />
+                <ct:object name="S1MR3_DPI" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="7302095c-f000-46e9-a22d-fee5f73cf6f3" />
+                <ct:object name="XV213" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="d69a5927-884a-4956-ae06-dd7822b7ba07" />
+                <ct:object name="XV223" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="7f91c71d-8714-4ee1-b735-a0dff6a6d671" />
+                <ct:object name="S1MR3_FLW" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="745e5ecc-3361-4177-8b4d-d3eb9b729112" />
+                <ct:object name="FCV234" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV" aspect="unit.Types.PCL" uuid="84604e13-acdb-494f-9ea0-eb35a8c0e5e5" />
+                <ct:object name="XV204" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="1ee147f9-d3a5-4fa8-beec-105d10742ce3" />
+                <ct:object name="S1MR4_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="aa1ff935-1b53-4165-a2a5-2e1df09a60a7" />
+                <ct:object name="S1MR4_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="e9d61ddc-fe9a-4605-a3f5-2c2d8ff3914e" />
+                <ct:object name="S1MR4" base-type="unit.Types.СИКН.Измерительная линия СИКН.FB_M_L" aspect="unit.Types.PCL" uuid="4aa00b67-b33d-451d-a1ad-92c4aceb3386" />
+                <ct:object name="S1MR4_DPI" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="4a8e7732-cbfb-477c-87da-6fba15dc177e" />
+                <ct:object name="XV214" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="6a63470f-c161-4860-a56c-751a111250f4" />
+                <ct:object name="XV224" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="0edf3ee1-5de7-4551-8ce3-b59fef79215d" />
+                <ct:object name="S1MR4_FLW" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="cfd937b3-5f93-4f21-b34c-29e141cc820f" />
+                <ct:object name="FCV235" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV" aspect="unit.Types.PCL" uuid="3d6aa448-8e0e-4bd2-b041-7036206b86c7" />
+                <ct:object name="XV205" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="0d7a407c-5e65-4c14-97f4-f9a4d7ac97b7" />
+                <ct:object name="S1MR5_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="6901ab0b-2dae-4f82-8acd-53d4cbb031c7" />
+                <ct:object name="S1MR5_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="01ac9dee-e277-4689-a9cb-b6aa106840ea" />
+                <ct:object name="S1MR5" base-type="unit.Types.СИКН.Измерительная линия СИКН.FB_M_L" aspect="unit.Types.PCL" uuid="c6487de1-25b8-4652-947a-016fd0f27367" />
+                <ct:object name="S1MR5_DPI" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="58c9bc00-aaa0-479f-9dd4-ef1d396c8d5b" />
+                <ct:object name="XV215" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="3fb64775-89ab-44c7-84c5-fa343c77e29c" />
+                <ct:object name="XV225" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="0893bfd6-3b32-43be-8358-b8675f5d99f2" />
+                <ct:object name="S1MR5_FLW" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="3f2e1c09-04c9-4aee-9718-edc50d159051" />
+                <ct:object name="FCV236" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV" aspect="unit.Types.PCL" uuid="6c032364-e4cf-4f06-a418-80bdd13b7618" />
+                <ct:object name="XV206" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="22b0f606-3693-467a-af97-584d5b242ce5" />
+                <ct:object name="S1MR6_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="05f56dd1-8f6a-4b7f-9b77-609a866df24f" />
+                <ct:object name="S1MR6_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="f57a634f-f435-4167-80b9-983dd38ce33e" />
+                <ct:object name="S1MR6" base-type="unit.Types.СИКН.Измерительная линия СИКН.FB_M_L" aspect="unit.Types.PCL" uuid="0794ceaf-2ca1-4505-a6a2-09aca292f217" />
+                <ct:object name="S1MR6_DPI" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="4d101d4c-8e82-4ff0-a75c-931f76d5a7b5" />
+                <ct:object name="XV216" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="e4de7f70-2933-4094-994b-f8c7780fda17" />
+                <ct:object name="XV226" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="c07b49bf-8936-444b-ae00-5ccf290d0df9" />
+                <ct:object name="S1MR6_FLW" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="4c22568c-1b2b-42b6-986f-cd543f95d275" />
+                <ct:object name="XV001" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="6261aea7-c718-4d57-a9dc-834dca808466" />
+                <ct:object name="XV002" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="c4716119-e69b-45d0-a4ee-82032f2177d5" />
+                <ct:object name="XV101" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="a5f3dc5b-fd81-4f44-8560-56f3dceac7ce" />
+                <ct:object name="XV102" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="13205400-8bd7-49d7-b95e-267c8782b862" />
+                <ct:object name="S1_PDIT" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="bb3fab72-d11a-4cdd-8dc6-5181a65befc1" />
+                <ct:object name="FLW_PLC" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="6279ee73-94ec-4821-b75e-0634bc541df4" />
+                <ct:object name="FLW_IVC" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="b514805d-b34d-43f7-a17f-73f6edcac79c" />
+                <ct:object name="INLET_PRESS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="f5aba65a-9345-4beb-a5f7-ab28a8d4ee29" />
+                <ct:object name="INLET_PRESS2" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="f5fe9e44-e0a2-41ca-b63c-3ed7027d40ec" />
+                <ct:object name="OUT_PRESS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="e2c7d61c-0003-4bc7-84a8-bec3351bdb11" />
+                <ct:object name="OUT_PRESS2" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="096ffd78-9e82-4ec0-a4ef-c5c59db4c7d3" />
+                <ct:object name="VOLUME_READ" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="405add3c-bcd3-4177-a846-a9d722f3d3e4" />
+                <ct:object name="VOLTOGO_READ" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="4b64652e-ae4f-4235-aedd-df9ff8f037b0" />
+                <ct:object name="NMASS_TOGO" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="417b0bef-3998-4242-88f7-4b85ab52d1b2" />
+                <ct:object name="NMASS_READ" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="d56ddc2c-526c-41d8-aadd-3a633b698d1a" />
+                <ct:object name="S1_570_READY" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="b76b6332-f4c3-4487-bfe7-33e781605ea6" />
+                <ct:object name="S1_FLW_SP" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="862c7d32-c7d9-4ec0-93d6-a1af22a349f9" />
+                <ct:object name="S1_FLW_SPD" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="0b57a136-b6e2-4597-937f-a92e942f294c" />
+                <ct:object name="S1_FLW_SP_U" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="9af3f3cd-1329-46b0-a4b6-714b8d277945" />
+                <ct:object name="XV011" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="911e8e44-439c-45c0-9689-08221595d2ad" />
+                <ct:object name="XV012" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="173abf50-7161-4dd1-8e4f-37ca2a3405c5" />
+                <ct:object name="S1MR1_PRIM_P" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="36eb46ac-d711-4811-95c7-2db24ce3951d" />
+                <ct:object name="S1MR1_PRIM_T" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="97d59775-43a2-4266-868c-26c43870753f" />
+                <ct:object name="S1MR2_PRIM_P" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="d7d09707-145a-41a3-a324-2a9aab1de1c8" />
+                <ct:object name="S1MR2_PRIM_T" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="570a2d35-c74e-44b1-9f04-77c033b9dae8" />
+                <ct:object name="S1MR3_PRIM_P" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="2a665573-06f0-43e9-9f3f-62a29774c577" />
+                <ct:object name="S1MR3_PRIM_T" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="32733529-41e0-4d11-b45c-32f81975cf79" />
+                <ct:object name="S1MR4_PRIM_P" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="649d923b-b29f-415c-9861-6f8100d094cb" />
+                <ct:object name="S1MR4_PRIM_T" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="f081f810-257b-4333-8c84-ad1abd093a9d" />
+                <ct:object name="S1MR5_PRIM_P" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="24038f9f-2bdb-40fa-8d95-54d32a75798b" />
+                <ct:object name="S1MR5_PRIM_T" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="7113438f-2022-4138-8729-7b6612738e39" />
+                <ct:object name="S1MR6_PRIM_P" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="d378fab5-576b-438d-bb6d-e77fd6eb3345" />
+                <ct:object name="S1MR6_PRIM_T" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="aeef99d3-570a-4083-9915-8541fe0f9676" />
+                <ct:object name="S1_BAT" uuid="bc1399ff-26eb-4999-9b8e-5861d850f500">
+                  <ct:object name="Name" base-type="unit.Types.БСМТ.Имя Танкера_Партии.Name_Tank_ASCII" aspect="unit.Types.PCL" uuid="6433269f-1c5b-4440-906d-4d6076a82f5f" />
+                  <ct:object name="Start" base-type="unit.Types.СИКН.Дата время СИКН.M_DataTime" aspect="unit.Types.PCL" uuid="55f39c7f-9e0e-4b3c-a174-003218b0d74f" />
+                  <ct:object name="TRM" base-type="unit.Types.СИКН.Дата время СИКН.M_DataTime" aspect="unit.Types.PCL" uuid="49ea6107-661c-4715-b05c-9a764359033b" />
+                  <ct:object name="Status" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="621f0827-a39b-49a9-9535-c1f5487bf5a8" />
+                  <ct:object name="WRN_PER" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="6feaf1ac-b90b-4b33-b436-e0b6d96305cd" />
+                </ct:object>
+                <ct:object name="S1_BATCH_rSP" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="13176c10-a8c3-4497-9c59-17395027a028" />
+                <ct:object name="IVK_MODE" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="4d0a1bc9-066c-41a1-92ce-9d454f93e06f" />
+                <ct:object name="S1_MODE" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="8632a85a-a018-4c18-ab19-3f6b06486de6">
+                  <ct:object name="U" base-type="Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="856bb243-d60e-455a-a2d2-3a078cb23d45" />
+                </ct:object>
+                <ct:object name="OUTLET_TEMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="f0c01b5d-ef72-4459-bf2e-98405f4d22d5" />
+                <ct:object name="SY" base-type="unit.Types.СИКН.Дата время СИКН.M_DataTime" aspect="unit.Types.PCL" uuid="d4950f84-4d9c-44d3-90b0-0f2dcc413e5d" />
+                <ct:object name="SAMPLER_rSP_H" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="9700a46f-ccc0-4632-a11f-93dece824138" />
+                <ct:object name="SPM_SELECT" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="104a3565-d062-414b-a2aa-e13897c67fa0" />
+                <ct:object name="MLS_SPL" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="6c37573d-f2ee-4008-bae5-1f9540089511" />
+                <ct:object name="togo1000" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="cb07fa74-e210-400c-b742-dc39e1ffb520" />
+                <ct:object name="togo2000" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="86bc7e8a-ccbb-4248-93e3-0b499f97bf61" />
+                <ct:object name="togo4000" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="d1eff920-913c-4e50-abd8-43ecf515ca1d" />
+                <ct:object name="togo6000" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="3edb65e0-dcc1-42cb-8dce-b28ace57f698" />
+                <ct:object name="togo9000" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="097e5875-91fa-4402-b463-5c19931ccf46" />
+                <ct:object name="C_L_OPEN" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="28e07b10-ce7c-4f4e-a570-ba7f16177c67" />
+                <ct:object name="PRV_SPL" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="dc8dafc8-e393-4ee9-8371-f74b5d9b9ef4" />
+                <ct:object name="QAL_SP" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="033ef635-4427-4674-babe-af983fca4b18" />
+                <ct:object name="PRV_FLOOD" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="5175cbe0-2a23-44a7-abe0-092200cd8377" />
+                <ct:object name="QL_V_SPLY_M_R" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="84b2ebdf-4237-4ac9-a89d-6d2bb93e2e30" />
+                <ct:object name="S_ESD_SCADA" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="65bcaa62-5bb2-4e6d-a948-d4f49fafe223" />
+                <ct:object name="S_ESD_WORKSTN" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="b4ba1182-551a-44c5-a681-fe2b24e7eb57" />
+                <ct:object name="S_LOW_BATTERY" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="214bef62-3738-4c71-92c9-4a5f8cb690c6" />
+                <ct:object name="S_QAL_GAS_H" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="a6ee5aa1-7447-47bc-ae6e-d8c5571bab16" />
+                <ct:object name="S_QAL_GAS_HH" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="87703156-28ed-4321-b9b2-95bd94fa88b6" />
+                <ct:object name="S_QAL_GAS_LNG" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="9eb4c957-680e-4962-94ce-acdaa442d34a" />
+                <ct:object name="SKID_ALM" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="ad6229ac-0009-471c-a9f4-ed7cbcd6d16b" />
+                <ct:object name="SKID_BF_FIRE" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="bd5086fe-d261-4a38-b551-cb7093666ddf" />
+                <ct:object name="SKID_MLS_FIRE" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="2b32a93d-b98e-489c-82a5-6963ce5e289d" />
+                <ct:object name="SKID_OUT_ALM" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="4d1f0613-27a0-45f7-bc31-88e3ccba533c" />
+                <ct:object name="SKID_PRV_FIRE" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="a7be0317-e5cf-4903-999a-647984b20b81" />
+                <ct:object name="SKID_QAL_FIRE" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="422b7ca9-5a36-419e-8b22-57b2ea65cf9c" />
+                <ct:object name="SKID_QAL_FLOOD" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="28b49d12-03ee-4b4a-a128-882038239e07" />
+                <ct:object name="SKID1_FLOOD" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="747d069e-956e-4d53-8508-1c1f82c9c868" />
+                <ct:object name="SKID2_FLOOD" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="407b485b-469b-4f76-86ce-2bd1402fb1e5" />
+                <ct:object name="SKID_START" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="63136c08-3976-42a6-934f-60990950b89a" />
+                <ct:object name="SY_EMERGENC" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="d4a07f68-38d5-43dc-ba5f-a38ae2450d96" />
+                <ct:object name="SY_REMOTE" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="c86926bc-a959-48fb-996e-400c636512ee" />
+                <ct:object name="SY_RST_FAILURS" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="37864b2f-5277-414c-8fda-59e6790ab51f" />
+                <ct:object name="SY_WATCHDOG" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="40677d89-4c10-4c73-b5c6-282dfdc4c680">
+                  <ct:object name="W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="4bf434d9-d44d-440f-bff8-4ace723e9f3a" />
+                </ct:object>
+                <ct:object name="S1MR1_IN_S_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="1547aee1-f07b-43e6-810f-858d28ad57da" />
+                <ct:object name="S1MR2_IN_S_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="28ac1033-24c0-4619-91c2-d1c6c2da2aee" />
+                <ct:object name="S1MR3_IN_S_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="3224fb47-8cb8-4f59-8d07-46a51ce1b884" />
+                <ct:object name="S1_IVK_PWR" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="8a7837ca-05d7-48a8-bdbe-4ef49de89221" />
+                <ct:object name="S1_ML2_FC_F_R" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="6b892212-9f96-4edf-9abc-069573936858" />
+                <ct:object name="S1_ML3_FC_F_R" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="be37e74b-0266-4b73-87d6-0ed7cc4752e4" />
+                <ct:object name="S1_ML4_FC_F_R" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="956bcb1b-e773-4177-9abc-810ab9df94bf" />
+                <ct:object name="S1_ML5_FC_F_R" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="1fa082ad-840b-4f0a-bf7f-4775213e5e7b" />
+                <ct:object name="S1_ML6_FC_F_R" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="78667e5a-ac0f-4a2e-982b-cf662485f8a9" />
+                <ct:object name="S1_QAL_SAMPLR_HI" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e1bdf7e8-d64c-4884-bbf8-32a25d3bf7a5" />
+                <ct:object name="S1_PROV_FCV_CV_R" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="25b576b3-c3e7-419b-8985-11b15836524c" />
+                <ct:object name="S1PRV_I_B_TMP_R" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3f652c17-f6be-4f96-8cbf-afcdd93eb55a" />
+                <ct:object name="S1_FLW_HI_R" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="8472a6d9-9438-49d4-a28a-c0548ae09ba2" />
+                <ct:object name="S1_QAL_FTR_rSP_H" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="1108e3d0-04b7-4588-8f43-0a41f23080ef" />
+                <ct:object name="S1_QAL_FTR_rSP_HH" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="568e83c9-547e-4c32-b8a3-551f646b7fa6" />
+                <ct:object name="S1_FLW_LO_R" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="c8250fee-611b-418c-ab5a-581163dee31d" />
+                <ct:object name="S1PRV_FCV_SO_W" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="91fdb16e-f108-4ced-b774-24a9ec792e88" />
+                <ct:object name="S1PRV_FLW_SP_R" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3f7bce7e-785d-4029-aa5d-cf021faf747c" />
+                <ct:object name="S1PRV_VOL_R" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="183a52c8-4945-481e-b2e9-f3e1fbc1f7d0" />
+                <ct:object name="S1_BAT_LOAD_TIME" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="d8d0c269-7a05-4c60-ac46-881918ada5f1" />
+                <ct:object name="S1_FLW_SP_D_HH" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="2617ca0f-b07b-43df-911b-1f75eec473bf" />
+              </ct:object>
+              <ct:object name="M0042_PK42_A570_QUALITY" uuid="4c4491af-ca8c-4591-a022-e7dd7c83d321">
+                <ct:object name="S1_PUMP_A" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="28e4885c-15da-4fbc-bbee-b474d3d8e827">
+                  <ct:object name="PROD" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a532f881-21ac-4b06-b5f4-1440ed44efc1" />
+                </ct:object>
+                <ct:object name="S1_PUMP_B" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="b5890c71-e7e7-48b4-ab44-a334ce0381f4">
+                  <ct:object name="PROD" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="d9c6aca7-23d3-46cb-b007-b2bec087b6a4" />
+                </ct:object>
+                <ct:object name="S1_PUMP_R" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" uuid="9406d5ff-eaaa-4559-993d-f3d95a72602c" />
+                <ct:object name="DNS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="3f264601-beae-44ad-811e-3f2566e7ddcf">
+                  <ct:object name="AB" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="3d406b77-0e24-4fe4-b1bd-4d43f8d72ad2" />
+                </ct:object>
+                <ct:object name="DNSA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="80621a93-a0fe-47a8-8d28-f77a46b54c64" />
+                <ct:object name="DNSB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="c5b4dd6f-bfc7-41a2-aa20-2f35fe40dea9" />
+                <ct:object name="DNS_15" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="35825cdd-5225-493f-aaba-85eb5fdc4b24" />
+                <ct:object name="DNS_20" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="9227c863-dda2-4a34-99b3-6e454a7d6d82" />
+                <ct:object name="DNS_API" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a258c856-6b89-4320-95fe-04ca51f9eb2a" />
+                <ct:object name="AIR_TEMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="ce9d3443-a67f-4b49-98d7-0dd90ee9cb4a" />
+                <ct:object name="Schvr_AIR_TEMP" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="597614a2-d81f-4ee1-a6e6-32970c71e787" />
+                <ct:object name="BSW" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="323bddb8-4f79-4329-bfe3-8dbed86d96d9">
+                  <ct:object name="AB" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="14ca19be-351a-47dc-b3a6-5507dc765f40" />
+                </ct:object>
+                <ct:object name="BSWA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="ffc606fe-e24f-4c52-b37b-3a4d260251b8" />
+                <ct:object name="BSWB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="3ad11132-a12a-4f4b-83aa-ad4a416f19fe" />
+                <ct:object name="FLW" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="9471c376-c509-4528-a4ff-91e5d0bc7785" />
+                <ct:object name="NXTB_VOL" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="fced42e7-f3b6-49b9-af15-e915e8012209" />
+                <ct:object name="NORM_VSC" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="5fb03211-24f3-4258-b2bb-fcadf3c5ce49" />
+                <ct:object name="RATIO" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="d29b58cf-c0d0-44a4-a960-5ae9c7532b5d" />
+                <ct:object name="RES_VOL" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="2c489c33-8495-475c-8670-76c4e57772b9" />
+                <ct:object name="VOL_PCUR" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="15c17f72-1c46-4664-bdb5-6cd5f79f7079">
+                  <ct:object name="U" base-type="Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="6ae8e63b-ecbe-418b-aec5-de5d99af7ba2" />
+                </ct:object>
+                <ct:object name="BSW_MASS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="bb4762c9-e180-4b6a-a7fc-1dc6d7c2dc0e" />
+                <ct:object name="PR_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="bdf64804-de2a-43d1-be5e-d96f4baf2876" />
+                <ct:object name="PR_PRSB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="147262a3-2fda-481d-9fe2-05e53656b738" />
+                <ct:object name="PR_PRSA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="27ae79a4-38a7-4d0a-91dc-1e1b35026aab" />
+                <ct:object name="PR_PRS1A" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="1a06f6fa-e1cf-4bd1-8cbe-2fe18b7864a7" />
+                <ct:object name="PR_PRS1B" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="e4a8284c-d2c6-44f0-9b7b-d9277c33908d" />
+                <ct:object name="PR_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="bbd92962-61c2-471b-98b6-3e1a516d2995" />
+                <ct:object name="PR_TMPB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="c558bdaa-d3e8-442c-a0c1-3f90ec30640f" />
+                <ct:object name="PR_TMPA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="73494167-4512-4c88-b5fd-c277b649af14" />
+                <ct:object name="PRM_VSC" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="01898462-fe99-46ee-bc73-1aba4aa6bb58">
+                  <ct:object name="AB" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="96da9fd7-7858-4b7e-a417-eb0c00ebcc31" />
+                </ct:object>
+                <ct:object name="PRM_VSCA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="47270687-c4f2-4249-803c-ed8e58347d4b" />
+                <ct:object name="PRM_VSCB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="7a866476-dacd-4c48-87d9-f199995867f0" />
+                <ct:object name="PT111A" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="fd02d0b3-170e-4af5-b18b-43ccb0f7dd2a" />
+                <ct:object name="PT112A" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="3c011598-7a0a-484e-8f43-3b6f837a9b4f" />
+                <ct:object name="FCV131A" base-type="unit.Types.СИКН.Регулятор расхода СИКН.M_FCV" aspect="unit.Types.PCL" uuid="9e51d293-dfb7-455f-938f-d3b43b1d913f" />
+                <ct:object name="P_DIT101A" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="6df24395-caa9-4dc1-95b0-7d15f83e93ea" />
+                <ct:object name="P_DIT102A" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="bdf09846-27fa-484c-a283-ebe9df826abd" />
+                <ct:object name="QAL_MASS" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="bc4ca0ca-943b-4158-b177-cd30a88095a3">
+                  <ct:object name="AB" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="b5c7c913-fe7b-49e4-a710-8ec51af25b6b" />
+                </ct:object>
+                <ct:object name="QAL_MASSB" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="cdafea24-61e8-4c72-b938-3d26bd6d11da" />
+                <ct:object name="QAL_MASSA" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="4ee412e2-007d-4fee-ac19-7352a7325121" />
+                <ct:object name="FAN_A" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="110e1c27-a9de-43b4-928b-5c04950d7297" />
+                <ct:object name="FAN_B" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="6d2a686c-bfa9-421e-bc72-118976d953a1" />
+                <ct:object name="HEATER" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="83f202ee-7f98-4c97-b951-313bf7c50d5d" />
+                <ct:object name="PUMP_103" base-type="unit.Types.СИКН.Вспомсистемы.M_UNIT_SIKN" aspect="unit.Types.PCL" uuid="2dfa3f76-dcce-4e9e-918b-e164f3238258" />
+                <ct:object name="FAN_AB" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="92f9eea7-2df1-48c4-a9ce-29849f916a2d" />
+                <ct:object name="DOOR_OPEN" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="6d819d2b-074b-4d10-b28c-546e7bea74d3" />
+                <ct:object name="PRESS_HH" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="b1475959-6857-4914-beec-4ee63f631efa" />
+                <ct:object name="SAMPLR_HI" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="ce0bdfa9-6d45-4f6d-beec-4e2e7233f50b" />
+                <ct:object name="SPL_VLT_R" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="4ac74ce6-b34f-42ff-8335-ccbac91dac7f" />
+                <ct:object name="REGULATE" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" aspect="unit.Types.PCL" uuid="78aeeca4-afb3-463c-9861-d287889fdef4" />
+                <ct:object name="PR_PRS34" aspect="Types.PCL" base-type="unit.Types.СИКН.Выбор ОСН АВ СИКН.PRIM_AB" uuid="6d380798-14f8-4a61-bc3e-7a118ea489c4"></ct:object>
+              </ct:object>
+              <ct:object name="M0042_PK42_A570_PARAMS2" uuid="f21d67a5-db9d-43ab-a09a-eaeb4be28cbe">
+                <ct:object name="MN_F" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="6a76c0c7-3427-45d0-a30c-cd6a498ff4f1" />
+                <ct:object name="MN_S" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3910fd74-fb63-46b4-a0b8-3842a8f64bcd" />
+                <ct:object name="VN_F" base-type="Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="4369451d-0786-4fa3-8e32-2cb0c21159e4" />
+                <ct:object name="VN_S" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="2a6b8977-16f3-41f5-be2d-26ebabc9d7e3" />
+                <ct:object name="VOL_CR_F" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="7fd7f7af-0e3c-44e2-b145-32765c73ccfd" />
+                <ct:object name="VOL_CR_S" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="7914318d-3841-40a8-8eb2-09b2ad80a06f" />
+                <ct:object name="VOL_DRP_F" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="18bf4bde-af17-4d1e-a51d-99bab34fae3b" />
+                <ct:object name="VOL_DRP_S" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="6e7b933e-ce22-43f6-9fe7-9594f461e0e8" />
+                <ct:object name="VOL_MAX_F" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="980446eb-5ccf-4c7a-8c56-61b894bb3220" />
+                <ct:object name="VOL_MAX_S" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3d083dec-8aa6-49b4-9080-c679be3d1f85" />
+                <ct:object name="ISOKINET" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="07549544-5fc9-4af6-8923-71c57367a0ae" />
+                <ct:object name="SAMP_1_F0" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="58effbd1-39ab-4eae-ac6b-293e906b284d" />
+                <ct:object name="SAMP_1_F1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="1dd4b2ca-f6be-40a5-8969-467f49678af1" />
+                <ct:object name="SAMP_1_F2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="a0aadcb4-8da3-40ec-adc3-ffb611c2d985" />
+                <ct:object name="SAMP_1_F3" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="fbf9f5f8-977f-447f-b0e9-5f539c12c7f2" />
+                <ct:object name="SAMP_2_F0" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="dc12db22-a51f-4e86-97ab-01ca8cee7b6d" />
+                <ct:object name="SAMP_2_F1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="8c437064-e520-4415-b74f-0f2c80bd37e7" />
+                <ct:object name="SAMP_2_F2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="48cbb0c7-738f-40c7-b620-51ae08231ee1" />
+                <ct:object name="SAMP_2_F3" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="92b9e10b-028a-4707-b0f3-ea03fbe9e749" />
+                <ct:object name="CURR_VOL_U" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="76521244-4262-4292-85b3-597db4d5c41a" />
+              </ct:object>
+              <ct:object name="M0042_PK42_A570_PROVER" uuid="e7172f76-cf9d-48da-8347-aa3310d5c05f">
+                <ct:object name="XV301" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="0ef0e127-b5ee-4741-b946-efeecd4f6a09" />
+                <ct:object name="XV302" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="0bdfc607-803c-4d73-895d-fd75c28aa0e9" />
+                <ct:object name="XV303" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="084bfaf2-1fe6-4207-a899-835750b3a84f" />
+                <ct:object name="XV304" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="5261794b-ad1b-4ef2-a194-a534c0488895" />
+                <ct:object name="XV501" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="913e1391-1b3f-47f5-bafa-ee3fda748826" />
+                <ct:object name="XV502" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="b2ef7ada-700d-41a5-b45c-2d6a7e4429c4" />
+                <ct:object name="XV503" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="4e888313-f188-4611-a6e4-0d24b24b3cad" />
+                <ct:object name="XV504" base-type="unit.Types.СИКН.ЗадвижкаСИКН.M_XV" aspect="unit.Types.PCL" uuid="bba79826-b0e7-4ff7-977d-c6b2ed18b1ad" />
+                <ct:object name="PROV_FLW_CV" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="948f835e-baf4-468b-8421-ae328fd9a3b4" />
+                <ct:object name="PROV_FLW_SP" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="a638a932-9bad-458b-9e78-5219cf97c851" />
+                <ct:object name="Proving_By" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="194f0e28-2095-4c7e-b2c9-89af336c33e2" />
+                <ct:object name="PRV_I_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="9e9cb1bc-4039-4f9b-8758-b1b261ba6222" />
+                <ct:object name="PRV_I_PRSA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="73fe622d-06ca-4b9b-a72c-234de33547b5" />
+                <ct:object name="PRV_I_PRSB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="31f51b7a-cb31-44c9-87ae-0250cd9413ae" />
+                <ct:object name="PRV_I_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="57fc4284-d35c-4996-bbcb-42f8c45c1243" />
+                <ct:object name="PRV_I_TMPA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="1a6c20a7-452b-4376-a28a-4296188eda66" />
+                <ct:object name="PRV_I_TMPB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="59dc3fe4-8edf-4c98-ba31-4254f89e2002" />
+                <ct:object name="PRV_O_PRS" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="34efe50c-9910-4eae-8b4a-729ba05e4c2f" />
+                <ct:object name="PRV_O_PRSB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="62dc5ac6-cd23-45df-ab9c-bcc2db2674fd" />
+                <ct:object name="PRV_O_PRSA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="a745714f-2292-46a1-be9b-6098b650fa65" />
+                <ct:object name="PRV_O_TMP" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="0bcda17a-fbbb-4c29-b675-0a3174db4148" />
+                <ct:object name="PRV_O_TMPB" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="d1c219ee-2a91-493c-ae7d-9ecf26c26771" />
+                <ct:object name="PRV_O_TMPA" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="ea6ece48-6e57-4f1f-9aab-d42616591b46" />
+                <ct:object name="New_MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="e15796d2-fb2b-4ca6-9354-65a48ea48a8a" />
+                <ct:object name="Prev_MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="24d4dfe0-0b04-44cb-88f9-1f1bdaa851bc" />
+                <ct:object name="Dev_MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="826a637e-3fe3-4444-9ffd-6d578fd48243" />
+                <ct:object name="PRV_STATUS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="2f311c70-f13e-425c-8895-743d8bca7e3f" />
+                <ct:object name="PDIT301" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="3938c99e-5d46-4451-8db6-b4f56f4c315e" />
+                <ct:object name="PDIT302" base-type="unit.Types.Аналоговый параметр.M_AP" aspect="unit.Types.PCL" uuid="8d835065-72f2-4400-9c26-6ec12a10aafd" />
+                <ct:object name="Err_R1" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="21737aaf-596b-467e-bbf0-63c9bdb40132" />
+                <ct:object name="Err_R2" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="e7b66b4b-fe09-42ca-9cc9-f03d45cc1a25" />
+                <ct:object name="Err_R3" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3c3f793b-e8f5-43c9-a43a-30546401e8cf" />
+                <ct:object name="Err_R4" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="efaba248-5a56-4ee6-8385-762f5d9e949c" />
+                <ct:object name="Err_R5" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="5ac45ad1-d360-4a2b-b952-e0408eca15cb" />
+                <ct:object name="Err_R6" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a143c5ea-7bf4-440f-bfb7-48d9cb0db39e" />
+                <ct:object name="Err_R7" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="fd8a4116-d892-4f2a-92d8-28ca5f80404a" />
+                <ct:object name="Err_R8" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="09cd004f-ea09-4ba2-b96f-e8bbaf21438b" />
+                <ct:object name="Err_R9" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="92c88611-cd0b-4831-932e-787d1b1dccba" />
+                <ct:object name="Err_R10" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="5682b2a2-79db-436e-95f7-bb917ec863e7" />
+                <ct:object name="SKID" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="7ac87ed9-b99f-4f05-8d87-46eb25a631a9" />
+                <ct:object name="STATUS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="bf624e5d-70c6-453c-a092-909857cfc5d4" />
+                <ct:object name="STREAM" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="51fa6d68-9ab6-4015-9514-62ff938df757" />
+                <ct:object name="VOL" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="dc5df9d5-b934-4257-99e0-d29203a1803b" />
+                <ct:object name="Run1" uuid="c0a99181-af81-4a98-a0fe-1098852eaf4d">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="d8f6af7d-796a-4d6c-9b56-45d9588b455e" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3182e494-77d5-41a8-aaf1-6b621dac9e29" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="9f4dfeec-4229-41f9-9664-8d01d55842a6" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="c2087222-35ca-4188-92c3-1c85be1964e7" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="f6ce2902-2b5b-4ead-9af9-41969082e33b" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="1becce9a-d511-456d-b331-7ff40d0c9d79" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="6d3c8a5c-b5d2-4008-813c-879e36664df4" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="2ce4300b-d663-483b-9443-8430fb554b21" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="8e41f7db-dc32-4f58-a529-ed3b5548878e" />
+                </ct:object>
+                <ct:object name="Run2" uuid="a6b0e300-d48e-41a5-abb6-96c451dd2ab5">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="56829f3b-a1d8-4541-9fd1-a3fab4ac25a9" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="9bc428db-f9ad-4612-818b-5368d9e3ac0e" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="e70b0d74-f534-4599-8579-456941e6abd9" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="45c776b4-7e63-4ef3-b70a-35d5f34b2118" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a7329ba3-8b53-44fa-80ed-2f6c5ce8fddb" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="0f100ab1-9a2b-4c2a-bff5-ce57c0296695" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="c0db08cc-35de-4777-a21b-e47f0da1a3d4" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="46a64d01-0203-41cc-8bbd-d2b2289429a8" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="5d7b8780-198d-4f63-91b9-4963800e5238" />
+                </ct:object>
+                <ct:object name="Run3" uuid="293f6a47-f17b-4ee3-897c-fbf7f2178b86">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="5d017e48-9da2-4aa6-b528-4cf5b808ad62" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="0d7a698e-ca9e-4e5e-b42e-1454f9483661" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="1abc819b-eb8e-4b7e-94f6-e1b69ad816f9" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="909c9a51-336f-4159-8906-3f3b9108d6d8" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="de67ef1e-fd45-4975-af14-95705ca5e614" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="387040be-1413-46f5-b0f2-00640ab661fc" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="c3f7c0cd-6af8-4036-9303-6d8cb1de9000" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="fc4353f8-9486-4ad6-95b1-b685b9ecc9e5" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="561c6042-7239-472d-ada1-ed68a1e939c5" />
+                </ct:object>
+                <ct:object name="Run4" uuid="2fc698ab-a087-4edb-a705-e89bd91535d5">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="bb695d4e-8b65-4184-8823-88d241f0cab7" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="6156908a-4d78-4d6b-a8f8-1cd7d32101f5" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="b53267ba-cf30-4e9b-8912-d20636423e8b" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="331fe280-38b5-4586-a939-0caa277556b9" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="1950e5e3-dcb0-4750-9c88-7ccdfd9827ee" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a4a03a31-7096-411b-9ede-25c9d3f73f95" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="60f2193f-4dbb-4178-9b5a-2b1c02a014c4" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a23a9b33-e855-4631-9c45-3a43e91f38e6" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="ee0d57e7-f431-470d-a549-9f2b8500330f" />
+                </ct:object>
+                <ct:object name="Run5" uuid="1e504caf-4839-482e-87a6-86084e579c82">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="b2778585-1918-4576-99af-54296b77cbea" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a1292690-c2d1-42c6-a1ca-46ac5dfcdcab" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="93170d29-ba27-4c71-b4f6-e26a555dd33a" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="16117fc8-6355-4a48-806b-6b88b0d38328" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="fcf5f42c-b7e4-42a6-b0d4-fdcaa9a8b2db" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="bd78cc52-9217-477f-b872-a962bbf0e482" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="8c934a97-6c69-4955-bd86-fdc5db174dd5" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="db8fbb45-e055-4f37-9e4b-6a75d471b53b" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a7549656-fad6-4de6-ac0d-64618eb4c578" />
+                  <ct:object name="MASTR_IP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="84de8055-6f8a-4ab1-83e7-3930f9c8b06d" />
+                </ct:object>
+                <ct:object name="Run6" uuid="aa7cbd5f-74e7-4466-8692-d0f4b26e6b42">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="248deb65-5af5-4d7c-a330-3235546ade56" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a1374b6b-5e64-48f6-85ba-9bb51721538b" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="7f52bd67-26ba-4d23-9c1e-7ffbce63797c" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="79f55a74-1c51-4212-be6c-0038cc8c7b1a" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="13743f28-f6fb-4fc8-b6bc-e6dbdfa11771" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="9d1b363d-b29d-43ba-8175-cc49d65a9bb2" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="7551404e-aae6-49ae-8e2d-a5af3db1e14d" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="bf25c5d1-0553-440a-8425-d72bb6305591" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="6c97efb0-bd95-463f-bf4c-8daa7f208821" />
+                </ct:object>
+                <ct:object name="Run7" uuid="6d9271a2-2a7d-4a10-baa7-5154097dd3a6">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="67a0cc71-ea9c-41c2-b1c6-e4757358eb7f" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="ba2990fd-fb91-43d7-bc28-b032c2d47e66" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a31fea46-89c8-4933-b758-777e52b23bea" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="68aeaec9-9aa3-49dd-a139-80bacfc182bc" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="02d5c9ba-6905-4122-9954-ec9573188496" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="b352faa3-7100-487a-aac1-96d83b886ccb" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="34ede6d7-2896-41b8-93f1-7b862d5aa6bf" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="2691b2c9-f29b-4bc5-bf8b-65ff69a61e98" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="01c7756e-2b6b-47b9-908a-36a2910b56ad" />
+                </ct:object>
+                <ct:object name="Run8" uuid="872b8502-fad2-4e40-9512-0b6108fff6ae">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="2e291b5e-b16c-459d-9762-1bb54ed2013c" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3ea5853a-b1dd-4cb7-bf9d-f25047cceb7e" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a8ca8638-52a1-447d-a33d-0d5989b82a68" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="efbe1104-9d5c-4c38-90d6-7a2d0c2c8a42" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a0a629d2-dfa2-47f5-afc7-2b295a61d873" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="fc9ac9e8-cc77-47e7-8e83-c0e0b58deb3c" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="f5a127b0-1fad-40c1-973d-1f3cfceb0b9e" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="2e8a9437-8a26-428e-a225-26edf4cd255d" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="c0d379b2-e008-4d7e-b677-88fb2d048684" />
+                </ct:object>
+                <ct:object name="Run9" uuid="4e303252-618f-4e51-92aa-bc4d688405f2">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="4edc1378-19a7-4063-9c84-e21be6ebedfa" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="94f8c46e-5832-4e23-9e0c-7bfe9dc41b9b" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="7eda2c7b-d3fd-4300-9930-b835beca24e1" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="c3a95282-1723-47e3-a454-9cf9e6fe06e2" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="8cfc95de-6d7e-47c0-ab8d-51131ae8ca35" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="d4be8219-f86f-4650-8eee-ed93440f628f" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a3c607f3-3a1b-4c7b-861b-b4e7ca55ddba" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="76769c2b-1275-4c9e-a7f0-9591aee46f7b" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="9fbc68a0-3b50-46a9-bd4d-cac8cce4339d" />
+                </ct:object>
+                <ct:object name="Run10" uuid="a03e60c0-78fb-4a3f-a407-b9c67f70b9a0">
+                  <ct:object name="BDNS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="517397c5-aff8-4c21-8c32-446ea7a37f44" />
+                  <ct:object name="FLW" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="168751b0-5568-4097-8e6d-e330d116c085" />
+                  <ct:object name="INTPUL" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="65f4e53a-10e1-483b-9289-d15108ea38df" />
+                  <ct:object name="METR_QTY" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="d1799c91-7e6a-4f60-940e-7f39a53e0baa" />
+                  <ct:object name="MF" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3319abf0-862a-4af5-ae69-265ca3c3244c" />
+                  <ct:object name="MPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="e68faafe-84ac-4ca1-a362-ae99157e48cc" />
+                  <ct:object name="MTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="a2dafc18-530c-4f57-bc4d-5eb2521a12fe" />
+                  <ct:object name="PPRS" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="e957db78-5133-43ed-9910-16abb7112198" />
+                  <ct:object name="PTMP" base-type="unit.Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="e378ffb2-2ac0-4e7d-bc30-c4e70d935402" />
+                </ct:object>
+                <ct:object name="FLW" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="b48b6e6a-4ad8-4212-b719-b1489055b663" />
+                <ct:object name="KMH_START" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="84cf895c-6ddc-440e-9e61-1b79e657c061" />
+                <ct:object name="PRVGTSLEAK" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="59e16b05-e6c5-45d9-bf1a-2402ce705a61" />
+                <ct:object name="ABORT_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="10157b56-b39f-4aaf-86e2-c9ee1434ec0f" />
+                <ct:object name="MF_UPDATE_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="42259bc1-b802-4d29-be81-dca37cf245ef" />
+                <ct:object name="PREP_ST_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="e4b1733f-5424-4e93-b015-951e0aab77eb" />
+                <ct:object name="PROVER_A570" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="8feee3ab-5fa3-4d53-8a02-24a87b9212c3" />
+                <ct:object name="CLOSE_FAIL" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="827ae142-4609-4f94-bad9-aae439f1fa96" />
+                <ct:object name="GATESLEAK" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="0568a498-6f48-4b1f-be8a-7eb9fe358473" />
+                <ct:object name="GT_CLOSED" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="74852ae0-00e0-45b6-95f3-f6cd73b1cd04" />
+                <ct:object name="GT_OPENED" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="b4178ffa-570b-470d-a5e4-f3d953fe060f" />
+                <ct:object name="OPEN_FAIL" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="10c15c7d-1e98-4a95-b8d4-f87dda3660e7" />
+                <ct:object name="OPENEDGTS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="55132e85-abcb-4bcd-93fa-2e7faa449081" />
+                <ct:object name="PROVER_Connect" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="1bee16ff-50b5-4bd3-bea0-d2ef0c1bcbe1" />
+                <ct:object name="PROVER_Discon" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="5e246c6d-d737-4735-a0b8-a81b52335c59" />
+                <ct:object name="LINE_NO_R" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="654040e8-a0ce-40f0-9419-583eb4f4ed0d" />
+                <ct:object name="NOT_READY" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e51fffd1-7929-4681-a6e3-0653cc865f83" />
+                <ct:object name="STARTED" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="f49f4b50-dd61-4597-b2bb-84777a7dcf61" />
+                <ct:object name="PRV_PREP_ST" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="a6bd3913-9cf8-4bd5-8e6f-8d4950e072a8" />
+                <ct:object name="PRV_FIRE" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="43c1feee-7960-43ff-b030-e62a7990fccd" />
+              </ct:object>
+              <ct:object name="M0042_PK42_A570_PARAMS1" uuid="c0ed28ae-bb06-4b60-ab67-6c08899e692d">
+                <ct:object name="LINE_HI" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="5c28fac4-adde-47c4-953c-5fb228e8c0ac" />
+                <ct:object name="LINE_LO" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="0256411a-557f-4b72-824e-e0b8c3042484" />
+                <ct:object name="PRIORITY1" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="9c178cc6-70a3-4d66-8af8-4944ee2758ff" />
+                <ct:object name="PRIORITY2" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="3efc60f1-efe5-4cf5-87c3-0edbd5922ea0" />
+                <ct:object name="PRIORITY3" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="00e4f92b-12e0-452d-940e-968ed938991a" />
+                <ct:object name="PRIORITY4" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="49e53e32-ffd6-4ca5-9550-9761a56f2f8f" />
+                <ct:object name="PRIORITY5" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="6c071672-fc4d-44df-a6bd-60343a429760" />
+                <ct:object name="PRIORITY6" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="627cc347-5050-409b-8fc0-61de16698895" />
+                <ct:object name="PRIORITY7" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="94fe0210-fc76-47a3-b93d-8d2e9d3e8d11" />
+                <ct:object name="PRIORITY8" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="0d5082b5-27cf-4530-81e9-6c328618bc90" />
+                <ct:object name="MR_FLW_HI_U" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="8899cc33-5d26-4eab-b5b0-286a7f66809c" />
+                <ct:object name="PRIOR_RESET" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="34c08f1c-3174-4a51-b1e0-cd4eac6da8f5" />
+                <ct:object name="PRIORITY_U" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="78cf9077-de59-447a-93af-c1da3987110b" />
+                <ct:object name="S1MR_FLW_HHLL" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="8d1542ad-6944-43cb-924d-a2270b380123" />
+              </ct:object>
+              <ct:object name="M0042_PK42_A570_PARAMS3" uuid="1e861d8d-ae00-41ca-a029-f4d4c0a9365b">
+                <ct:object name="MRPRV_FCV_CV_HH" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="55054cdc-8019-4945-a35b-69ca52a6aaee" />
+                <ct:object name="MRPRV_FCV_CV_LL" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="3b8db8ec-4ace-4a84-b388-ea49f68ef902" />
+                <ct:object name="MRW_FCV_CV_HH" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="1470ccfc-b08c-40e5-8f11-f33762b5d168" />
+                <ct:object name="MRW_FCV_CV_LL" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="unit.Types.PCL" uuid="9ecbea7d-02fc-4b0a-8f40-82da9d812c23" />
+                <ct:object name="FLW_SP_D_HH" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="ff415929-d9d8-416f-a073-8f1c01fd31a2" />
+                <ct:object name="MR_FCV_CV_HH" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="ee550a89-3ef6-4352-8c7d-3d2db1f9a043" />
+                <ct:object name="MRPRV_FLW" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="33273984-1bbb-437a-9bf3-888ba5d36bdc" />
+                <ct:object name="MRPRV_Prgss" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="2b5d15de-049b-4964-a041-a245fdfa1856" />
+                <ct:object name="MRPRV_Q" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="0b102b66-42dd-417b-92a0-8ed761997482" />
+                <ct:object name="MRPRV_QNR" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="66ff8a9e-d0a5-49e4-b7a3-0e39cd93b6f9" />
+                <ct:object name="MRPRV_QNR_CV_HH" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="f77757a3-a9f7-4b41-bd3a-77886a7e4a7f" />
+                <ct:object name="MRPRV_QNR_CV_LL" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="14e4347a-8e82-4b51-992b-ec5f94dc5657" />
+                <ct:object name="PDIT_HH" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="c9fac028-0dc3-479a-a8af-476c827654af" />
+                <ct:object name="Ramp" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="53365d2f-ca38-471c-86e0-6d63bad510be" />
+                <ct:object name="Ramp_Down" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="cded0d25-a6a0-4dd4-8a4a-fa15ed2e5f56" />
+                <ct:object name="Ramp_Up" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="9b1fa7a0-419f-42c7-8cbd-926551474ec4" />
+                <ct:object name="Ramp_Up_Need" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="683eccf9-7ed6-4b54-8944-3554f688b080" />
+                <ct:object name="SKID_IN_P" base-type="unit.Types.Дискретный параметр.M_DP" aspect="unit.Types.PCL" uuid="3a68306f-b9fe-4921-9b65-feadb620f322" />
+              </ct:object>
+              <ct:object name="M0042_PK42_A570_BATCH" uuid="828adfe3-6d2f-4b47-935e-2ee61732c2a7">
+                <ct:object name="S1_BAT_WARN" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="9b2605a1-af51-4439-8eaf-ffdb047905e6" />
+                <ct:object name="S1_NMASS_SP" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="81a421e0-5892-42ec-b455-3b45ac996905" />
+                <ct:object name="S1_MASS_TOGO" base-type="unit.Types.Уставка.M_SP" aspect="unit.Types.PCL" uuid="000ba6a9-0fa3-4c2e-b584-d28bf2d36cc9" />
+                <ct:object name="A570_Auth" base-type="Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="b2cb05b0-be05-4e2e-8404-525a3a872138" />
+                <ct:object name="A570_SPM1" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="35e0b14b-d6d3-4f3c-b7e2-0a01124b5274" />
+                <ct:object name="A570_SPM2" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="245dca48-d571-40f7-9bb4-f7f1afea75a9" />
+                <ct:object name="A570_SPM3" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="071a74fd-2dac-498c-9d57-40cb0483528b" />
+                <ct:object name="BAT_PAR_U" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="7b2d14c0-ee76-42be-877c-8812d4728cad" />
+                <ct:object name="BAT_START_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="47ee0cb3-6738-4dad-8f12-a3058608afbd" />
+                <ct:object name="BAT_TRM_W" base-type="unit.Types.Команда.M_CMD" aspect="unit.Types.PCL" uuid="80a861cb-0a0f-4cc3-aaee-daabc1d48568" />
+              </ct:object>
+              <ct:object name="M0042IB_COMM_STATS" uuid="eb2a625f-7a17-4100-8545-a7d14cda87ba">
+                <ct:object name="PLC_KEY_POS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="1c799004-6072-4f80-b719-483dd3f2a668" />
+                <ct:object name="SYS_RCH7" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="a8678fe2-942b-4392-87b9-e82b9491f8e5" />
+                <ct:object name="SYS_RCH6" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="5051c768-f575-4831-bd97-d62675064e18" />
+                <ct:object name="SYS_RCH5" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="66d590d0-95f4-443a-8080-6c51d9fd8066" />
+                <ct:object name="SYS_RCH4" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="2835c476-bcf9-470a-8dc5-88833c02ddf3" />
+                <ct:object name="SYS_RCH3" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="f1ddc9ad-173e-4dc4-b454-75c488e0e84d" />
+                <ct:object name="SYS_RCH13" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="fd13e49c-62a0-4426-a4f7-d29daed2d444" />
+                <ct:object name="SYS_RCH11" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="8ebd39d0-4825-44d0-bbb6-aef769a0d065" />
+                <ct:object name="SYS_RACKB" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="be8be9d8-e180-41a4-99ef-2063c0029764" />
+                <ct:object name="SYS_RACKACTIV" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="79752e37-8b21-47ee-8788-9985a72bd9cb" />
+                <ct:object name="SYS_RACKA" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="d0c11606-dad1-412a-8ed8-9b76c4c8db80" />
+                <ct:object name="SYS_Minor_F" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="c46efef6-3d40-422d-a5ad-02abdb2046a2" />
+                <ct:object name="SYS_Major_F" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="07c779fb-a1fb-45b4-b433-892fa6a65464" />
+                <ct:object name="SYS_ETHERNET2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="ec6fc1da-31bc-4753-99ba-142254e0c038" />
+                <ct:object name="SYS_ETHERNET1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="8679f514-7713-4259-aafc-95dfeedbfb0a" />
+                <ct:object name="SYS_EN2T_2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="cdcadb41-6d07-4e12-95db-d09dea4873fa" />
+                <ct:object name="SYS_EN2T_1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="62c2ccf2-d762-4b81-8edf-4b28bf9e4c3f" />
+                <ct:object name="SYS_CNTRN_2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="998ee4c5-3d9a-43ca-90e7-67ce2c712349" />
+                <ct:object name="SYS_CNTRN_1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e713b85c-2664-4c23-88b9-a937650e3d13" />
+                <ct:object name="SYS_ARM2CON2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="6f63c3cf-39a3-4aae-a269-d5d172375537" />
+                <ct:object name="SYS_ARM2CON1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="3b9930f8-526d-4cff-bd71-cd2c47632bd1" />
+                <ct:object name="SYS_ARM1CON2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="13d6b3b6-fc1b-47eb-b9cc-5755641f4cd6" />
+                <ct:object name="SYS_ARM1CON1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="b9d10ce5-1df8-4972-bca8-197e6f1aab05" />
+                <ct:object name="SYS_AB_RED" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="d9ff537c-6ce9-4bdf-b068-0c17e771377f" />
+                <ct:object name="SCHVR_DOOR" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="2b3ba55a-bd68-4bc3-a6d7-a141e4c4c0f8" />
+                <ct:object name="PS_2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="fd0d408b-ffdb-49ca-beba-b94d3f319916" />
+                <ct:object name="PS_1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="14a18684-6817-4c13-8cf0-071bb5d8f1d7" />
+                <ct:object name="BATTERY_ONLY" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e5f20657-766d-4ea0-ac49-585dc886e502" />
+                <ct:object name="BATTERY_stat1" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="f02d6f7b-828e-4f2e-8757-557a906dded8" />
+                <ct:object name="BATTERY_stat10" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="9a426fee-b314-419a-afc5-c648737b58c8" />
+                <ct:object name="BATTERY_stat11" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="751fc4bf-7853-4e0d-b649-7f4c06e3274b" />
+                <ct:object name="BATTERY_stat12" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="86b4b885-6068-4776-acc5-0c72d70e1ec5" />
+                <ct:object name="BATTERY_stat2" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="14167165-a3f8-4c03-8f86-0cc084e66de7" />
+                <ct:object name="BATTERY_stat3" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="b6a620e7-3276-4d47-9c66-70b6b7fa0fd3" />
+                <ct:object name="BATTERY_stat4" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="2c0db4ff-6e2c-4204-9082-37b008b1fd3a" />
+                <ct:object name="BATTERY_stat5" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="83f9565b-36ee-4567-803f-0c38db15021e" />
+                <ct:object name="BATTERY_stat6" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="4780b242-465e-4ddb-aed6-a33483b4be24" />
+                <ct:object name="BATTERY_stat8" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="2f6e7ca2-e7e6-4f5c-8221-d7f6fbb922ce" />
+                <ct:object name="BATTERY_stat9" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="9295de1a-9905-4927-8bcf-4e7e057a070e" />
+                <ct:object name="IVK1_CNCT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="8a04fdaa-7d74-44e2-a899-ca651d4ba047" />
+                <ct:object name="IVK1_CTRL_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="5d202ac6-289a-471f-8207-59947ee91509" />
+                <ct:object name="IVK1_FAULT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="0a0987dd-f9f4-4826-97cf-156b2692b00b" />
+                <ct:object name="IVK1_P1_CNCT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="bd6cfc8a-e77c-4c34-9a21-89f19c6407ba" />
+                <ct:object name="IVK1_P2_CNCT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="9203b037-f523-4f6f-b9ae-22a9918d1841" />
+                <ct:object name="IVK1_PC_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="302d35ef-5efd-445b-bb60-11a3e3de4a09" />
+                <ct:object name="IVK1_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="0a929f09-6b9c-4cfa-97b0-b21e0b086a56" />
+                <ct:object name="IVK2_CNCT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="f7738cca-1eb1-460b-a0c4-73dc5f306cd5" />
+                <ct:object name="IVK2_CTRL_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e9427de2-f361-4e9a-90ae-9229ae65edda" />
+                <ct:object name="IVK2_FAULT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="ce9ec35b-db06-4bc9-9b34-eafbe9905579" />
+                <ct:object name="IVK2_P1_CNCT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="906a733b-7243-47bc-a21e-cc55015f89e9" />
+                <ct:object name="IVK2_P2_CNCT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="0ac3a667-1c0c-4a91-9396-c5eb8e3b04bc" />
+                <ct:object name="IVK2_PC_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="3fb6d894-7df1-4548-9174-12ed2fa25d64" />
+                <ct:object name="IVK2_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e89b9359-4737-4403-ab1c-50ad6e3d2bb9" />
+                <ct:object name="IVK_ACT_CNCT" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="2bbfe1a4-f6fb-453c-98bd-17088fc9b51d" />
+                <ct:object name="IVK_ACTIVE" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="bb32a83d-afde-443d-a3fb-3f8866391129" />
+                <ct:object name="IVK_CONTROL_MODE" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="354b824f-cc78-460e-809f-a4a3c393ccda" />
+                <ct:object name="IVK_PWR" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e8277977-1311-4a60-a3e5-859bd0312aa8" />
+                <ct:object name="IVK_T_H" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="e1a18a21-dd3b-4851-9110-1c27089a9ef7" />
+                <ct:object name="IVK_T_HH" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="7c3fa0a7-2bb2-4d79-bdcc-b6325b991c15" />
+                <ct:object name="IVK_T_L" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="748185f9-b99f-4a0a-94b1-996d126d36b9" />
+                <ct:object name="IVK_T_LL" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="3672d6d7-6710-4ecf-b3fa-d7ea531103d7" />
+                <ct:object name="LOW_BATTERY" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="3548d2da-e41f-40e7-8fcf-88168146ea2d" />
+                <ct:object name="MVI56E_A_LINK_ER" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="d0ce61c0-5eb2-4157-a76f-69049962bf56" />
+                <ct:object name="MVI56E_A_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="b548571b-fc0e-4d3d-abce-a27153c9f6fc" />
+                <ct:object name="MVI56E_B_LINK_ER" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="3d8a24a8-d7bb-42d5-b524-8f20a3b929a2" />
+                <ct:object name="MVI56E_B_STATUS" base-type="unit.Types.Простой дискретный параметр.M_DP_S" aspect="unit.Types.PCL" uuid="97653980-d72b-409f-94b9-f05f857dc734" />
+              </ct:object>
+            </ct:object>
+            <attribute type="unit.System.Attributes.Description" value="БСМТ" />
+          </ct:object>
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+</omx>

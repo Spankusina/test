@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <plc:plc name="PLC_P0021.P0021VT" uuid="5712859f-ebff-467d-9ad4-a37cdac71d60">
+    <plc:crate name="P0021VT" uuid="82565fd5-7423-4e31-8ecf-493bad2012fd">
+      <plc:cpu name="P0021VT_CPU" uuid="bd6eb522-b0fa-4e9e-9b62-67ee28b33294">
+        <eth:ethernet-adapter name="P0021VT_Eth1" address="11.160.72.1" network="Ethernet1" uuid="d8e7207e-c6c0-44b6-9e31-b411e0dfea0e">
+          <attribute type="unit.System.Attributes.Comment" value="10.100.205.104" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0021VT_Eth2" address="11.160.72.33" network="Ethernet2" uuid="638cf49f-a540-4291-b845-96661c72525b">
+          <attribute type="unit.System.Attributes.Comment" value="11.160.72.33" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0021VT_EIPAdapter" address-map="P0021VT_CPU.P0021VT.CIP_P0021VT" route="backpane;0" uuid="81acea5a-0cd8-4609-8fa3-e4f47e14f57e" />
+        <dp:application-object name="P0021VT" uuid="fb809a09-2de1-4254-bd0c-8e7c4fcbf5cc">
+          <ct:object name="CPC" uuid="9a963ed9-ee92-4544-8923-463700dcefba">
+            <ct:object name="P0021" uuid="2465c20d-1cd9-4ab4-b9a1-dc7cbce05128">
+              <ct:object name="VT" uuid="ddf60129-eaca-47c6-bb93-1ec461e36fbc">
+                <ct:object name="LAUNCHER" uuid="87dd915e-965f-412c-9d9f-fb0e44ac2aa7">
+                  <ct:object name="BYPASS_INSEQ" uuid="00210014-0079-0010-0001-305c7091110d" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="HS_9010" uuid="00210014-0079-0030-0001-30a8cd823f0a" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="HS0502" uuid="00210014-0079-0010-0001-3116631cb1d8" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="HS0502ACMD" uuid="00210014-0079-0030-0001-31a40f968365" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="HS0502BCMD" uuid="00210014-0079-0030-0001-32aaeeff866c" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="HS0502F" uuid="00210014-0079-0010-0001-3461865fe064" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="HS0502G" uuid="00210014-0079-0010-0001-35b71b8990a7" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="LAHH0003" uuid="00210014-0079-0010-0001-36b80158012d" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="LAUNCH_COMPLETE" uuid="00210014-0079-0010-0001-37f5cb0da38f" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="LIT0510" uuid="00210014-0079-0002-0001-1d322eb1e26b" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="PIG_GONE" uuid="00210014-0079-0010-0001-38ffb0f77676" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PIG_LAUNCHED" uuid="00210014-0079-0010-0001-3900a4b0741b" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PIG_STUCK" uuid="00210014-0079-0010-0001-40954d1622ad" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PT0506" uuid="00210014-0079-0002-0001-3820e321ed56" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="PT0510" uuid="00210014-0079-0002-0001-4c3e5df88221" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="PT0511" uuid="00210014-0079-0002-0001-5af60dee2660" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="TRAP_RDY" uuid="00210014-0079-0010-0001-490d73199c74" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="UA0502E" uuid="00210014-0079-0010-0001-503b54f114a0" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="UA0502F" uuid="00210014-0079-0010-0001-51f8756cfe9f" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="UA0502G" uuid="00210014-0079-0010-0001-5284eed826bc" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="XL0506B" uuid="00210014-0079-0030-0001-35b87dac21d9" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="XS0506A" uuid="00210014-0079-0010-0001-593ed12f8f14" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="XV0386" uuid="00210014-0079-0029-0001-12cd69345aa3" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT"></ct:object>
+                  <ct:object name="XV0387" uuid="00210014-0079-0029-0001-29873f06c1ca" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT"></ct:object>
+                  <ct:object name="XV0388" uuid="00210014-0079-0029-0001-3d183d55d13a" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT"></ct:object>
+                  <ct:object name="XV0389" uuid="00210014-0079-0029-0001-494b849f1d5b" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT"></ct:object>
+                  <ct:object name="XV0391" uuid="00210014-0079-0029-0001-5e5e8382f1fb" aspect="Types.PCL" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_STOP_AUT"></ct:object>
+                  <ct:object name="ZA0502A" uuid="00210014-0079-0010-0001-61be5cddd86c" aspect="Types.PCL" base-type="Types.Линейная часть.Скребок.M_PIG"></ct:object>
+                  <ct:object name="ZA0502B" uuid="00210014-0079-0010-0001-62fb0292f9c8" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="ZI0506A" uuid="00210014-0079-0010-0001-669327b999e1" aspect="Types.PCL" base-type="Types.Линейная часть.Скребок.M_PIG"></ct:object>
+                  <ct:object name="ZLOC0510" uuid="00210014-0079-0030-0001-366d64f4cac0" aspect="Types.PCL" base-type="Types.Команда.M_CMD"></ct:object>
+                  <ct:object name="ZT0502" uuid="00210014-0079-0002-0001-91fb759b6295" aspect="Types.PCL" base-type="Types.Аналоговый параметр.M_AP"></ct:object>
+                  <ct:object name="0510" uuid="3fb94da8-cd5a-4ad1-bae7-8a4b32a3e411" base-type="Types.Линейная часть.Станционные вспомсистемы.M_MOTOR_ST" />
+                </ct:object>
+                <ct:object name="DIAGNOSTICS" uuid="eeb98789-e054-4d49-bfac-64ce43a370d9">
+                  <ct:object name="PLC_STATE" uuid="00210014-0079-0010-0001-48d0e2779814" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PLC_RELOADED" uuid="00210014-0079-0010-0001-477afa46ef3d" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PLC_MINOR_FLT" uuid="00210014-0079-0010-0001-46c94356a4cd" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PLC_KEY_POS" uuid="00210014-0079-0010-0001-45708b880ea7" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PLC_IO_MOD_STS" uuid="00210014-0079-0010-0001-44654b9ea4e2" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PLC_FRC_EN" uuid="00210014-0079-0010-0001-4313a48f049d" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PLC_FLS_STS" uuid="00210014-0079-0010-0001-42f108c9a09e" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="PLC_BAT_STATE" uuid="00210014-0079-0010-0001-41acaf4a8aca" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="XA0915A" uuid="00210014-0079-0010-0001-54835d6c890e" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="XA0915B" uuid="00210014-0079-0010-0001-55ce25a11313" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                  <ct:object name="XA0915C" uuid="00210014-0079-0010-0001-56cb3023f37b" aspect="Types.PCL" base-type="Types.Простой дискретный параметр.M_DP_S"></ct:object>
+                </ct:object>
+              </ct:object>
+            </ct:object>
+          </ct:object>
+          <eip:cip-address-map name="CIP_P0021VT" file="P0021_Tengiz\CIP_P0021VT.xml" uuid="52b20ffa-e2ac-4789-9a32-4365061e3db3" />
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+  <ct:object name="Domain.CPC_tree.CPC.P0021.VT" uuid="c8edf437-f144-4d08-9953-f00e1378e187">
+    <attribute type="unit.System.Attributes.Description" />
+    <ct:object name="DIAGNOSTICS" uuid="f30545ea-ea30-41e4-8da2-d2c839c29320">
+      <ct:object name="PLC_BAT_STATE" uuid="00210014-0079-0010-0002-41141fb60662" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_BAT_STATE</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_BAT_STATE</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). СОСТОЯНИЕ АККУМУЛ ПЛК</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_BAT_STATE" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" aspect="unit.Types.IOS" uuid="7f3a7315-5969-4885-8c9c-eac233e124d6">
+        <attribute type="unit.Server.Attributes.Alarm">
+          <property name="value">{"Aggregator":{"Condition":{"Conditions":[{"Type":"Enumeration"},{"Type":"Dynamic"},{"Subconditions":["On"],"Type":"Discrete"}]},"IsEnabled":true,"Severity":{"Ranges":[{"High":1,"Low":1},{"High":101,"Low":101}]}}}</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="PLC_FLS_STS" uuid="00210014-0079-0010-0002-42908e3d5448" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_FLS_STS</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_FLS_STS</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). СОСТОЯНИЕ ФЛЭШ-ПАМЯТИ ПЛК</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_FLS_STS" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PLC_FRC_EN" uuid="00210014-0079-0010-0002-43a18a054e72" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_FRC_EN</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_FRC_EN</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). НЕЗНАЧИТ НЕИСПР ПЛК"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_FRC_EN" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PLC_IO_MOD_STS" uuid="00210014-0079-0010-0002-44cf0868044a" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_IO_MOD_STS</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_IO_MOD_STS</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). СОСТОЯНИЕ МОДУЛЯ ВВ/ВЫВ ПЛК</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_IO_MOD_STS" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PLC_KEY_POS" uuid="00210014-0079-0010-0002-45175cf59437" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_KEY_POS</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_KEY_POS</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). ПОЛОЖЕНИЕ КЛЮЧА ПЛК"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_KEY_POS" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PLC_MINOR_FLT" uuid="00210014-0079-0010-0002-46373746e86e" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_MINOR_FLT</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_MINOR_FLT</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). НЕЗНАЧИТЕЛЬНЫЙ СБОЙ ПЛК</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_MINOR_FLT" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PLC_RELOADED" uuid="00210014-0079-0010-0002-47b42feb7a15" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_RELOADED</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_RELOADED</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). ПЕРЕЗАГРУЗКА ПЛК"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_RELOADED" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="PLC_STATE" uuid="00210014-0079-0010-0002-485f857fb878" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_STATE</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.PLC_STATE</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). СОСТОЯНИЕ ПЛК"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PLC_STATE" />
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XA0915A" uuid="00210014-0079-0010-0002-54ccd144fad4" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.XA0915A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.XA0915A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XA-0915A"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Питание 1 в шкафу ПЛК VT</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XA0915B" uuid="00210014-0079-0010-0002-55ae81ba4b1b" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.XA0915B</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.XA0915B</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XA-0915B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Питание 2 в шкафу ПЛК VT</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+      <ct:object name="XA0915C" uuid="00210014-0079-0010-0002-56443d064ee7" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+        <property name="original">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.XA0915C</property>
+        <r:init-ref ref="Reference">
+          <property name="target">Domain.PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.DIAGNOSTICS.XA0915C</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XA-0915C"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). ВЕНТ. 1 В ШКАФУ VT ПЛК</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="LAUNCHER" uuid="3f976188-42b3-4de4-9633-af91c8608f8a">
+      <ct:object name="HS_9010" uuid="00210014-0079-0030-0002-305fb17637f0" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS_9010</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS_9010</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="HS-9010"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Подтвердить и сбросить</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" aspect="unit.Types.IOS" uuid="43161db0-0766-4224-a1d6-19215d81879a">
+        <attribute type="unit.Server.Attributes.Alarm">
+          <property name="value">{"Aggregator":{"Condition":{"Conditions":[{"Type":"Enumeration"},{"Type":"Dynamic"},{"Subconditions":["On"],"Type":"Discrete"}]},"IsEnabled":true,"Severity":{"Ranges":[{"High":1,"Low":1},{"High":101,"Low":101}]}}}</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="XV0386" uuid="00210014-0079-0029-0002-19e3c0baa931" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0386</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0386</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0386"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="МШК @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="XV0387" uuid="00210014-0079-0029-0002-242de427baec" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0387</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0387</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0387"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="МШК @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="XV0388" uuid="00210014-0079-0029-0002-34cbdab62a2a" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0388</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0388</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0388"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="МШК @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="XV0389" uuid="00210014-0079-0029-0002-4a13742cd1d4" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0389</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0389</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0389"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="МШК @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+      <ct:object name="ZA0502A" uuid="00210014-0079-0010-0002-612a7e1d5247" aspect="Types.IOS" base-type="Types.Линейная часть.Скребок.IOS_PIG">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZA0502A</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZA0502A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ZA-0502A"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Датчик прохождения СОД</property>
+        </attribute>
+        <ct:object name="AP" uuid="2fde1598-e704-418e-ae53-de8eee73cc9c">
+          <ct:object name="ZT0502" uuid="00210014-0079-0002-0002-9b1c5b9659b6" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP">
+            <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZT0502</property>
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZT0502</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="ZT-0502"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="Уровень УЗ сигнала @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Max_raw" value="100"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Max_EGU" value="256"></attribute>
+            <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="ед."></attribute>
+            <attribute type="unit.Types.Attributes.AP.L_Limit" value="0"></attribute>
+            <attribute type="unit.Types.Attributes.AP.H_Limit" value="0"></attribute>
+            <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0"></attribute>
+            <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+            <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+            <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+            <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="True"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="True"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="True"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="True"></attribute>
+            <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+            <attribute type="unit.Types.Attributes.AP.Ust.EnableUST_AlarmWarning" value="0" />
+          </ct:object>
+        </ct:object>
+        <ct:object name="DS" uuid="c5c8bf5b-35ca-4c54-b31b-4611791b7109" base-type="Types.Дискретный параметр.IOS_DP_SBOR">
+          <ct:object name="UA0502E" uuid="00210014-0079-0010-0002-50cc9a9b7ee0" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.UA0502E</property>
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.UA0502E</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="UA-0502E"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Идет тест"></attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="2" />
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="warning.wav" />
+            <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+            <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Yellow" value="1" />
+          </ct:object>
+          <ct:object name="ZA0502B" uuid="00210014-0079-0010-0002-627bf06a32e0" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZA0502B</property>
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZA0502B</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="ZA-0502B"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+            <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). УЛИС ошибка"></attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <ct:object name="LAHH0003" uuid="00210014-0079-0010-0002-364eae4b84ae" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+            <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.LAHH0003</property>
+            <r:init-ref ref="Reference">
+              <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.LAHH0003</property>
+            </r:init-ref>
+            <attribute type="unit.Types.Attributes.Common.Sign" value="LAHH-0003"></attribute>
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+            <attribute type="unit.System.Attributes.Description">
+              <property name="value">@(object:unit.Types.Attributes.Common.Sign). Колодец УЛИС. Аварийный высокий уровень</property>
+            </attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+            <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+          </ct:object>
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="26" />
+        <attribute type="unit.Types.Attributes.PIG.Cmd.EnableCom_Test" value="1" />
+      </ct:object>
+      <ct:object name="ZI0506A" uuid="00210014-0079-0010-0002-66eb1e1c1631" aspect="Types.IOS" base-type="Types.Линейная часть.Скребок.IOS_PIG">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZI0506A</property>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="ZI-0506A"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). Датчик прохождения СОД</property>
+        </attribute>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.ZI0506A</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Type_HMI" value="9" />
+      </ct:object>
+      <ct:object name="LRA212" uuid="3fd66ef1-60e6-4e62-8cf1-0856b2cfb33d" base-type="Types.Объект.IOS_Obj">
+        <ct:object name="SEQ_LAUNCHER" uuid="dce1f732-8d53-4e83-a267-b47f195c60c8">
+          <ct:object name="TU" uuid="1d83195e-0084-4bf0-a9b1-3e618a6c0e77">
+            <ct:object name="HS0502A" uuid="00210014-0079-0030-0002-3134d308faa3" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502ACMD</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502ACMD</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="HS-0502A"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Пуск СОД"></attribute>
+            </ct:object>
+            <ct:object name="HS0502B" uuid="00210014-0079-0030-0002-32b85c9798b8" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502BCMD</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502BCMD</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="HS-0502B"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Байпассировать УПСОД</property>
+              </attribute>
+            </ct:object>
+          </ct:object>
+          <ct:object name="Agg_Alarm" base-type="Types.Агрегация.Agg_Alarm" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="6a40ad86-49ca-42d8-a2f2-9d07bd0f0107">
+            <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:51,&quot;Low&quot;:51},{&quot;High&quot;:101,&quot;Low&quot;:101},{&quot;High&quot;:151,&quot;Low&quot;:151}]}},&quot;Conditions&quot;:{&quot;IsEnabled&quot;:&quot;false&quot;}}" />
+          </ct:object>
+          <ct:object name="Agg_Warning" base-type="Types.Агрегация.Agg_Warning" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="1e78496d-3925-4bf1-9389-63e524ff81d4">
+            <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:2,&quot;Low&quot;:2},{&quot;High&quot;:52,&quot;Low&quot;:52},{&quot;High&quot;:102,&quot;Low&quot;:102},{&quot;High&quot;:152,&quot;Low&quot;:152}]}},&quot;Conditions&quot;:{&quot;IsEnabled&quot;:&quot;false&quot;}}" />
+          </ct:object>
+          <ct:object name="ALM" uuid="28299693-5473-417d-9f3e-25fffa78ddf0" base-type="Types.Дискретный параметр.IOS_DP_SBOR">
+            <ct:object name="HS0502F" uuid="00210014-0079-0010-0002-34116146d456" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502F</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502F</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="HS-0502F"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Запуск скребка в последовательности Старт</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <ct:object name="LAUNCH_COMPLETE" uuid="00210014-0079-0010-0002-3797ed502858" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.LAUNCH_COMPLETE</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.LAUNCH_COMPLETE</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Запуск скребка завершён</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="LAUNCH_COMPLETE" />
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <ct:object name="HS0502G" uuid="00210014-0079-0010-0002-35ea9c28579c" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502G</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502G</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="HS-0502G"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Запуск скребка в последовательности</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <ct:object name="TRAP_RDY" uuid="00210014-0079-0010-0002-4935ea4e9e43" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.TRAP_RDY</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.TRAP_RDY</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Устройство запуска готов к загрузке</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="TRAP_RDY" />
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <ct:object name="UA0502F" uuid="00210014-0079-0010-0002-519d21e8c50b" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.UA0502F</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.UA0502F</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="UA-0502F"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Сбой последовательности запуска скребка</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="UA0502G" uuid="00210014-0079-0010-0002-529557175d52" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.UA0502G</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.UA0502G</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="UA-0502G"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Сбой последовательности скребка</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="PIG_STUCK" uuid="00210014-0079-0010-0002-40904d0a7c56" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PIG_STUCK</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PIG_STUCK</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Скребок запущен, но застрял</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="PIG_STUCK" />
+              <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+            </ct:object>
+            <ct:object name="HS0502" uuid="00210014-0079-0010-0002-31475f45a7c5" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.HS0502</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="HS-0502"></attribute>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Готов к пуску СОД"></attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <ct:object name="PIG_LAUNCHED" uuid="00210014-0079-0010-0002-397601abdc91" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PIG_LAUNCHED</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PIG_LAUNCHED</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Запуск скребка, обнаружен выход</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="PIG_LAUNCHED" />
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <ct:object name="PIG_GONE" uuid="00210014-0079-0010-0002-38652b445fe1" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PIG_GONE</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PIG_GONE</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Запуск скребка обнаружен</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="PIG_GONE" />
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <ct:object name="BYPASS_INSEQ" uuid="00210014-0079-0010-0002-304251d5a76a" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.BYPASS_INSEQ</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.BYPASS_INSEQ</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.System.Attributes.Description">
+                <property name="value">@(object:unit.Types.Attributes.Common.Sign). Устройство запуска в байпас послед.</property>
+              </attribute>
+              <attribute type="unit.Types.Attributes.DP.DP_Severity" value="104"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="BYPASS_INSEQ" />
+              <attribute type="unit.Types.Attributes.DP.DP_Need_kvit" value="0" />
+              <attribute type="unit.Types.Attributes.Common.Type_HMI" value="513" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Red" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorTrue_Green" value="1" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Green" value="0" />
+              <attribute type="unit.Types.Attributes.DP.Color.ColorFalse_Grey" value="1" />
+            </ct:object>
+            <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT" />
+            <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER" />
+            <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D" />
+            <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+              <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+            </attribute>
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+        </ct:object>
+        <ct:object name="XS0506A" uuid="00210014-0079-0010-0002-59d10af6cb91" aspect="Types.IOS" base-type="Types.Простой дискретный параметр.IOS_DP_S">
+          <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XS0506A</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XS0506A</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="XS-0506A"></attribute>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="@(object:unit.Types.Attributes.Common.Sign). Крышка открыта"></attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Severity" value="1"></attribute>
+          <attribute type="unit.Types.Attributes.DP.DP_Sound" value="fastbeep.wav" />
+        </ct:object>
+        <ct:object name="Comment" base-type="Types.Служебные.Comment" uuid="06d8fb4d-d18b-45dc-9593-95bc1b1e25fb">
+          <attribute type="unit.System.Attributes.Description" />
+        </ct:object>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER" />
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.System.Attributes.Description" value="Камера запуска @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="LR-A212" />
+      </ct:object>
+      <ct:object name="VEA002A" uuid="19b49305-725c-42bb-9545-52a8773e2f54" base-type="Types.Объект.IOS_Obj">
+        <ct:object name="0510" base-type="Types.Линейная часть.Станционные вспомсистемы.IOS_MOTOR_ST" aspect="unit.Types.IOS" uuid="37957961-9e16-4484-9847-6936bd59754a">
+          <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.0510</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.0510</property>
+          </r:init-ref>
+          <attribute type="unit.System.Attributes.Description" value="Насос @(object:unit.Types.Attributes.Common.Sign)" />
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PU-A002A" />
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT" />
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER" />
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O" />
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+            <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+          </attribute>
+          <ct:object name="AP" uuid="855f7da3-9c29-4f7d-a0aa-3c099ac39e87">
+            <ct:object name="PT0510" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="142f80f3-0ea7-4df9-8ac2-412e9738efc0">
+              <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PT0510</property>
+              <r:init-ref ref="Reference">
+                <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PT0510</property>
+              </r:init-ref>
+              <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+              <attribute type="unit.Types.Attributes.Common.Sign" value="PT-0510"></attribute>
+              <attribute type="unit.System.Attributes.Description" value="Давление на выходе @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Max_raw" value="800"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Max_EGU" value="800"></attribute>
+              <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+              <attribute type="unit.Types.Attributes.AP.L_Limit" value="200"></attribute>
+              <attribute type="unit.Types.Attributes.AP.H_Limit" value="470"></attribute>
+              <attribute type="unit.Types.Attributes.AP.HH_Limit" value="470"></attribute>
+              <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+              <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+              <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="false"></attribute>
+              <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="10"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="True"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="True"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="True"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="True"></attribute>
+              <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-98"></attribute>
+              <attribute type="unit.Types.Attributes.AP.Min_raw" value="-98"></attribute>
+            </ct:object>
+          </ct:object>
+          <attribute type="unit.Types.Attributes.Common.Type_HMI" value="48" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Res" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Mode_other.EnableMode_Osn" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Res" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Osn" value="0" />
+          <attribute type="unit.Types.Attributes.VS.Cmd.EnableCom_Expand" value="0" />
+          <attribute type="unit.Types.Attributes.VS.State.EnableSt_StatrForbidd" value="0" />
+          <attribute type="unit.Types.Attributes.VS.State.EnableSt_Ready" value="0" />
+        </ct:object>
+        <ct:object name="PT0511" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="8518133f-43fa-41f0-aca9-ff50fdb69946">
+          <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PT0511</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PT0511</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="PT-0511"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Давление @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="100"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="100"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="10"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="150"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="False"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="1"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        </ct:object>
+        <ct:object name="LIT0510" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="158e6841-a6f5-4fa4-825e-e3ac3d9182a2">
+          <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.LIT0510</property>
+          <r:init-ref ref="Reference">
+            <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.LIT0510</property>
+          </r:init-ref>
+          <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+          <attribute type="unit.Types.Attributes.Common.Sign" value="LIT-0510"></attribute>
+          <attribute type="unit.System.Attributes.Description" value="Уровень @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_raw" value="3000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Max_EGU" value="3000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="мм"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_Limit" value="700"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_Limit" value="2300"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_Limit" value="3000"></attribute>
+          <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="false"></attribute>
+          <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="5"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="True"></attribute>
+          <attribute type="unit.Types.Attributes.AP.LL_Limit" value="250"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+          <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+        </ct:object>
+        <attribute type="unit.System.Attributes.Description" value="Емкость @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="VE-A002A" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT" />
+        <attribute type="unit.Types.Attributes.Common.Name">
+          <property name="value">@(object:unit.Types.Attributes.Common.Remote) @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS">
+          <property name="value">@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)</property>
+        </attribute>
+      </ct:object>
+      <ct:object name="PT0506" aspect="Types.IOS" base-type="Types.Аналоговый параметр.IOS_AP" uuid="946565d9-29ba-484f-b84b-ba44b6e9e8bb">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PT0506</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.PT0506</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="PT-0506"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Давлен. в камере скребка @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_raw" value="10000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="7000"></attribute>
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="кПа"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_Limit" value="-100"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_Limit" value="6700"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_Limit" value="6700"></attribute>
+        <attribute type="unit.Types.Attributes.AP.HH_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.H_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_alarm_check" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.L_alarm_check" value="False"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Alarm_Deadband" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_LL" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_L" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_HH" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Use_PLC_H" value="True"></attribute>
+        <attribute type="unit.Types.Attributes.AP.LL_Limit" value="240"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="0"></attribute>
+        <attribute type="unit.Types.Attributes.AP.Min_raw" value="0"></attribute>
+      </ct:object>
+      <ct:object name="XV0391" uuid="00210014-0079-0029-0002-5be63a397335" aspect="Types.IOS" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_STOP_AUT">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0391</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XV0391</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-0391"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_O"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021_LAUNCHER"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description" value="МШК @(object:unit.Types.Attributes.Common.Sign)"></attribute>
+      </ct:object>
+    </ct:object>
+    <ct:object name="NO_DISP" uuid="0a9b2901-83c0-413e-88c2-3398a74a19c3">
+      <ct:object name="XL0506B" uuid="00210014-0079-0030-0002-350f5b29aeca" aspect="Types.IOS" base-type="Types.Команда.IOS_CMD">
+        <property name="original">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XL0506B</property>
+        <r:init-ref ref="Reference">
+          <property name="target">PLC_P0021.P0021VT.P0021VT.P0021VT_CPU.P0021VT.CPC.P0021.VT.LAUNCHER.XL0506B</property>
+        </r:init-ref>
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XL-0506B"></attribute>
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0021_D"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0021VT_NO_DISP"></attribute>
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0021VT"></attribute>
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">@(object:unit.Types.Attributes.Common.Sign). LR-A212 ИНДИКАТОР ОТКР. ЛОВУШКИ</property>
+        </attribute>
+      </ct:object>
+    </ct:object>
+  </ct:object>
+</omx>

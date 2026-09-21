@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<omx xmlns="system" migration="53" xmlns:ct="automation.control" xmlns:plc="automation.plc" xmlns:dp="automation.deployment" xmlns:eip="automation.ethernetip" xmlns:eth="automation.ethernet" xmlns:r="automation.reference">
+  <plc:plc name="PLC_P0031.P0031JD" uuid="2767a2f4-3476-441b-97a1-c532eb1b65f8">
+    <plc:crate name="P0031JD" uuid="58e24b00-8326-4124-81b3-d7d7e3d0b058">
+      <plc:cpu name="P0031JD_CPU" uuid="72a22c08-1c06-4fed-ba57-3311606443dc">
+        <eth:ethernet-adapter name="P0031JD_Eth1" address="11.130.42.1" network="Ethernet1" uuid="72916f72-df5b-4317-be31-b12b97b42a11">
+          <attribute type="unit.System.Attributes.Comment" value="172.16.122.230" />
+        </eth:ethernet-adapter>
+        <eth:ethernet-adapter name="P0031JD_Eth2" address="11.130.42.129" network="Ethernet2" uuid="3af3c83b-808b-446a-bd4c-3b40bc8619d8">
+          <attribute type="unit.System.Attributes.Comment" value="11.130.42.129" />
+        </eth:ethernet-adapter>
+        <eip:plc-eip-adapter name="P0031JD_EIPAdapter" address-map="P0031JD_CPU.P0031JD.CIP_P0031JD" route="backpane;0" uuid="3a94ca1f-b80b-48f2-bbda-3ba151df2f57" />
+        <dp:application-object name="P0031JD" uuid="e206ea67-2852-48ec-8033-4ca377f55b9e">
+          <ct:object name="CPC" uuid="d84da1a6-2887-46e5-bde1-710684f1d263">
+            <ct:object name="JD" uuid="2cfcaab6-d0ba-4d17-83cb-ba5831201d58">
+              <ct:object name="TREATED_SEWAGE_SYS" uuid="778d2f62-58c9-4311-8bbe-93ba3708fd45">
+                <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="Types.PCL" uuid="03539b97-bbe2-4139-a2da-de67a2d39409" />
+                <ct:object name="TT0003" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="Types.PCL" uuid="495de52a-982b-4bc8-bd57-0c294afb64d9" />
+                <ct:object name="TT0002" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="Types.PCL" uuid="0aae72f8-235e-48da-bfa1-f3a95d15e0f9" />
+                <ct:object name="XV0010" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" aspect="Types.PCL" uuid="72aa9797-7724-4d7e-b946-01f7eaf8b8d3" />
+                <ct:object name="XV0011" base-type="Types.Линейная часть.Станционные задвижки.M_VALVE_MINI" aspect="Types.PCL" uuid="2090880c-0f9c-45f3-b7b3-ee1f7478aad5" />
+              </ct:object>
+              <ct:object name="SURGE_SUPPR_SYS" uuid="3d53cb2d-f418-4172-bfb1-7e367490c888">
+                <ct:object name="FT" base-type="Types.Простой аналоговый параметр.M_AP_S" aspect="Types.PCL" uuid="2d16c142-d48c-4488-8182-e3921baabbc3" />
+              </ct:object>
+            </ct:object>
+          </ct:object>
+          <eip:cip-address-map name="CIP_P0031JD" file="P0031_Kurman\CIP_P0031JD.xml" uuid="00382c24-3e59-45cf-910a-69db10e845a2" />
+        </dp:application-object>
+      </plc:cpu>
+    </plc:crate>
+  </plc:plc>
+  <ct:object name="Domain.CPC_tree.CPC.P0031.JD" uuid="12d67a8e-56d3-4b13-b206-cac48ce53c0a">
+    <attribute type="unit.System.Attributes.Description" />
+    <ct:object name="SURGE_SUPPR_SYS" access-scope="global" access-level="public" uuid="69060500-0965-4f47-ac23-8567134a9c35">
+      <ct:object name="FT" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" original="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.SURGE_SUPPR_SYS.FT" access-level="public" uuid="dead329c-b644-4888-a3cd-6c094e9c55c0">
+        <attribute type="unit.System.Attributes.Description" value="Расход очищенных сточных вод" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0031_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="FT" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0031_SURGE_SUPPR_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0031JD" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="м³/ч" />
+        <r:init-ref ref="Reference" target="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.SURGE_SUPPR_SYS.FT" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="7.5" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="a96f0a0f-5b70-4a30-b5db-b3a64063d1d3">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+    <ct:object name="TREATED_SEWAGE_SYS" access-scope="global" access-level="public" uuid="0f25b704-97e6-40c0-a222-8fdca215b621">
+      <ct:object name="TT0001" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" original="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.TT0001" access-level="public" uuid="e401ab84-843e-4fa8-bee5-fbe129f6fced">
+        <r:init-ref ref="Reference" target="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.TT0001" />
+        <attribute type="unit.System.Attributes.Description">
+          <property name="value">Температура в блок-боксе @(object:unit.Types.Attributes.Common.Sign)</property>
+        </attribute>
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0031_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0001" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0031_TREATED_SEWAGE_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0031JD" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="400" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+      </ct:object>
+      <ct:object name="TT0002" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" original="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.TT0002" access-level="public" uuid="a780ebeb-039c-4162-92c4-f46a97cebf6f">
+        <r:init-ref ref="Reference" target="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.TT0002" />
+        <attribute type="unit.System.Attributes.Description" value="Температура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0031_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0002" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0031_TREATED_SEWAGE_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0031JD" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="400" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+      </ct:object>
+      <ct:object name="TT0003" base-type="Types.Простой аналоговый параметр.IOS_AP_S" access-scope="global" original="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.TT0003" access-level="public" uuid="038ed96b-1fc6-4950-8045-17861e3dc936">
+        <r:init-ref ref="Reference" target="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.TT0003" />
+        <attribute type="unit.System.Attributes.Description" value="Температура @(object:unit.Types.Attributes.Common.Sign)" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0031_O" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="TT-0003" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0031_TREATED_SEWAGE_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0031JD" />
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.AP.EUnitRUS" value="°C" />
+        <attribute type="unit.Types.Attributes.AP.Max_EGU" value="400" />
+        <attribute type="unit.Types.Attributes.AP.Min_EGU" value="-50" />
+      </ct:object>
+      <ct:object name="XV0010" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" access-scope="global" aspect="Types.IOS" original="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.XV0010" access-level="public" uuid="f2e49d67-c79e-4087-ad6e-8e78f6f1ace6">
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0031JD" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0031_TREATED_SEWAGE_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-Z1" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0031_O" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <r:init-ref ref="Reference" target="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.XV0010" />
+      </ct:object>
+      <ct:object name="XV0011" base-type="Types.Линейная часть.Станционные задвижки.IOS_VALVE_MINI" access-scope="global" aspect="Types.IOS" original="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.XV0011" access-level="public" uuid="c6a94662-3628-4327-929b-2c6b14bd3ae7">
+        <attribute type="unit.Types.Attributes.Common.DescriptionRUS" value="@(*parent:unit.System.Attributes.Description) @(object:unit.System.Attributes.Description)" />
+        <attribute type="unit.Types.Attributes.Common.Remote" value="P0031JD" />
+        <attribute type="unit.Types.Attributes.Common.Priority_Display" value="P0031_TREATED_SEWAGE_SYS" />
+        <attribute type="unit.Types.Attributes.Common.Sign" value="XV-Z2" />
+        <attribute type="unit.Types.Attributes.Common.Group" value="P0031_O" />
+        <attribute type="unit.System.Attributes.Description" value="Запорная арматура @(object:unit.Types.Attributes.Common.Sign)" />
+        <r:init-ref ref="Reference" target="PLC_P0031.P0031JD.P0031JD.P0031JD_CPU.P0031JD.CPC.JD.TREATED_SEWAGE_SYS.XV0011" />
+      </ct:object>
+      <ct:object name="Agg_Alarm_Disp" base-type="unit.Types.Агрегация.Agg_Alarm_Disp" access-scope="global" aspect="unit.Types.IOS" access-level="public" uuid="2e7ab773-6532-4da3-9f54-c69e620c7e23">
+        <attribute type="unit.Server.Attributes.Alarm" value="{&quot;Aggregator&quot;:{&quot;Condition&quot;:{&quot;Conditions&quot;:[{&quot;Type&quot;:&quot;Enumeration&quot;},{&quot;Type&quot;:&quot;Dynamic&quot;},{&quot;Subconditions&quot;:[&quot;On&quot;],&quot;Type&quot;:&quot;Discrete&quot;}]},&quot;IsEnabled&quot;:true,&quot;Severity&quot;:{&quot;Ranges&quot;:[{&quot;High&quot;:1,&quot;Low&quot;:1},{&quot;High&quot;:101,&quot;Low&quot;:101}]}}}" />
+      </ct:object>
+    </ct:object>
+  </ct:object>
+</omx>
